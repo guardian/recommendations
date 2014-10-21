@@ -1,4 +1,4 @@
-guidelines
+Guidelines
 ==========
 
-Suggestions for how to develop software at the Guardian
+This repository contains guidelines for how to develop software at the Guardian. It's an attempt to have something that's more, up to date and discoverable than previous google docs.
