@@ -6,3 +6,4 @@ This repository contains guidelines for how to develop software at the Guardian.
  * [Services](services.md)
  * [Applications](applications.md)
  * [AWS](AWS.md)
+ * [Scala](scala.md)
