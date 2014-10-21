@@ -7,3 +7,4 @@ This repository contains guidelines for how to develop software at the Guardian.
  * [Applications](applications.md)
  * [AWS](AWS.md)
  * [Scala](scala.md)
+ * [Elasticsearch](elasticsearch.md)
