@@ -18,6 +18,7 @@ EC2
  * Use ELB healthchecks even if the app has no other HTTP endpoints, as other healthchecks are very limited.
  * Autoscaling groups should span all availability zones in a region.
  * EC2 security groups should not have globally open ports.
+ * Ensure NTP is installed.
 
 ELB
 ---
