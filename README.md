@@ -14,7 +14,7 @@ Principles
 
 **Design to be monitored** statistics measuring what the product is trying to achieve should be monitored
 
-**Design for horizontal scaling** a system that can be scaled by adding additional servers 
+**Design for horizontal scaling** a system that can be scaled by adding additional servers
  provides simpler scalability and greater robustness
 
 **Single responsibility applications** monitoring, self-healing and graceful degradation are simpler when responsibilities are not conflated. This should be balanced with the complexity cost of many different applications.
@@ -33,3 +33,4 @@ Guidelines
  * [AWS](AWS.md)
  * [Scala](scala.md)
  * [Elasticsearch](elasticsearch.md)
+ * [Pull requests](pull-requests.md)
