@@ -14,6 +14,10 @@ A pull request should be releasable once its review is complete. The person subm
 
 If these things are not true then you should address the blockers before raising the pull request.
 
+## Small
+
+A good pull request is easy to understand. There should be a manageable number of changes in each pull request. Don't mix multiple changes into the same pull request. If you are doing bulk moves and deletions only have one kind of operation in a pull request.
+
 ## The art of the pull request review
 
 Good pull request reviews are extremely valuable and help share understanding of both the problem being addressed and its solution.
@@ -25,3 +29,11 @@ When someone reviews a pull request they do not take responsibility for whether 
 A review simply confirms that the pull request addresses its stated problem in a reasonable way and the solution has no obvious problems.
 
 The ultimate responsibility for the change always lies with the person who submitted the pull request and who releases it to production.
+
+### DRY
+
+No-one loves someone who writes the same comment fifteen times on a pull request. If there is a recurring issue like naming, code formatting or code structure in a pull request then point one example out and make a general comment explaining there are multiple occurances.
+
+### Talk is better
+
+Don't try and hold a conversation in a pull request. If you have more than three comments or three paragraphs in a pull request then consider simply talking through the issues with the person who raised the pull request.
