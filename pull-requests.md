@@ -37,3 +37,9 @@ No-one loves someone who writes the same comment fifteen times on a pull request
 ### Talk is better
 
 Don't try and hold a conversation in a pull request. If you have more than three comments or three paragraphs in a pull request then consider simply talking through the issues with the person who raised the pull request.
+
+Record the outcome and actions of the conversation on the pull request so everyone else can follow the review.
+
+### Good not great
+
+Try not to block a pull request if the majority of it is okay and the pull request as a whole provides value. Issues of style or the possibilities for a better written solution can be addressed by raising Github Issues. Don't stop the value flow lightly.
