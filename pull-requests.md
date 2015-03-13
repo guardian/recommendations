@@ -2,11 +2,14 @@
 
 Pull requests are:
 
-## Atomic
+## Small and frequent
 
-A pull request should not depend on another pull request explicitly. "Chains" of pull requests are particularly brittle and vulnerable to any bugs or issues being found in any one of the components of the chain.
+A good pull request is easy to understand. There should be a manageable number of changes in each pull request. Try to make your pull request as small as possible why still advancing the functionality of the product.
 
-Where a feature will require multiple PRs to deliver the whole feature consider using an Issue to track the overall status of the feature and reference the issue from the pull request.
+Aim to deploy a pull request before submitting the next one. Frequently small deployments of functionality are easier to review and easier to understand in production.
+
+* Don't mix multiple changes into the same pull request.
+* If you are doing bulk moves and deletions only have one kind of operation in a pull request
 
 ## Releasable
 
@@ -14,9 +17,6 @@ A pull request should be releasable once its review is complete. The person subm
 
 If these things are not true then you should address the blockers before raising the pull request.
 
-## Small
-
-A good pull request is easy to understand. There should be a manageable number of changes in each pull request. Don't mix multiple changes into the same pull request. If you are doing bulk moves and deletions only have one kind of operation in a pull request.
 
 ## The art of the pull request review
 
