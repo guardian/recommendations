@@ -20,11 +20,11 @@ free to justify why not.
 
 ## Coding style
 
-- Have an .editorconfig file in your repo.
+- Have an [.editorconfig](http://editorconfig.org/) file in your repo.
 - Automate linting as part of your test phase (e.g. jshint, eslint,
   csslint).
 - Don’t enforce coding styles in pull requests. Add linting dot files
-  (.jshintrc etc) to your project instead.
+  (e.g. .jshintrc) to your project instead.
 
 
 ## Dependencies
@@ -40,9 +40,9 @@ free to justify why not.
 NPM, Bower, JSPM, etc? How to depend on other libraries?*
 
 Favour the following libraries unless you can justify otherwise:
-- lodash over underscore
-- reqwest for AJAX
-- moment for dates
+- [lodash](https://lodash.com/) over [underscore](http://underscorejs.org/)
+- [reqwest](https://github.com/ded/reqwest) for AJAX
+- [moment](http://momentjs.com/) for dates
 
 *TODO: any others?*
 
