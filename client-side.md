@@ -103,5 +103,5 @@ targets, automated testing or RUM?*
 
 ### Build tools/task runners
 
-Have an automated process to produce your final assets (e.g. using
-Grunt, Gulp, Plumber, etc).
+- Have an automated process to produce your final assets (e.g. using
+  Grunt, Gulp, Plumber, etc).
