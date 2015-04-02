@@ -32,7 +32,7 @@ The ultimate responsibility for the change always lies with the person who submi
 
 ### DRY
 
-No-one loves someone who writes the same comment fifteen times on a pull request. If there is a recurring issue like naming, code formatting or code structure in a pull request then point one example out and make a general comment explaining there are multiple occurances.
+No-one loves someone who writes the same comment fifteen times on a pull request. If there is a recurring issue like naming, code formatting or code structure in a pull request then point one example out and make a general comment explaining there are multiple occurrences.
 
 ### Talk is better
 
