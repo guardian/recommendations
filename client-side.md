@@ -34,8 +34,7 @@ free to justify why not.
   be provided by the environment.
 - If starting a new project, favour ES6 modules unless you can justify
   otherwise.
-- Do not commit your dependencies into Git. Instead, commit a
-  lockfile/shrinkwrap, e.g. jspm’s `config.js`.
+- Do not commit your dependencies into Git. Instead, lock your dependencies (direct and transitive) using a lockfile or shrinkwrap file, e.g. jspm’s `config.js` or npm’s `shrinkwrap.json`.
 
 *TODO: How to publish your own libraries? What format to publish it in?
 NPM, Bower, JSPM, etc? How to depend on other libraries?*
