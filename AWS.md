@@ -29,3 +29,6 @@ SQS
 ---
 
  * Use SQS's long polling support to minimise message processing latency.
+
+
+NB: see also [Resiliency and Robustness](resiliency.md) which has AWS-relevant recommendations.
