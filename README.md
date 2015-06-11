@@ -34,3 +34,4 @@ Guidelines
  * [Scala](scala.md)
  * [Elasticsearch](elasticsearch.md)
  * [Pull requests](pull-requests.md)
+ * [Resiliency and Robustness](resiliency.md)
