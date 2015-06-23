@@ -1,5 +1,7 @@
 # The art of the pull request
 
+It is worth reading [Github's pull request conventions](https://github.com/blog/1943-how-to-write-the-perfect-pull-request) as this seem to cover most of the basics.
+
 Pull requests are:
 
 ## Small and frequent
