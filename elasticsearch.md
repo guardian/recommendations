@@ -4,7 +4,7 @@ Elasticsearch
 ##Security
 
 - Never expose ES ports to the internet! It has no security by default.
-- Suggested private VPC setup (ask @sihil)
+- Disable dynamic scripting unless absolutely necessary, see [Elasticsearch docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html).
 
 ##Backups & Recovery
 
@@ -19,11 +19,10 @@ You can watch snapshots in progress: `curl $ES_URL:9200/_snapshot/_status`
 ##Settings
 
  * Always use explicit index mappings
- * discovery.zen.minimum_master_nodes should be > half your cluster size
+ * discovery.zen.minimum_master_nodes should be (n/2 + 1) where n is the number of nodes in your cluster
  * use doc_values if you're doing large amounts of aggregation queries
 
 See settings for dynamic scripting here: https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html 
-
 
 ##Upgrading
 
@@ -33,9 +32,13 @@ See: https://www.elastic.co/guide/en/elasticsearch/guide/current/_rolling_restar
 
 ##Instances
 
-- Need > 4GB of memory
+The instance type you require is quite dependant on the amount of data you have and the queries and aggregation you perform. 
+
+Some rough guidelines: 
+
+- Greater than 4GB of memory (though 2GB has been known to work).
+- To protect against data loss a cluster should have at least 3 nodes, preferably distributed accross availability zones.
 - Assign ~50% of instance memory to ES: This can be done by setting the `ES_HEAP_SIZE` environment variable. See https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html.
-- This works out to the minimum spec ES instance being an m3.large.
 
 ##Monitoring
 
