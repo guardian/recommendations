@@ -35,3 +35,4 @@ Guidelines
  * [Elasticsearch](elasticsearch.md)
  * [Pull requests](pull-requests.md)
  * [Resiliency and Robustness](resiliency.md)
+ * [Security](security.md)
