@@ -31,6 +31,7 @@ Guidelines
  * [Services](services.md)
  * [Applications](applications.md)
  * [AWS](AWS.md)
+ * [AWS Costs](AWS-costs.md)
  * [Scala](scala.md)
  * [Elasticsearch](elasticsearch.md)
  * [Pull requests](pull-requests.md)
