@@ -25,7 +25,7 @@ accidental leakage, files containing secrets should be stored away
 from the project, completely outside of the source tree.
 
 **Use the OWASP Security Knowledge Framework**. Before releasing a new
-application make sure you run through the Security Knowledge Framework
+application make sure you run through the [Security Knowledge Framework](https://skf.gutools.co.uk/)
 to get pointers on areas that might need extra attention. Revisit it
 from time to time to stay on top of changes in the application and the
 team.
@@ -39,7 +39,7 @@ and these should be temporary credentials (e.g. provided by Janus).
 
 ## HTTPS everywhere
 
-**_Everything_ should be served over HTTPS.**
+**_All_ external endpoints should be served over HTTPS.**
 
 ## Personal hygiene
 
