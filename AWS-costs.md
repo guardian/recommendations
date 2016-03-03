@@ -55,3 +55,7 @@ You can see savings of over `50%` on reserved instances vs. on-demand instances.
 
 Reservations are set to a particular AWS region and to a particular instances type.
 Therefore after making a reservation you are committing to run that particular region/instances combination until the reservation period finishes or you will swipe off all the financial benefits.
+
+### Spot Instances
+
+If your application can handle occasionally being shut down, with short notice, [spot instances](https://aws.amazon.com/ec2/spot/details/) are generally *much* cheaper. Often instances are availabe almost all the time for 10-20% of the standard price making them notably cheaper than reserved instances. [Spot fleet](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) should make it to the point where you're very unlikely not to have the capacity you need, though at the time of writing, it's not supoorted in CloudFormation.
