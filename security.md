@@ -37,6 +37,11 @@ should use `assumeRole` to gain access to other AWS resources. For
 local development you should use AWS profiles to manage credentials
 and these should be temporary credentials (e.g. provided by Janus).
 
+**Try to avoid using shared keys for SSH access.** Instead consider using
+the [ssh-keys feature](https://github.com/guardian/machine-images/tree/master/packer/resources/features/ssh-keys)
+built into machine images and/or using keys generated
+by the [github-keys-to-s3 lambda](https://github.com/guardian/github-keys-to-s3-lambda).
+
 ## HTTPS everywhere
 
 **_All_ external endpoints should be served over HTTPS.**
