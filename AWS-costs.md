@@ -43,6 +43,16 @@ Extremely low storage price, very high access price. Interesting for data to arc
 
 Another useful feature to manage your buckets is the possibility to set [lifecycle policies](http://docs.aws.amazon.com/AmazonS3/latest/UG/lifecycle-configuration-bucket-no-versioning.html) to change the storage class or delete objects in the buckets or on a path of the bucket.
 
+#### Getting rid of incomplete multipart upload
+
+ S3’s multipart upload feature accelerates the uploading of large objects by allowing you to split them up into logical parts that can be uploaded in parallel. However if you initiate a multipart upload but never finish it, the in-progress upload occupies some storage space and will incur storage charges.
+And the thing is these uploads are not visible when you list the contents of a bucket through the console or the standard api (you have to use a special command)
+
+There is 2 easy ways to solve this now and prevent it to happen in the future:
+
+* a [simple script](https://gist.github.com/mchv/9dccbd9245287b26e34ab78bad43ea6c) that can list them with size and potentially delete existing (based on [AWS API](http://docs.aws.amazon.com/cli/latest/reference/s3api/list-parts.html?highlight=list%20parts))
+* [Add a lifecycle rule](https://aws.amazon.com/blogs/aws/s3-lifecycle-management-update-support-for-multipart-uploads-and-delete-markers/) to each bucket to delete automatically incomplete multipart uploads after a few days  ([official AWS doc](http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)) 
+
 ### Bandwidth
 Compress the outgoing traffic.
 New AWS instance types often have cost savings potential.
