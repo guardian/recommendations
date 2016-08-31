@@ -14,7 +14,7 @@ Scala
 
 Instead of `injecting` your dependencies, you should simply [pass them as parameters](http://debasishg.blogspot.com/2011/03/pushing-envelope-on-oo-and-functional.html) of functions you are calling. This enable [referential transparency](https://en.wikipedia.org/wiki/Referential_transparency) of your programs.
 
-Most of the time, dependency injection does not solve a real business problem. You don't need to have a single place where you define which concrete instance your trait should be used. This is`accidental complexity`, as coined by Fred Brooks in [No Silver Bullet](`https://en.wikipedia.org/wiki/No_Silver_Bullet`)  
+Most of the time, dependency injection does not solve a real business problem. You don't need to have a single place where you define which concrete instance your trait should be used. This is`accidental complexity`, as coined by Fred Brooks in [No Silver Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet)  
 
 With [The play framework](https://www.playframework.com/) you should always use [compile-time dependency injection](https://www.playframework.com/documentation/2.5.x/ScalaCompileTimeDependencyInjection) which refers to using the [cake pattern](http://www.cakesolutions.net/teamblogs/2011/12/15/dependency-injection-vs-cake-pattern), a object oriented way to specify your components declaratively in scala.
 
