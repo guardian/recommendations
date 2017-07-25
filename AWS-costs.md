@@ -13,6 +13,9 @@ You can use the [Bills](https://console.aws.amazon.com/billing/home?region=eu-we
 ### Unattached Volumes
 Volumes available but not in used costs the same price. You can easily find them in the [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Volumes:state=available;sort=size) under Volumes section by filtering by state (available).
 
+### Unused AMIs
+Unused AMIs cost money.  You can easily clean them up using the [AMI cleanup tool](https://github.com/guardian/deploy-tools-platform/tree/master/cleanup)
+
 ### Unattached EIPs
 Unattached Elastic IP addresses costs money. You can easily find them using the trust advisor, or looking at your bills as they are free if they are attached (so in use).
 
