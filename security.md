@@ -38,8 +38,8 @@ local development you should use AWS profiles to manage credentials
 and these should be temporary credentials (e.g. provided by Janus).
 
 **Try to avoid using shared keys for SSH access.** Instead consider using
-the [ssh-keys feature](https://github.com/guardian/machine-images/tree/master/packer/resources/features/ssh-keys)
-built into machine images and/or using keys generated
+the [s3-ssh-keys feature](https://amigo.gutools.co.uk/roles#s3-ssh-keys)
+built into [amigo](https://amigo.gutools.co.uk/) and/or using keys generated
 by the [github-keys-to-s3 lambda](https://github.com/guardian/github-keys-to-s3-lambda).
 
 ## HTTPS everywhere
