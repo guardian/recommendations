@@ -25,7 +25,7 @@ accidental leakage, files containing secrets should be stored away
 from the project, completely outside of the source tree.
 
 **Use the OWASP Security Knowledge Framework**. Before releasing a new
-application make sure you run through the [Security Knowledge Framework](https://skf.gutools.co.uk/)
+application make sure you run through the [Security Knowledge Framework](https://www.securityknowledgeframework.org/)
 to get pointers on areas that might need extra attention. Revisit it
 from time to time to stay on top of changes in the application and the
 team.
