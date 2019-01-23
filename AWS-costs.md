@@ -56,6 +56,20 @@ There is 2 easy ways to solve this now and prevent it to happen in the future:
 * a [simple script](https://gist.github.com/mchv/9dccbd9245287b26e34ab78bad43ea6c) that can list them with size and potentially delete existing (based on [AWS API](http://docs.aws.amazon.com/cli/latest/reference/s3api/list-parts.html?highlight=list%20parts))
 * [Add a lifecycle rule](https://aws.amazon.com/blogs/aws/s3-lifecycle-management-update-support-for-multipart-uploads-and-delete-markers/) to each bucket to delete automatically incomplete multipart uploads after a few days  ([official AWS doc](http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)) 
 
+An example of how to cloud-form the lifecycle rule:
+
+```yaml
+  UploadBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "upload-bucket"
+      LifecycleConfiguration:
+        Rules:
+          - AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+            Status: Enabled
+```
+
 ### Bandwidth
 Compress the outgoing traffic.
 New AWS instance types often have cost savings potential.
