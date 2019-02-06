@@ -24,18 +24,23 @@ stored in version control, even if the repo is "private". To prevent
 accidental leakage, files containing secrets should be stored away
 from the project, completely outside of the source tree.
 
-**Use the OWASP Security Knowledge Framework**. Before releasing a new
-application make sure you run through the [Security Knowledge Framework](https://skf.gutools.co.uk/)
-to get pointers on areas that might need extra attention. Revisit it
-from time to time to stay on top of changes in the application and the
-team.
-
 ## AWS
 
 **Do not use permanent AWS credentials.** Applications running in AWS
 should use `assumeRole` to gain access to other AWS resources. For
 local development you should use AWS profiles to manage credentials
 and these should be temporary credentials (e.g. provided by Janus).
+
+**Use Security HQ to get an overview of our AWS accounts.**
+Centralised Reporting from AWS services, including Trusted Advisor, is
+available in [Security HQ](https://security-hq.gutools.co.uk) and can be
+used to monitor the security status of our AWS accounts.
+
+**Use SSM-Scala for SSH access.**
+[SSM-scala](https://github.com/guardian/ssm-scala#ssm-scala) is a tool
+executing commands on EC2 instances authenticated by IAM credentials.
+The SSM Agent is baked into many of our AMI images and should be
+preferentially used to permanent keys.
 
 **Try to avoid using shared keys for SSH access.** Instead consider using
 the [s3-ssh-keys feature](https://amigo.gutools.co.uk/roles#s3-ssh-keys)
