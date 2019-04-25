@@ -7,6 +7,7 @@ It is recommended that apps use [AWS Parameter Store](https://docs.aws.amazon.co
 2. Free to use
 3. Versioned
 4. Encryption at rest
+5. Monitoring of access
 
 ##### Scala config
 Our own [simple-configuration](https://github.com/guardian/simple-configuration) library provides a convenient way to load config from Parameter Store and into [Typesafe config](https://github.com/lightbend/config) objects. The readme includes an example of using it in a Play app.
@@ -15,4 +16,4 @@ For existing projects which currently have their config stored in Typesafe (HOCO
 
 
 ##### Lambdas
-Lambdas may also use Parameter Store, though passing non-secret configuration through from Cloudformation as environment variables may be simpler and quicker.
+Lambdas may also use Parameter Store, and it's possible to have config passed in as environment variables directly from Parameter Store, [including secure strings](https://aws.amazon.com/about-aws/whats-new/2018/08/aws-cloudformation-introduces-dynamic-references-to-support-aws-/). 
