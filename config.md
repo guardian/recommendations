@@ -19,3 +19,8 @@ For existing projects which currently have their config stored in Typesafe (HOCO
 
 ##### Lambdas
 Lambdas may also use Parameter Store, and it's possible to have config passed in as environment variables directly from Parameter Store, [including secure strings](https://aws.amazon.com/about-aws/whats-new/2018/08/aws-cloudformation-introduces-dynamic-references-to-support-aws-/). 
+
+##### Secret rotation
+[AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) can perform secret rotation automatically for some AWS services.
+
+For Play secret rotation you can use [play-secret-rotation](https://github.com/guardian/play-secret-rotation) (which doesn't use Secrets Manager).
