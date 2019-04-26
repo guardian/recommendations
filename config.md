@@ -1,4 +1,5 @@
 ### Config
+Generally we encourage teams to pick the right technology for the task, but there are advantages to having consistency in how we manage our configuration.
 
 It is recommended that apps use [AWS Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html) for storing configuration.
 
@@ -8,6 +9,7 @@ It is recommended that apps use [AWS Parameter Store](https://docs.aws.amazon.co
 3. Versioned
 4. Encryption at rest
 5. Monitoring of access
+6. Integrates with Cloudformation
 
 ##### Scala config
 Our own [simple-configuration](https://github.com/guardian/simple-configuration) library provides a convenient way to load config from Parameter Store and into [Typesafe config](https://github.com/lightbend/config) objects. The readme includes an example of using it in a Play app.
