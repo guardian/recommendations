@@ -29,7 +29,18 @@ SQS
 ---
 
  * Use SQS's long polling support to minimise message processing latency.
+ 
+Alarming on 5XX Errors (CloudWatch Metrics)
+---
+When using EC2 and ELB/ALB there are two different counts for 5XX
+- `HTTPCode_Backend_5XX` produced by your application server
+- `HTTPCode_ELB_5XX` produced by the load balancer (metric name is slightly different for ALB) 
 
+To the client/consumer it doesn't matter what the source of the 5XX (backend or ELB).. it's still a 5XX - and we as engineers need to hear about it.
+
+Use 'Metric Math', to change any 5XX alarms to use the SUM of the `HTTPCode_Backend_5XX` and the `HTTPCode_ELB_5XX` metrics to capture ALL 5XX scenarios. For example see https://github.com/guardian/members-data-api/pull/425 
+
+![image](https://user-images.githubusercontent.com/19289579/83737803-6a09b300-a64b-11ea-81e6-33aa5e928c7c.png)
 
 NB: see also [Resiliency and Robustness](resiliency.md) and
 [Security](security.md), which have AWS-relevant recommendations.
