@@ -74,6 +74,6 @@ various areas below.
 
 - Don’t fail silently.
 - Report your JavaScript errors into a logging system (e.g. Sentry).
-- Define web performance budgest and track them
+- Define web performance budgets and track them
 
 ### Build tools/task runners
