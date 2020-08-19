@@ -6,9 +6,6 @@ free to justify why not.
 
 ## Assets
 
-- Pre-process before serving in production (e.g. Sass, ES6).
-- Minimize the number of HTTP requests using methods such as bundling
-  to avoid latency issues.
 - Minify assets (e.g. uglify).
 - Gzip all textual assets served, using GZip level 6 where possible
 - Optimise images for size (e.g. jpegtran, pngquant, giflossy, svgo,
@@ -29,23 +26,9 @@ free to justify why not.
 
 ## Dependencies
 
-- Make all your dependencies explicit using a dependency system
-  (e.g. AMD, CJS, ES6 modules, @import), rather than expecting them to
-  be provided by the environment.
 - If starting a new project, favour ES6 modules unless you can justify
   otherwise.
-- Do not commit your dependencies into Git. Instead, lock your dependencies (direct and transitive) using a lockfile or shrinkwrap file, e.g. jspm’s `config.js` or npm’s `shrinkwrap.json`.
-
-*TODO: How to publish your own libraries? What format to publish it in?
-NPM, Bower, JSPM, etc? How to depend on other libraries?*
-
-Favour the following libraries unless you can justify otherwise:
-- [lodash](https://lodash.com/) over [underscore](http://underscorejs.org/)
-- [reqwest](https://github.com/ded/reqwest) for AJAX
-- [moment](http://momentjs.com/) for dates
-
-*TODO: any others?*
-
+- Do not commit your dependencies into Git. Instead, lock your dependencies (direct and transitive) using a lockfile.
 
 ## Strategies
 
@@ -57,9 +40,6 @@ various areas below.
 
 - Cache as long as possible (for performance).
 - Ability to cache bust (distributing updates).
-- Bundle assets together based on their expected lifetime
-  (e.g. separate fast-changing app bundles from slow-changing
-  dependency bundle).
 
 ### Connectivity
 
@@ -83,8 +63,6 @@ various areas below.
 - Make sure tests are run against compiled (i.e. production-ready)
   assets when testing locally.
 - Serve sourcemaps for all your minified code.
-- Avoid programmatically generated CSS class names to simplify static
-  analysis.
 
 ### Browser support
 
@@ -96,12 +74,6 @@ various areas below.
 
 - Don’t fail silently.
 - Report your JavaScript errors into a logging system (e.g. Sentry).
-
-*TODO: Would be good to have something about performance (memory,
-responsiveness, etc), maybe a strategy to assess performance, some
-targets, automated testing or RUM?*
+- Define web performance budgest and track them
 
 ### Build tools/task runners
-
-- Have an automated process to produce your final assets (e.g. using
-  Grunt, Gulp, [Plumber](https://github.com/plumberjs/plumber), etc).
