@@ -28,7 +28,7 @@ free to justify why not.
 
 - If starting a new project, favour ES6 modules unless you can justify
   otherwise.
-- Do not commit your dependencies into Git. Instead, lock your dependencies (direct and transitive) using a lockfile.
+- Prefer locking your dependencies (direct and transitive) using a lockfile rather than committing them into Git.
 
 ## Strategies
 
