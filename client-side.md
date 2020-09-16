@@ -77,3 +77,5 @@ various areas below.
 - Define web performance budgets and track them
 
 ### Build tools/task runners
+
+- Have an automated process to produce your final assets (e.g. webpack, rollup, microbundle ).
