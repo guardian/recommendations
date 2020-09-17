@@ -4,6 +4,15 @@ These are recommendations from the experiences of multiple teams
 across the Guardian. Feel free to not follow of them, but also feel
 free to justify why not.
 
+## `@guardian` packages
+### Publishing
+- Publish packages in ES2020 JavaScript
+- Prefer including TypeScript types (e.g. [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html))
+### Consuming
+- Make sure you include all `@guardian` packages in `node_modules` in your transpilation toolchain 
+  - e.g. in a [`webpack.config.js`](https://github.com/webpack/webpack/issues/2031#issuecomment-219040479)
+
+
 ## Assets
 
 - Minify assets (e.g. uglify).
