@@ -24,7 +24,7 @@ For web-based products, ensure your interfaces:
 
 ### Assistive technology
 
-For web-based products, test each change using one of the [most commonly used screen reader / browser combinations](https://www.w3.org/TR/WCAG21/#input-modalities):
+For web-based products, test each change using one of the [most commonly used screen reader / browser combinations](https://webaim.org/projects/screenreadersurvey8/#browsercombos):
 
 - JAWS with Chrome or Internet Explorer
 - NVDA with Chrome or Firefox
@@ -32,17 +32,17 @@ For web-based products, test each change using one of the [most commonly used sc
 
 Also test your changes using only a keyboard.
 
-For native apps, test changes using the [most commonly used screen reader on the platform](https://www.w3.org/TR/WCAG21/#input-modalities):
+For native apps, test changes using the [most commonly used screen reader on the platform](https://webaim.org/projects/screenreadersurvey8/#mobilescreenreaders):
 
 - VoiceOver on iOS
 - Talkback on Android
 
 For all products, test changes using a screen magnifier:
 
-- [Magnifier on iOS](https://www.w3.org/TR/WCAG21/#input-modalities)
-- [Magnifier on Android](https://www.w3.org/TR/WCAG21/#input-modalities)
-- [Zoom on OSX](https://www.w3.org/TR/WCAG21/#input-modalities)
-- [Magnifier on Windows](https://www.w3.org/TR/WCAG21/#input-modalities)
+- [Magnifier on iOS](https://support.apple.com/en-gb/HT209517)
+- [Magnifier on Android](https://support.google.com/accessibility/android/answer/6006949?hl=en-GB)
+- [Zoom on OSX](https://support.apple.com/en-gb/guide/mac-help/mh40579/10.15/mac/10.15)
+- [Magnifier on Windows](https://support.microsoft.com/en-gb/help/11542/windows-use-magnifier-to-make-things-easier-to-see)
 
 Changes to web-based products should also be tested using only a keyboard.
 
@@ -52,15 +52,15 @@ Incorporate automated accessibility testing tools into the CI process, where app
 
 The following tools have proven useful for web-based products:
 
-- [Lighthouse](https://www.w3.org/TR/WCAG21/#input-modalities)
-- [Pa11y](https://www.w3.org/TR/WCAG21/#input-modalities)
-- [React axe](https://www.w3.org/TR/WCAG21/#input-modalities)
-- [eslint-plugin-jsx-a11y](https://www.w3.org/TR/WCAG21/#input-modalities)
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+- [Pa11y](https://pa11y.org/)
+- [React axe](https://github.com/dequelabs/react-axe)
+- [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
 ### Audits
 
-Perform regular accessibility self-audits against your products. Tools such as [WAVE](https://www.w3.org/TR/WCAG21/#input-modalities) can help facilitate audits.
+Perform regular accessibility self-audits against your products. Tools such as [WAVE](https://wave.webaim.org/) can help facilitate audits.
 
 Prioritise and fix any issues in a health week.
 
-Arrange external audits for your product using a recognised accessibility auditing company (e.g. [the RNIB](https://www.w3.org/TR/WCAG21/#input-modalities)).
+Arrange external audits for your product using a recognised accessibility auditing company (e.g. [the RNIB](https://www.rnib.org.uk/rnib-business/website-and-apps)).
