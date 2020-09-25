@@ -2,7 +2,9 @@
 
 ## Compliance
 
-Products should comply with a subset of WCAG 2.1 AA standards. We should build user interfaces that:
+We use a subset of the WCAG 2.1 AA standards as our benchmark for accessible products.
+
+Aim to build user interfaces that:
 
 - Provide [text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives)
 - Are [adaptable](https://www.w3.org/TR/WCAG21/#adaptable)
@@ -13,7 +15,7 @@ Products should comply with a subset of WCAG 2.1 AA standards. We should build u
 - Help users [avoid or correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance)
 - Are [compatible](https://www.w3.org/TR/WCAG21/#compatible) with existing or future users agents and assistive technologies
 
-Of special interest to web-based products, we should ensure our interfaces:
+For web-based products, ensure your interfaces:
 
 - Are [keyboard accessible](https://www.w3.org/TR/WCAG21/#compatible)
 - Are [accessible to non-keyboard input devices](https://www.w3.org/TR/WCAG21/#input-modalities)
@@ -22,18 +24,20 @@ Of special interest to web-based products, we should ensure our interfaces:
 
 ### Assistive technology
 
-Where appropriate, each change should be tested using at least one of the [most commonly used screen reader / browser combinations](https://www.w3.org/TR/WCAG21/#input-modalities):
+For web-based products, test each change using one of the [most commonly used screen reader / browser combinations](https://www.w3.org/TR/WCAG21/#input-modalities):
 
 - JAWS with Chrome or Internet Explorer
 - NVDA with Chrome or Firefox
 - VoiceOver with Safari
 
-Native apps should be tested using the [most commonly used screen reader on the platform](https://www.w3.org/TR/WCAG21/#input-modalities):
+Also test your changes using only a keyboard.
+
+For native apps, test changes using the [most commonly used screen reader on the platform](https://www.w3.org/TR/WCAG21/#input-modalities):
 
 - VoiceOver on iOS
 - Talkback on Android
 
-Changes should be tested using a screen magnifier:
+For all products, test changes using a screen magnifier:
 
 - [Magnifier on iOS](https://www.w3.org/TR/WCAG21/#input-modalities)
 - [Magnifier on Android](https://www.w3.org/TR/WCAG21/#input-modalities)
@@ -44,7 +48,7 @@ Changes to web-based products should also be tested using only a keyboard.
 
 ### Tools
 
-Automated accessibility testing tools should be incorporated into the CI process, where appropriate.
+Incorporate automated accessibility testing tools into the CI process, where appropriate.
 
 The following tools have proven useful for web-based products:
 
@@ -55,8 +59,8 @@ The following tools have proven useful for web-based products:
 
 ### Audits
 
-Teams should perform regular accessibility self-audits on their products. They may use tools such as [WAVE](https://www.w3.org/TR/WCAG21/#input-modalities) to facilitate audits.
+Perform regular accessibility self-audits against your products. Tools such as [WAVE](https://www.w3.org/TR/WCAG21/#input-modalities) can help facilitate audits.
 
-The highest priority issues should be identified and fixed in a subsequent health week.
+Prioritise and fix any issues in a health week.
 
-As well as self-audits, products should undergo external audits from a recognised accessibility auditing company (e.g. [the RNIB](https://www.w3.org/TR/WCAG21/#input-modalities)).
+Arrange external audits for your product using a recognised accessibility auditing company (e.g. [the RNIB](https://www.w3.org/TR/WCAG21/#input-modalities)).
