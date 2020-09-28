@@ -46,8 +46,6 @@ For all products, test changes using a screen magnifier:
 - [Zoom on OSX](https://support.apple.com/en-gb/guide/mac-help/mh40579/10.15/mac/10.15)
 - [Magnifier on Windows](https://support.microsoft.com/en-gb/help/11542/windows-use-magnifier-to-make-things-easier-to-see)
 
-Changes to web-based products should also be tested using only a keyboard.
-
 ### Tools
 
 Incorporate automated accessibility testing tools into the CI process, where appropriate.
