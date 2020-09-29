@@ -22,9 +22,9 @@ For web-based products, ensure your interfaces:
 - Are [keyboard accessible](https://www.w3.org/TR/WCAG21/#compatible)
 - Are [accessible to non-keyboard input devices](https://www.w3.org/TR/WCAG21/#input-modalities)
 
-## Testing
+## Assistive technology
 
-### Assistive technology
+### Web
 
 For web-based products, test each change using one of the [most commonly used screen reader / browser combinations](https://webaim.org/projects/screenreadersurvey8/#browsercombos):
 
@@ -32,12 +32,23 @@ For web-based products, test each change using one of the [most commonly used sc
 - NVDA with Chrome or Firefox
 - VoiceOver with Safari
 
+WebAIM provides a useful guide to [testing accessibility with VoiceOver](https://webaim.org/articles/voiceover/).
+
 Also test your changes using only a keyboard.
+
+Test each change using speech recognition software:
+
+- [Speech Recognition on Windows](https://support.microsoft.com/en-gb/help/12427)
+- [Voice Control (or Dictation on MacOS < 10.15) with Safari](https://support.apple.com/en-gb/guide/mac-help/mh40719/10.15/mac/10.15)
+
+### Native
 
 For native apps, test changes using the [most commonly used screen reader on the platform](https://webaim.org/projects/screenreadersurvey8/#mobilescreenreaders):
 
 - VoiceOver on iOS
 - Talkback on Android
+
+### All products
 
 For all products, test changes using a screen magnifier:
 
@@ -46,7 +57,7 @@ For all products, test changes using a screen magnifier:
 - [Zoom on OSX](https://support.apple.com/en-gb/guide/mac-help/mh40579/10.15/mac/10.15)
 - [Magnifier on Windows](https://support.microsoft.com/en-gb/help/11542/windows-use-magnifier-to-make-things-easier-to-see)
 
-### Tools
+## Tools
 
 Incorporate automated accessibility testing tools into the CI process, where appropriate.
 
@@ -57,7 +68,7 @@ The following tools have proven useful for web-based products:
 - [React axe](https://github.com/dequelabs/react-axe)
 - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
-### Audits
+## Audits
 
 Perform regular accessibility self-audits against your products. Tools such as [WAVE](https://wave.webaim.org/) can help facilitate audits.
 
