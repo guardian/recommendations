@@ -13,9 +13,9 @@ Aim to build user interfaces that:
 - Are [navigable](https://www.w3.org/TR/WCAG21/#navigable)
 - Are [predictable](https://www.w3.org/TR/WCAG21/#navigable)
 - Help users [avoid or correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance)
-- Are [compatible][] with existing or future users agents and assistive technologies
+- Are [compatible][compatible] with existing or future users agents and assistive technologies
 
-[compatible]: (https://www.w3.org/TR/WCAG21/#compatible)
+[compatible]: https://www.w3.org/TR/WCAG21/#compatible
 
 For web-based products, ensure your interfaces:
 
@@ -38,8 +38,11 @@ Also test your changes using only a keyboard.
 
 Test each change using speech recognition software:
 
-- [Speech Recognition on Windows](https://support.microsoft.com/en-gb/help/12427)
-- [Voice Control (or Dictation on MacOS < 10.15) with Safari](https://support.apple.com/en-gb/guide/mac-help/mh40719/10.15/mac/10.15)
+- [Speech Recognition][speech-recognition] on Windows
+- [Voice Control][voice-control] (or Dictation on MacOS < 10.15) with Safari
+
+[speech-recognition]: https://support.microsoft.com/en-gb/help/12427
+[voice-control]: https://support.apple.com/en-gb/guide/mac-help/mh40719/10.15/mac/10.15
 
 ### Native
 
