@@ -60,6 +60,20 @@ For all products, test changes using a screen magnifier:
 - [Zoom on OSX](https://support.apple.com/en-gb/guide/mac-help/mh40579/10.15/mac/10.15)
 - [Magnifier on Windows](https://support.microsoft.com/en-gb/help/11542/windows-use-magnifier-to-make-things-easier-to-see)
 
+## Design system
+
+In web products, use the standard [UI components][ui-components] and [typography snippets][typography-snippets] provided by the Source Design System. These are optimised for accessibility.
+
+For all products, try to use:
+
+- [colour tokens][colour-tokens] to ensure text and iconography have suitable colour contrast
+- [size tokens][size-tokens] to ensure interactive elements have adequate target size
+
+[ui-components]: https://www.theguardian.design/2a1e5182b/p/77ee17-overview
+[typography-snippets]: https://www.theguardian.design/2a1e5182b/p/95d5d0-code
+[colour-tokens]: https://www.theguardian.design/2a1e5182b/p/1377a6-tokens/b/293ddb
+[size-tokens]: https://www.theguardian.design/2a1e5182b/p/00ddcb-tokens
+
 ## Tools
 
 Incorporate automated accessibility testing tools into the CI process, where appropriate.
@@ -68,7 +82,7 @@ The following tools have proven useful for web-based products:
 
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 - [Pa11y](https://pa11y.org/)
-- [React axe](https://github.com/dequelabs/react-axe)
+- [React axe](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react)
 - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
 ## Audits
