@@ -82,7 +82,7 @@ The following tools have proven useful for web-based products:
 
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 - [Pa11y](https://pa11y.org/)
-- [React axe](https://github.com/dequelabs/react-axe)
+- [React axe](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react)
 - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
 ## Audits
