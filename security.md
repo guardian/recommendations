@@ -17,6 +17,8 @@ directly depend on the data should be able to access it.
 within the team and under your control. Don't share it with other
 teams, don't store it in cookies and don't let it sit in caches.
 
+**Keep data only for as long as it is needed** Ensure retention policies are implemented aligned with the requirements set for the type of data you are storing. Use [AWS object life-cycle managemet](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) whenever possible.
+
 ## Application development
 
 **Keep secrets out of repositories.** Application secrets must not be
