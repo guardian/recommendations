@@ -29,7 +29,55 @@ SQS
 ---
 
  * Use SQS's long polling support to minimise message processing latency.
- 
+
+Lambda
+------
+
+You may occasionally see unexpected socket errors in NodeJS lambdas:
+
+```
+Error: socket hang up
+    at connResetException (internal/errors.js:608:14)
+    at TLSSocket.socketOnEnd (_http_client.js:460:23)
+    at TLSSocket.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+```
+
+```
+TimeoutError: Socket timed out without establishing a connection
+```
+
+It is a known issue with the Node 10 and 12 AWS runtimes and can happen in the following situations:
+
+- The function has not been invoked for between 3 to 5 minutes
+
+and the the function does one or more of the following:
+
+- Tries to re-use connections
+- Has an async root handler
+- Doesn't have any other pending callbacks (file read tasks, setTimeout/Interval timer handles etc)
+
+This started happening after a change in how the event loop works between NodeJS 8 and 10. The method AWS uses to freeze the lambda runtime after it has not been invoked for a while may not work correctly in the cases above.
+
+The workaround is simple (if a little silly). Wrap your root handler in a setTimeout:
+
+```javascript
+exports.handler = function (event, context, callback) {
+    setTimeout(function () {
+        // Lambda Function code },
+    0);
+};
+```
+
+If you hit this problem only because you have an async root handler, you can swap it out for the traditional callback style:
+
+```typescript
+export function handler(event: Event, context: any, callback: (err: Error | null, result?: any) => void)
+```
+
+AWS advise you should only use the workaround if you see errors.
+
 Alarming on 5XX Errors (CloudWatch Metrics)
 ---
 When using EC2 and ELB/ALB there are two different counts for 5XX
