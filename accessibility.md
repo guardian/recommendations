@@ -9,12 +9,14 @@ Aim to build user interfaces that:
 - Provide [text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives)
 - Are [adaptable](https://www.w3.org/TR/WCAG21/#adaptable)
 - Are [distinguishable](https://www.w3.org/TR/WCAG21/#distinguishable)
+- Give [enough time][] to read and use
 - Do not [trigger seizures or physical reactions](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
 - Are [navigable](https://www.w3.org/TR/WCAG21/#navigable)
 - Are [predictable](https://www.w3.org/TR/WCAG21/#navigable)
 - Help users [avoid or correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance)
-- Are [compatible][compatible] with existing or future users agents and assistive technologies
+- Are [compatible][] with existing or future users agents and assistive technologies
 
+[enough time]: https://www.w3.org/TR/WCAG21/#enough-time
 [compatible]: https://www.w3.org/TR/WCAG21/#compatible
 
 For web-based products, ensure your interfaces:
