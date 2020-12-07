@@ -6,7 +6,7 @@ Pull requests are:
 
 ## Small and frequent
 
-A good pull request is easy to understand. There should be a manageable number of changes in each pull request. Try to make your pull request as small as possible why still advancing the functionality of the product.
+A good pull request is easy to understand. There should be a manageable number of changes in each pull request. Try to make your pull request as small as possible while still advancing the functionality of the product.
 
 Aim to deploy a pull request before submitting the next one. Frequently small deployments of functionality are easier to review and easier to understand in production.
 
