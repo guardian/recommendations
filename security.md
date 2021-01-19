@@ -44,11 +44,6 @@ executing commands on EC2 instances authenticated by IAM credentials.
 The SSM Agent is baked into many of our AMI images and should be
 preferentially used to permanent keys.
 
-**Try to avoid using shared keys for SSH access.** Instead consider using
-the [s3-ssh-keys feature](https://amigo.gutools.co.uk/roles#s3-ssh-keys)
-built into [amigo](https://amigo.gutools.co.uk/) and/or using keys generated
-by the [github-keys-to-s3 lambda](https://github.com/guardian/github-keys-to-s3-lambda).
-
 ## HTTPS everywhere
 
 **_All_ external endpoints should be served over HTTPS.**
