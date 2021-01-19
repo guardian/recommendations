@@ -33,6 +33,11 @@ should use `assumeRole` to gain access to other AWS resources. For
 local development you should use AWS profiles to manage credentials
 and these should be temporary credentials (e.g. provided by Janus).
 
+**Ensure that at least 2 people have IAM logins for each AWS account.**  
+In the event of a VPN or Janus outage this will ensure that teams can
+still access their account. IAM users should have 2FA enabled and no
+active access keys.
+
 **Use Security HQ to get an overview of our AWS accounts.**
 Centralised Reporting from AWS services, including Trusted Advisor, is
 available in [Security HQ](https://security-hq.gutools.co.uk) and can be
