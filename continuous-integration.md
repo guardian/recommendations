@@ -1,6 +1,7 @@
-# Continuous Integration
+Continuous Integration
+---
 
-**Our vision: At the Guardian, we have a consistent and transparent method of maintaining continuous integration and deployment, with all non-private configuration stored under version control.**
+**[Our vision](https://docs.google.com/document/d/1O5QbX-p9ujZyx9QcnmQ4yIiEv0XvsdztzXMwG5UPU6M/edit?ts=5ffdaadf): At the Guardian, we have a consistent and transparent method of maintaining continuous integration and deployment, with all non-private configuration stored under version control.**
                                                                                               
 Currently, we primarily use TeamCity for continuous integration, with some teams migrating certain applications to GitHub Actions.
 
@@ -9,14 +10,12 @@ To simplify and ease the process of managing continuous integration at the Guard
 
 ## CI configuration within the repository
  - A single file for configuring CI steps (such as a GitHub Action file in .github/workflows, or [TeamCity configuration as code](https://blog.jetbrains.com/teamcity/2019/03/configuration-as-code-part-1-getting-started-with-kotlin-dsl/))
- - A single bash script containing CI steps, ideally located in `script/ci` and following GitHub's [Scripts To Rule Them All pattern](https://github.com/github/scripts-to-rule-them-all) 
+ - A single bash script to run CI commands, ideally `script/ci`, following GitHub's [Scripts To Rule Them All pattern](https://github.com/github/scripts-to-rule-them-all)
+    - This script can call multiple sub-scripts to avoid `script/ci` becoming excessively lengthy
  
 ## Required CI configuration, actions and behaviours outside the repository
 
-You should only need to navigate outside the repository for one-off actions, such as:
- - Deploying your version of an app to an environment (eg deploying a branch to CODE)
- - Creating CloudFormation stacks and viewing deploy histories 
- 
- Ideally, you would only need to go one or two UIs for all of these behaviours, and custom services and tooling would be in place to handle these behaviours with ease and efficiency.
+At the moment, you will need to navigate to TeamCity's UI to set up and configure your application.
+In the future, we will aim for continuous integration to be automatically generated for applications, with GitHub Actions already making this possible by adding a `.github/workflows` file.
 
-To achieve this, we can provision AWS accounts with appropriate configuration and sensible defaults, allowing developers to write minimal CI configuration in order to get their changes tested, built and deployed to their infrastructure.
+We can provision AWS accounts with appropriate configuration and sensible defaults, allowing developers to write minimal configuration in order to get their changes tested, built and deployed to their infrastructure.
