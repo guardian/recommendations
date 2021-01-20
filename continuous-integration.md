@@ -1,11 +1,30 @@
 Continuous Integration
----
+====
+
+## Current practices
+
+### Platforms
+
+* Use TeamCity to run continuous integration tasks such as:
+    - Running tests
+    - Linting your codebase
+    - Publishing artifacts to RiffRaff
+* If possible, have a centralised script in the repository named `scripts/ci`  
+    - This adheres to GitHub's [Scripts To Rule Them All pattern](https://github.com/github/scripts-to-rule-them-all)
+* For public repositories, you can use [GitHub Actions](https://docs.github.com/en/actions) for some above tasks, but we are yet to develop a safe way of uploading artifacts to RiffRaff through it
+
+### Publishing artifacts
+
+You should publish artifacts to [RiffRaff](https://github.com/guardian/riff-raff). 
+Two useful libraries for doing so are:
+ 
+* [`node-riffraff-artifact`](https://www.npmjs.com/package/@guardian/node-riffraff-artifact) for publishing Node project artifacts (such as AWS Lambdas)
+* [`sbt-riffraff-artifact`](https://github.com/guardian/sbt-riffraff-artifact) for publishing artifacts from Scala projects
+
+## Vision
 
 **[Our vision](https://docs.google.com/document/d/1O5QbX-p9ujZyx9QcnmQ4yIiEv0XvsdztzXMwG5UPU6M/edit?ts=5ffdaadf): At the Guardian, we have a consistent and transparent method of maintaining continuous integration and deployment, with all non-private configuration stored under version control.**
-                                                                                              
-Currently, we primarily use TeamCity for continuous integration, with some teams migrating certain applications to GitHub Actions.
-
-Per repository, we have around 10 different places to maintain continuous integration, deployment and delivery at the Guardian - see the [research document](https://docs.google.com/document/d/1ZshliBZMYogwbSMZv8xgghohn0KGjPxCfBmXj75xL8k/edit#) for more information. 
+                     
 To simplify and ease the process of managing continuous integration at the Guardian, we [propose](https://docs.google.com/document/d/1O5QbX-p9ujZyx9QcnmQ4yIiEv0XvsdztzXMwG5UPU6M/edit?ts=5ffdaadf) to have it set up like so:
 
 ## CI configuration within the repository
