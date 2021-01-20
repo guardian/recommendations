@@ -5,14 +5,18 @@ across the Guardian. Feel free to not follow of them, but also feel
 free to justify why not.
 
 ## `@guardian` packages
+
 ### Publishing
+
 - Publish packages in ES2020 JavaScript (see `target` in [TypeScript's compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html))
 - Do not ship or depend on polyfills
 - Prefer including TypeScript types (e.g. [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html))
+- Use [np](https://www.npmjs.com/package/np) to publish packages. Add it as a project dependency and call it via a `release` script in your `package.json`.
+
 ### Consuming
+
 - Make sure you including any `@guardian` packages for transpilation in your build process 
   - e.g. in a [`webpack.config.js`](https://github.com/webpack/webpack/issues/2031#issuecomment-219040479)
-
 
 ## Assets
 
@@ -24,7 +28,6 @@ free to justify why not.
   unsupported?
 - Avoid inlining encoded assets in CSS.
 
-
 ## Coding style
 
 - Have an [.editorconfig](http://editorconfig.org/) file in your repo.
@@ -32,7 +35,6 @@ free to justify why not.
   csslint).
 - Don’t enforce coding styles in pull requests. Add linting dot files
   (e.g. .jshintrc) to your project instead.
-
 
 ## Dependencies
 
