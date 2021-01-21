@@ -32,6 +32,8 @@ Guidelines
  * [Applications](applications.md)
  * [AWS](AWS.md)
  * [AWS Costs](AWS-costs.md)
+ * [Continuous Integration](continuous-integration.md)
+ * [Continuous Deployment](continuous-deployment.md)
  * [Scala](scala.md)
  * [Elasticsearch](elasticsearch.md)
  * [Pull requests](pull-requests.md)
