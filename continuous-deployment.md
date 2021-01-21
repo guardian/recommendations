@@ -1,13 +1,23 @@
 Continuous Deployment
 -----
 
-## Current practices
+Continuous Deployment (CD) is a software release process where verified changes to a codebase are deployed immediately and autonomously to a production environment.
+
+You should have continuous deployment set up for your repository, with the following behaviours configured if applicable:
+* Automatically deploying changes to the `main` branch to production
+* Regularly redeploying the application on a schedule
+* Restricting deployments if and when required
+
+You should already have [continuous integration](continuous-integration.md) configured in order to set up continuous deployment.
+This ensures the deployed code is safe and ready for deployment. 
+
+## Platforms
 
 * Use [RiffRaff](https://github.com/guardian/riffraff) to deploy your application, set up scheduled deploys and configure continuous deployment
-    - Set up scheduled deploys, continuous deployment, scheduled deployment and deployment restrictions in the RiffRaff UI
+    - Set up scheduled deploys, continuous deployment and deployment restrictions in the RiffRaff UI
     - Configure your RiffRaff deployment types inside your repository's `riff-raff.yaml` file 
 
-## Our Vision
+## Future Vision
 
 **Our vision: At the Guardian, we have a consistent and transparent method of maintaining continuous integration and deployment, with all non-private configuration stored under version control.**
  
