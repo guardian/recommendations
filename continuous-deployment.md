@@ -5,7 +5,7 @@ Continuous Deployment (CD) is a software release process where verified changes 
 
 You should have continuous deployment set up for your repository, with the following behaviours configured if applicable:
 * Automatically deploying changes to the `main` branch to production
-* Regularly redeploying the application on a schedule
+* Using an AMIgo AMI and regularly redeploying the application on a schedule
 * Restricting deployments if and when required
 
 You should already have [continuous integration](continuous-integration.md) configured in order to set up continuous deployment.
