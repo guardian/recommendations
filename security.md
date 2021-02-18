@@ -53,6 +53,11 @@ preferentially used to permanent keys.
 
 **_All_ external endpoints should be served over HTTPS.**
 
+## Third party dependencies/software
+You should perform due diligence to check that any dependencies your 
+project uses are still supported and receive security updates. The 
+[snyk advisor](https://snyk.io/advisor/) is a helpful starting point.
+
 ## Personal hygiene
 
 **Disk encryption.** All machines that you do work on must have disk
