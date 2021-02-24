@@ -11,7 +11,7 @@ free to justify why not.
 - Publish packages in ES2020 JavaScript (see `target` in [TypeScript's compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html))
 - Do not ship or depend on polyfills
 - Include TypeScript [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) if your project uses TypeScript.
-  - Never publish `.ts`/`.tsx` files – they depend on an unknownable, per-project TypeScript configuration.
+  - Do not publish `.ts`/`.tsx` files – they depend on an unknownable, per-project TypeScript configuration.
 - Use [np](https://www.npmjs.com/package/np) to publish packages. Add it as a project dependency and call it via a `release` script in your `package.json`.
 
 ### Consuming
