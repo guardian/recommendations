@@ -102,9 +102,9 @@ Publish manually from the command line using [np](https://www.npmjs.com/package/
 
 ## Using `@guardian` NPM packages
 
-To ensure the Guardian's application bundles are as efficient as possible, packages assume nothing about where they will run.
+To ensure the Guardian's application bundles are as efficient as possible, packages assume nothing about the environment in which their code will run (e.g. which browsers, versions of browsers etc).
 
-Applications that install `@guardian` packages should decide what language features they will need to polyfill etc.
+Applications that install `@guardian` packages should decide what language features they will need to transpile or polyfill.
 
 Therefore, you need to make sure you include any `@guardian` packages for transpilation in your build process.
 
