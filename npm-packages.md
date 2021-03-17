@@ -11,7 +11,7 @@ Write your library in [TypeScript](https://www.typescriptlang.org).
 
 ### Packaging
 
-Do not include your TypeScript source code in your package. Instead, publish compiled JavaScript and [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+Do not include your TypeScript source code in your package. Instead, compile your source to JavaScript and [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) and publish those.
 
 > TypeScript depends on a project-specific configuration, and your setup may not be the same the project that installs your package
 
