@@ -11,22 +11,22 @@ Write your library in [TypeScript](https://www.typescriptlang.org).
 
 ### Packaging
 
-Do not include your TypeScript source code in your package. Instead, publish compiled JavaScript files and [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
+Do not include your TypeScript source code in your package. Instead, publish compiled JavaScript and [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 
-> TypeScript files depend on a project-specific configuration, and your setup may not be the same the project that installs your package
+> TypeScript depends on a project-specific configuration, and your setup may not be the same the project that installs your package
 
-Do not include or depend on [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill). Leave these decisions to the projects that install your package (see the section on using our packages below).
+Do not include or depend on [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill). Let projects that install your package decide what they need (see the section on using our packages below).
 
 #### Compiling
 
-Use the TypeScript compiler (`tsc`) to generate the JavaScript files and TypeScript [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) that you publish.
+Use the TypeScript compiler (`tsc`) to generate the JavaScript and TypeScript [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) that you publish.
 
 Generate two versions of your library:
 
 1. ES modules targetting ES2020
 2. CommonJS modules targetting ES2018 (Node 10+)
 
-> CommonJS is a non-standard module format used by older versions of Node. These files are useful with [Jest](https://jestjs.io/) or if your library is used on the server, for example. At some point we will probably stop including these but currently it adds little overhead and has some value.
+> CommonJS is a non-standard module format used by older versions of Node. These files are useful with [Jest](https://jestjs.io/) or if your library is used on the server, for example. At some point we will probably stop publishing these but currently it adds little overhead and has some value.
 
 ##### Example
 
@@ -45,7 +45,7 @@ Generate two versions of your library:
 }
 ```
 
-You could then run:
+Given the above, you could run:
 
 -   `tsc` to generate the default ES modules version and TypeScript declaration files
 -   `tsc --module commonjs --target es2018 --outDir dist/cjs` to generate a CommonJS version
@@ -70,11 +70,11 @@ Publish under the [`@guardian`](https://www.npmjs.com/org/guardian) scope.
 }
 ```
 
-#### File references
+#### Module references
 
-The ES module version of your library should be referenced in the `module` field.
+The ES module version of your library should be referenced by the `module` field.
 
-The CommonJS version should be referenced in the `main` field, and the TypeScript declaration files in the `types` field.
+The CommonJS version should be referenced by the `main` field, and the TypeScript declaration files by the `types` field.
 
 ##### Example
 
@@ -92,7 +92,9 @@ The CommonJS version should be referenced in the `main` field, and the TypeScrip
 
 #### Continuous delivery
 
-Use [Semantic Release](https://github.com/semantic-release/semantic-release) in a GitHub action with [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to automate publishing.
+Use [Semantic Release](https://github.com/semantic-release/semantic-release) in a GitHub action.
+
+If your release branch is protected (a good idea) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps.
 
 #### Spontaneous publishing
 
