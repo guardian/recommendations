@@ -3,7 +3,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Publishing a `@guardian` package to NPM
+## Publishing a `@guardian` library as an NPM package
 
 ### Authoring
 
@@ -11,15 +11,15 @@ Write your library in [TypeScript](https://www.typescriptlang.org).
 
 ### Packaging
 
-Do not publish your source code in your package, especially if you use TypeScript.
+Do not include your TypeScript source code in your package. Instead, publish compiled JavaScript files and [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
 
 > TypeScript files depend on a project-specific configuration, and your setup may not be the same the project that installs your package
 
-Do not include or depend on [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill).
+Do not include or depend on [polyfills](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill). Leave these decisions to the projects that install your package (see the section on using our packages below).
 
 #### Compiling
 
-Use the TypeScript compiler (`tsc`) to generate the JavaScript files and TypeScript [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) that you will publish.
+Use the TypeScript compiler (`tsc`) to generate the JavaScript files and TypeScript [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) that you publish.
 
 Generate two versions of your library:
 
