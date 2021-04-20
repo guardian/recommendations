@@ -31,6 +31,14 @@ SQS
 
  * Use SQS's long polling support to minimise message processing latency.
 
+S3
+--
+
+ * Don't delete S3 buckets once they're not used any more
+   * S3 bucket names are global and someone else could pick up the same name
+   * This may pose a security risk if we inadvertently still use or reference the bucket
+   * Instead remove everything from within the bucket and/or set a minimal ACL so it cannot be accessed other than by Janus users
+
 Lambda
 ------
 
