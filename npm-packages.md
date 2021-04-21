@@ -94,7 +94,7 @@ The CommonJS version should be referenced by the `main` field, and the TypeScrip
 
 Use [Semantic Release](https://github.com/semantic-release/semantic-release) in a GitHub action.
 
-If your release branch is protected (a good idea) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps.
+If your release branch is protected ([a good idea](https://github.com/guardian/recommendations/blob/master/github.md)) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps.
 
 ##### **Parsing Commit Messages**
 
