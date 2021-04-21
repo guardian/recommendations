@@ -98,7 +98,7 @@ If your release branch is protected (a good idea) use [guardian/actions-merge-re
 
 ##### **Parsing Commit Messages**
 
-Use tooling to aid crafting and verfying commits and/or PR titles to ensure that the new version determined by the [semantic-release/commit-analyser](https://github.com/semantic-release/commit-analyzer) plugin is correct with one of the following stategies:
+Use tooling to help write and verify commits/PR titles. This will ensure that the [semantic-release/commit-analyser](https://github.com/semantic-release/commit-analyzer) plugin can determine the correct new version using one of the following strategies:
 
 ###### PR Titles
 
@@ -128,9 +128,9 @@ jobs:
 
 ###### Commit Messages
 
-When using commit messages to determine the new version, it is possible to either use conforming commits for every commit or only for a single commit within the pull request. The first strategy reduces the effort of the developer but makes it much harder to validate that the lack of conformity is deliberate.
+If you rely on commit messages to determine the new version, you can rely on every commit or just a single commit within the pull request. The first strategy reduces overhead in development, but it becomes difficult to validate that the lack of conformity is deliberate.
 
-To aid the process of crafting confirming commit messages, tools such as [commitizen](https://github.com/commitizen/cz-cli) can be used. This presents a command line interface at the point of comitting to craft commits following convention.
+Tools such as [commitizen](https://github.com/commitizen/cz-cli) can help developers write valid commit messages at the point of committing.
 
 #### Spontaneous publishing
 
