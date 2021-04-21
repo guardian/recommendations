@@ -94,7 +94,43 @@ The CommonJS version should be referenced by the `main` field, and the TypeScrip
 
 Use [Semantic Release](https://github.com/semantic-release/semantic-release) in a GitHub action.
 
-If your release branch is protected (a good idea) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps.
+If your release branch is protected ([a good idea](https://github.com/guardian/recommendations/blob/master/github.md)) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps.
+
+##### **Parsing Commit Messages**
+
+Use tooling to help write and verify commits/PR titles. This will ensure that the [semantic-release/commit-analyser](https://github.com/semantic-release/commit-analyzer) plugin can determine the correct new version using one of the following strategies:
+
+###### PR Titles
+
+Use conforming PR titles and merge via the [squash and merge](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#squash-and-merge-your-pull-request-commits) strategy (as the PR title is used as the commit message to the base branch).
+
+In this case, configure your repository to only allow the squash and merge strategy and use a status check (such as [amannn/action-semantic-pull-request](https://github.com/marketplace/actions/semantic-pull-request)) to validate that the PR title conforms to the convention. With [amannn/action-semantic-pull-request](https://github.com/marketplace/actions/semantic-pull-request), use the `pull_request` target and set the `validateSingleCommit` option to true to validate the commit message for single commit PRs as this is the default value that GitHub will use for the commit message when squashing and merging. For example:
+
+```yaml
+# .github/workflows/pr.yaml
+name: PR
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v3.4.0
+        with:
+          validateSingleCommit: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+###### Commit Messages
+
+If you rely on commit messages to determine the new version, you can rely on every commit or just a single commit within the pull request. The first strategy reduces overhead in development, but it becomes difficult to validate that the lack of conformity is deliberate.
+
+Tools such as [commitizen](https://github.com/commitizen/cz-cli) can help developers write valid commit messages at the point of committing.
 
 #### Spontaneous publishing
 
