@@ -165,3 +165,29 @@ module: {
 	]
 }
 ```
+
+## Running NPM packages as binaries in CI
+Various Node libraries can be run over the CLI using tools like `npx` or `yarn dlx`.
+
+The `npx` and `yarn dlx` tools are not deterministic as they do not work off a lockfile, they will install dependencies 
+according to the library's `package.json`.
+That is if the library depends on `^1.0.0` of a library, `npx` can resolve this to `1.0.0` today and `1.99.0` tomorrow.
+
+To ensure a deterministic and repeatable CI build, it is recommended to directly install a package and use a script to run it.
+This will result in entries in your project's lockfile as the library is treated like any other dependency.
+
+### Example
+Rather than `npx @guardian/node-riffraff-artifact`, prefer to update `package.json`:
+
+```
+{
+  "devDependencies": {
+    "@guardian/node-riffraff-artifact": "^0.2.1"
+  },
+  "scripts": {
+    "riffraff-upload": "node-riffraff-artifact"
+  }
+}
+```
+
+Then run script `npm run riffraff-upload` in CI.
