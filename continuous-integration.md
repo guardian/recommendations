@@ -7,7 +7,7 @@
 Continuous Integration
 ======================
 
-[Continuous Integration (CI)](https://www.martinfowler.com/articles/continuousIntegration.html) is a practice where developers frequently integrate their work frequently, usually each person integrates at least daily, leading to multiple integrations per day. Each integration is verified by an automated build and checks run on each check-in, allowing teams to detect problems early.
+[Continuous Integration (CI)](https://www.martinfowler.com/articles/continuousIntegration.html) is a practice where developers frequently integrate their work, usually each person integrates at least daily, leading to multiple integrations per day. Each integration is verified by an automated build and checks run on each check-in, allowing teams to detect problems early.
 
 ## Tasks
 
