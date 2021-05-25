@@ -23,7 +23,7 @@ You should have continuous integration set up in your repository running the fol
 The purpose of CI is to have rapid feedback and as such you should favour `speedness` over `correctness` and direct  `costs`.    
 Quoting `Martin Folwer`:  
 
-_For most projects, however, the XP guideline of a ten minute build is perfectly within reason. Most of our modern projects achieve this. It's worth putting in concentrated effort to make it happen, because every minute you reduce off the build time is a minute saved for each developer every time they commit. Since CI demands frequent commits, this adds up to a lot of time._
+> For most projects, however, the XP guideline of a ten minute build is perfectly within reason. Most of our modern projects achieve this. It's worth putting in concentrated effort to make it happen, because every minute you reduce off the build time is a minute saved for each developer every time they commit. Since CI demands frequent commits, this adds up to a lot of time.
 
 In a news organisation having a minimal time to recovery can be important due to the unpredictability of the news agenda, and the importance of timing.
 Every minute you reduce your building time is a minute saved when you will need to fix an issue on `PROD` at a critical moment. 
