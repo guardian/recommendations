@@ -42,6 +42,7 @@ S3
 Lambda
 ------
 
+## Unexpected socket errors in Node v10 and 12 lambdas
 You may occasionally see unexpected socket errors in NodeJS lambdas:
 
 ```
@@ -86,6 +87,19 @@ export function handler(event: Event, context: any, callback: (err: Error | null
 ```
 
 AWS advise you should only use the workaround if you see errors.
+
+## Long-running lambda triggered multiple times from CLI `aws lambda invoke`
+
+The AWS CLI has a timeout set by [`--cli-read-timeout`](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html#:~:text=cli%2Dread%2Dtimeout), which determines how long (in seconds) it will wait for data on an open socket.
+
+The implicit default seems to be 60 seconds. If you use the CLI to trigger a lambda synchronously (`--invocation-type RequestResponse`), and your if the lambda runs longer than 60 seconds, the CLI will terminate the first request and trigger a retry. Your lambda will execute multiple times, despite the first invocation having succeeded. (Question: is this retry caused by the lambda service, or the CLI?).
+
+The solution is to set `--cli-read-timeout` to a value longer than your lambda timeout, or set it to `0` to remove the timeout and make the socket read wait indefinitely.
+
+There is a StackOverflow thread about this issue here:
+
+https://stackoverflow.com/questions/53898894/aws-lambda-timeout-when-another-long-lambda-is-invoked
+
 
 Alarming on 5XX Errors (CloudWatch Metrics)
 ---
