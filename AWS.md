@@ -42,7 +42,7 @@ S3
 Lambda
 ------
 
-## Unexpected socket errors in Node v10 and 12 lambdas
+### Unexpected socket errors in Node v10 and 12 lambdas
 You may occasionally see unexpected socket errors in NodeJS lambdas:
 
 ```
@@ -88,7 +88,7 @@ export function handler(event: Event, context: any, callback: (err: Error | null
 
 AWS advise you should only use the workaround if you see errors.
 
-## Long-running lambda triggered multiple times from CLI `aws lambda invoke`
+### Long-running lambda triggered multiple times from CLI `aws lambda invoke`
 
 The AWS CLI has a timeout set by [`--cli-read-timeout`](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html#:~:text=cli%2Dread%2Dtimeout), which determines how long (in seconds) it will wait for data on an open socket.
 
