@@ -103,8 +103,7 @@ There is a StackOverflow thread about this issue here:
 https://stackoverflow.com/questions/53898894/aws-lambda-timeout-when-another-long-lambda-is-invoked
 
 #### Recommendation
-- Set `--cli-read-timeout` to a value longer than your lambda timeout
-- OR, set `--cli-read-timeout` to `0` to remove the timeout and make the socket read wait indefinitely.
+Set `--cli-read-timeout` to `0` to remove the timeout and make the socket read wait indefinitely.
 
 
 Alarming on 5XX Errors (CloudWatch Metrics)
