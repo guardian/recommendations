@@ -90,20 +90,21 @@ AWS advise you should only use the workaround if you see errors.
 
 ### Long-running lambda triggered multiple times from CLI `aws lambda invoke`
 
-#### Problem
+#### Recommendation
+Set `--cli-read-timeout` to `0` when running `aws lambda invoke` with `--invocation-type RequestResponse`
+
+#### What problem does it solve?
 Your lambda will get triggered multiple times you trigger it synchronously using `--invocation-type RequestResponse` and it runs longer than 60 seconds, unless you set the [`--cli-read-timeout`](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html#:~:text=cli%2Dread%2Dtimeout) param.
 
 #### Details
 [`--cli-read-timeout`](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html#:~:text=cli%2Dread%2Dtimeout) is a general CLI param that applies to all subcommands and determines how long it will wait for data to be read from a socket. It seems to default to 60 seconds.
 
-In the case of a synchronously executed long-running lambda, this timeout can be exceeded. The first lambda invocation "fails" (though not in a way that is visible in any lambda metrics or logs), and something (either the CLI or the lambda service, I'm not sure which) retries. The first lambda invocation hasn't really failed though - it will continue to run, possibly successfully - it's just that the CLI client that initiated it has stopped waiting for a response.
+In the case of a synchronously executed long-running lambda, this timeout can be exceeded. The first lambda invocation "fails" (though not in a way that is visible in any lambda metrics or logs), and the CLI will abort the request and retry. The first lambda invocation hasn't really failed though - it will continue to run, possibly successfully - it's just that the CLI client that initiated it has stopped waiting for a response.
+
+Setting `--cli-read-timeout` to `0` removes the timeout and make the socket read wait indefinitely, meaning the CLI command will block until the lambda completes or times out.
 
 There is a StackOverflow thread about this issue here:
-
 https://stackoverflow.com/questions/53898894/aws-lambda-timeout-when-another-long-lambda-is-invoked
-
-#### Recommendation
-Set `--cli-read-timeout` to `0` to remove the timeout and make the socket read wait indefinitely.
 
 
 Alarming on 5XX Errors (CloudWatch Metrics)
