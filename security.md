@@ -1,5 +1,9 @@
 # Security
 
+## Vulnerability management
+
+Please ensure you [actively manage vulnerabilities from third party](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md).
+
 ## Sensitive data
 
 **Before building an application think about what (if any) sensitive
