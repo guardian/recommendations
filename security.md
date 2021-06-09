@@ -2,8 +2,7 @@
 
 ## Vulnerability management
 
-You should [perform due diligence](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md) to check that any dependencies your 
-project uses are still supported and receive security updates.
+You should [perform due diligence](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md) to check that any dependencies your project uses are still supported and receive security updates.
 
 ## Sensitive data
 
