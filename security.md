@@ -7,21 +7,30 @@ You should [perform due diligence](https://github.com/guardian/security-hq/blob/
 ## Sensitive data
 
 **Before building an application think about what (if any) sensitive
-data is involved.** Be particularly aware of any personal user data
+data is involved.**
+
+Be particularly aware of any personal user data
 (including email addresses).
 
-**Have a plan for storing sensitive data safely.** Make sure the ways
-that data can be accessed are well understood. How will you ensure the
+**Have a plan for storing sensitive data safely.**
+Make sure the ways that data can be accessed are well understood. How will you ensure the
 data remains safe?
 
-**Limit access to sensitive data.** Only people and services that
+**Limit access to sensitive data.**
+Only people and services that
 directly depend on the data should be able to access it.
 
-**Keep sensitive data to yourself.** Keep your team's sensitive data
+**Keep sensitive data to yourself.**
+Keep your team's sensitive data
 within the team and under your control. Don't share it with other
 teams, don't store it in cookies and don't let it sit in caches.
 
-**Keep data only for as long as it is needed** Ensure retention policies are implemented aligned with the requirements set for the type of data you are storing. Use [AWS object life-cycle managemet](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) whenever possible.
+**Keep data only for as long as it is needed**
+Ensure retention policies are implemented aligned with the requirements set for the type of data you are storing. Use [AWS object life-cycle managemet](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) whenever possible.
+
+**Ensure you set the right `Cache-Control` for CDN to not cache your response**
+Using `Cache-Control: no-cache` is NOT sufficient, use **`Cache-Control: private`** for this purpose.
+See [Cache-control semantics](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) and [Fastly config](https://developer.fastly.com/learning/concepts/cache-freshness/#preventing-content-from-being-cached)
 
 ## Application development
 
