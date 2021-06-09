@@ -2,7 +2,8 @@
 
 ## Vulnerability management
 
-Please ensure you [actively manage vulnerabilities from third party](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md).
+You should [perform due diligence](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md) to check that any dependencies your 
+project uses are still supported and receive security updates.
 
 ## Sensitive data
 
@@ -56,11 +57,6 @@ preferentially used to permanent keys.
 ## HTTPS everywhere
 
 **_All_ external endpoints should be served over HTTPS.**
-
-## Third party dependencies/software
-You should perform due diligence to check that any dependencies your 
-project uses are still supported and receive security updates. The 
-[snyk advisor](https://snyk.io/advisor/) is a helpful starting point.
 
 ## Personal hygiene
 
