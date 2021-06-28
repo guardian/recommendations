@@ -14,3 +14,4 @@
 -   optimise your code for people who know the language it is written in
     -   prefer idiomatic patterns and techniques
 -   optimise your code for reading, not writing
+    - simplicity > sophistication
