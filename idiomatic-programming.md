@@ -10,7 +10,7 @@
 ## Recommendations
 
 -   optimise your project for Guardian engineers
-    -   prefer programming languages that are commonly used at the Guardian
+    -   prefer programming languages and frameworks that are commonly used at the Guardian
 -   optimise your code for people who know the language it is written in
     -   prefer idiomatic patterns and techniques
 -   optimise your code for reading over writing
