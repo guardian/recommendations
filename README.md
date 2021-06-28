@@ -1,6 +1,4 @@
-
-Principles
-==========
+# Principles
 
 **Design for failures** all things break, so the behaviour of a system when any of its components, collaborators or hosting infrastructure fail or respond slowly must be a key part of its design
 
@@ -15,7 +13,7 @@ Principles
 **Design to be monitored** statistics measuring what the product is trying to achieve should be monitored
 
 **Design for horizontal scaling** a system that can be scaled by adding additional servers
- provides simpler scalability and greater robustness
+provides simpler scalability and greater robustness
 
 **Single responsibility applications** monitoring, self-healing and graceful degradation are simpler when responsibilities are not conflated. This should be balanced with the complexity cost of many different applications.
 
@@ -37,6 +35,7 @@ Principles
 -   [Continuous Integration](continuous-integration.md)
 -   [Elasticsearch](elasticsearch.md)
 -   [GitHub](github.md)
+-   [Idiomatic programming](idiomatic-programming.md)
 -   [NPM packages](npm-packages.md)
 -   [Pull requests](pull-requests.md)
 -   [Resiliency and Robustness](resiliency.md)
