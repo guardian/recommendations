@@ -25,17 +25,22 @@ Principles
 
 **Prefer communication via idempotent events** idempotent events allow us to replay in the event of failure and use at-least-once semantics
 
-Guidelines
-----------
+## Guidelines
 
- * [Services](services.md)
- * [Applications](applications.md)
- * [AWS](AWS.md)
- * [AWS Costs](AWS-costs.md)
- * [Continuous Integration](continuous-integration.md)
- * [Continuous Deployment](continuous-deployment.md)
- * [Scala](scala.md)
- * [Elasticsearch](elasticsearch.md)
- * [Pull requests](pull-requests.md)
- * [Resiliency and Robustness](resiliency.md)
- * [Security](security.md)
+-   [Accessibility](accessibility.md)
+-   [Applications](applications.md)
+-   [AWS](AWS.md)
+-   [AWS Costs](AWS-costs.md)
+-   [Client Side](client-side.md)
+-   [Config](config.md)
+-   [Continuous Deployment](continuous-deployment.md)
+-   [Continuous Integration](continuous-integration.md)
+-   [Elasticsearch](elasticsearch.md)
+-   [GitHub](github.md)
+-   [NPM packages](npm-packages.md)
+-   [Pull requests](pull-requests.md)
+-   [Resiliency and Robustness](resiliency.md)
+-   [Scala](scala.md)
+-   [Security](security.md)
+-   [Services](services.md)
+-   [Thrift](thrift.md)
