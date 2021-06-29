@@ -13,5 +13,5 @@
     -   prefer programming languages and frameworks that are commonly used at the Guardian
 -   optimise your code for people who are familiar with the language it is written in
     -   prefer idiomatic patterns and techniques
--   optimise your code for reading over writing
+-   optimise your code for the next reader
     - simplicity > sophistication
