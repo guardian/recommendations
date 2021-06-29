@@ -1,6 +1,6 @@
 # Coding with empathy
 
-> _If you choose not to follow these guidelines you should describe your reasons in the project readme, and provide as much context and guidance as possible._
+> _If your project does not follow these guidelines, be sure to describe the reasons in the readme, and provide as much context and guidance as possible._
 
 ## Principles
 
