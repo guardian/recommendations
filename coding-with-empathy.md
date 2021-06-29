@@ -1,4 +1,4 @@
-# Idiomatic programming
+# Coding with empathy
 
 > _If you choose not to follow these guidelines you should describe your reasons in the project readme, and provide as much context and guidance as possible._
 
