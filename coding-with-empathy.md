@@ -13,5 +13,5 @@
     -   this will optimise your project for Guardian engineers
 -   prefer idiomatic patterns and techniques
     -   this will optimise your code for people who are already familiar with the language it is written in
-- simplicity > sophistication
+- prefer simplicity over sophistication
     -   this will optimise your code for the next reader
