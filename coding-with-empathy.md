@@ -9,9 +9,9 @@
 
 ## Recommendations
 
--   optimise your project for Guardian engineers
-    -   prefer programming languages and frameworks that are commonly used at the Guardian
--   optimise your code for people who are familiar with the language it is written in
-    -   prefer idiomatic patterns and techniques
--   optimise your code for the next reader
-    - simplicity > sophistication
+-   prefer programming languages and frameworks that are commonly used at the Guardian
+    -   this will optimise your project for Guardian engineers
+-   prefer idiomatic patterns and techniques
+    -   this will optimise your code for people who are already familiar with the language it is written in
+- simplicity > sophistication
+    -   this will optimise your code for the next reader
