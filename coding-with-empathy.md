@@ -13,7 +13,7 @@
     -   this will optimise your project for Guardian engineers
 -   prefer idiomatic patterns and techniques
     -   this will optimise your code for people who are already familiar with the language it is written in
-- prefer simplicity over sophistication
+-   prefer simplicity over sophistication
     -   this will optimise your code for the next reader
 -   defer to [the principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
     -   our code should make the reader feel capable rather out of their depth
