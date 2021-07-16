@@ -16,4 +16,4 @@
 -   prefer simplicity over sophistication
     -   this will optimise our code for the next reader
 -   defer to [the principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)
-    -   our code should make the reader feel capable rather out of their depth
+    -   our code should make the reader feel capable rather than out of their depth
