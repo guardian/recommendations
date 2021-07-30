@@ -14,6 +14,10 @@ Branch protection should be enabled for the default/release branch of a reposito
 
 It is recommended to include a `CODEOWNERS` file which references the GitHub team or teams that are responsible for the repository. Where this file is present, it is also recommended to enable the `Require review from Code Owners` option in branch protection.
 
+## Archiving
+
+Repositories that are no longer used should be [archived](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/archiving-a-github-repository/archiving-repositories).
+
 ## Environments
 
 [GitHub environments](https://docs.github.com/en/actions/reference/environments) can be configured with protection rules and secrets. Workflows that reference an environment will then be bound by its protection rules and, if allowed, get access to it's secrets. When configuring workflows that require secrets, consider whether an environment can be used in conjunction with the [branch protection rules](#branch-protection) to limit the use of the secret.
