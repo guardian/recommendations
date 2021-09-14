@@ -2,15 +2,18 @@
 
 # NPM Dependencies
 
-- Semver intro + link
+Many NPM packages follow [semantic versioning] and some of the recommendations
+below are based on that.
 
 - Reducing bundle size w/ peer deps
-- Consideration around @dependabot 
-    - package.json for humans / yarn.lock for machines
+- Consideration around @dependabot
+  - package.json for humans / yarn.lock for machines
 - Info about caret & tilde notations
-- 
+-
 
 We recommend using caret notation to target the latest minor and patch versions.
+
+[semantic versioning]: https://semver.org/
 
 ## Known non-semver packages
 
