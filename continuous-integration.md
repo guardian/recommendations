@@ -3,6 +3,7 @@
 [RiffRaff]: https://github.com/guardian/riff-raff
 [`node-riffraff-artifact`]: https://www.npmjs.com/package/@guardian/node-riffraff-artifact
 [`sbt-riffraff-artifact`]: https://github.com/guardian/sbt-riffraff-artifact
+[`guardian/actions-assume-aws-role`]: https://github.com/guardian/actions-assume-aws-role
 
 Continuous Integration
 ======================
@@ -31,10 +32,9 @@ Every minute you reduce your building time is a minute saved when you will need 
 
 ## Platforms
 
-* Use TeamCity to run continuous integration tasks
+* Use TeamCity or GitHub Actions (with [`guardian/actions-assume-aws-role`]) to run continuous integration tasks
 * Where possible, have CI execute a single, centralised script in the repository named `script/ci` 
     - This adheres to GitHub's [Scripts To Rule Them All pattern]
-* You can use [GitHub Actions] for most above tasks, however there is not currently a departmental best practice for uploading artifacts to RiffRaff through it.
 
 ## Publishing artifacts
 
