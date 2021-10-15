@@ -55,6 +55,7 @@ This is only an example, there are many ways of configuring this.
 ### Configuring your package
 
 NPM packages are described in a `package.json` file.
+Dependencies should specify [allowed version ranges](./dependencies.md#JavaScript-NPM-Dependencies).
 
 #### NPM scope
 
