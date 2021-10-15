@@ -6,7 +6,7 @@ Managing these dependencies is crucial to delivery: we need processes that yield
 consistent results in all environments, whether on a developer’s machine or a
 deploys. Most languages have package manager which aim to solve this issue.
 
-## [Semantic Versioning][semver]
+## [Semantic Versioning][]
 
 > Given a version number `major`.`minor`.`patch`, increment the:
 >
@@ -19,7 +19,7 @@ deploys. Most languages have package manager which aim to solve this issue.
 Several tools, such as [Dependabot][] or Snyk, can automatically and regularly
 scan the dependencies of your projects and suggest upgrades.
 
-[semver]: https://semver.org/
+[Semantic Versioning]: https://semver.org/
 [Dependabot]: https://github.com/guardian/configs/blob/main/.github/dependabot.yml
 
 ## Scala: SBT Dependencies
