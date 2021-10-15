@@ -1,3 +1,27 @@
+Dependencies
+============
+
+The software we develop often depends on standalone packaged libraries.
+Managing these dependencies is crucial to delivery: we need processes that yield
+consistent results in all environments, whether on a developer’s machine or a
+deploys. Most languages have package manager which aim to solve this issue.
+
+## [Semantic Versioning][semver]
+
+> Given a version number `major`.`minor`.`patch`, increment the:
+>
+> - `major` version when you make incompatible API changes;
+> - `minor` version when you add functionality in a backwards compatible manner;
+> - `patch` version when you make backwards compatible bug fixes.
+>
+> Additional labels for pre-release and build metadata are available as extensions to the `major`.`minor`.`patch` format.
+
+Several tools, such as [Dependabot][] or Snyk, can automatically and regularly
+scan the dependencies of your projects and suggest upgrades.
+
+[semver]: https://semver.org/
+[Dependabot]: https://github.com/guardian/configs/blob/main/.github/dependabot.yml
+
 ## Scala: SBT Dependencies
 
 Dependencies should be pinned to the `minor` version.
