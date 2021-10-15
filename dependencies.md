@@ -26,7 +26,7 @@ scan the dependencies of your projects and suggest upgrades.
 
 Dependencies should be pinned to the `minor` version.
 
-See the [Scala-specific recommendations][./scala.md] 
+See the [Scala-specific recommendations](./scala.md)
 
 ## JavaScript: NPM Dependencies
 
