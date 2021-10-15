@@ -1,4 +1,8 @@
-> TODO: add general info about dependencies in other environments / languages.
+## Scala: SBT Dependencies
+
+Dependencies should be pinned to the `minor` version.
+
+See the [Scala-specific recommendations][./scala.md] 
 
 ## JavaScript: NPM Dependencies
 
