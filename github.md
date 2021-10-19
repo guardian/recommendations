@@ -28,12 +28,12 @@ For example, when configuring [auto-publishing for an npm library](./npm-package
 
 [Topics](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics) should be used to categorise repositories that are not destined for production. These topics make it clear to others what the purpose of the repository is and allow projects to be filtered out of searches where required.
 
-| Topic     | Description                                                        |
-| --------- | ------------------------------------------------------------------ |
-| prototype | Repositories that are used to prove a new concept \*               |
-| learning  | Repositories that have been created as part of a learning exercise |
-| hackday   | Repositories that are created during hack days \*                  |
-
-\* The tag should be removed if the project is productionised
+| Topic      | Description                                                        |
+| ---------- | ------------------------------------------------------------------ |
+| prototype  | Repositories that are used to prove a new concept                  |
+| learning   | Repositories that have been created as part of a learning exercise |
+| hackday    | Repositories that are created during hack days                     |
+| testing    | Repositories that are used for test purposes                       |
+| production | Repositories that are deployed to production                       |
 
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use.
