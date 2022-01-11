@@ -2,6 +2,8 @@
 
 [Emotion](https://emotion.sh/) is a CSS-in-JS library that provides component-scoping, encapsulation and composition for your styles.
 
+It can be used with and without React, but this guide covers our standard use, which is alongside React. In particular it sets out how to use Emotion alongside the React implementation of our design system, [`Source`](https://github.com/guardian/source).
+
 ## Getting started
 
 ```shell
