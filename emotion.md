@@ -51,7 +51,7 @@ In your `.babelrc`:
 
 ### Server side rendering
 
-If your app is doing server-side rendering, you need to follow the [Advanced Approach](https://emotion.sh/docs/ssr#advanced-approach) to SSR setup. This is because our components use sibling selectors that may be interrupted by the way Emotion embeds `<style>` tags directly into your markup.
+If your app is doing server-side rendering, you need to follow [Emotion's Advanced Approach](https://emotion.sh/docs/ssr#advanced-approach) to SSR setup. This is because our components use sibling selectors that may be interrupted by the way Emotion embeds `<style>` tags directly into your markup.
 
 ## Example
 
