@@ -16,7 +16,9 @@ $ yarn add @emotion/react
 
 ### TypeScript
 
-We recommend using [React's automatic runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+If you are using TypeScript <= 4.1 and React <=17, it's simplest to use [React's automatic runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) with TypeScript's attendant [jsx](https://www.typescriptlang.org/tsconfig#jsx) and [jsxImportSource}(https://www.typescriptlang.org/tsconfig#jsxImportSource) compiler options.
+
+For earlier versions, use the Babel setup described below.
 
 In your `tsconfig.json`:
 
