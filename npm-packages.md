@@ -93,11 +93,17 @@ The CommonJS version should be referenced by the `main` field, and the TypeScrip
 
 #### Continuous delivery
 
-Use [Semantic Release](https://github.com/semantic-release/semantic-release) in a GitHub action.
+Prefer continuous delivery from GitHub, using either [Semantic Release](https://github.com/semantic-release/semantic-release) (see below) or [Changesets](https://github.com/changesets/changesets) in a GitHub action.
 
-If your release branch is protected ([a good idea](https://github.com/guardian/recommendations/blob/master/github.md)) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps.
+Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account.
 
-##### **Parsing Commit Messages**
+> This account is managed under npm@theguardian.com by the devex stream.
+
+##### Semantic Release
+
+If your release branch is protected ([a good idea](https://github.com/guardian/recommendations/blob/master/github.md)) use [guardian/actions-merge-release-changes-to-protected-branch](https://github.com/guardian/actions-merge-release-changes-to-protected-branch) to commit version bumps to `main`.
+
+###### **Parsing Commit Messages**
 
 Use tooling to help write and verify commits/PR titles. This will ensure that the [semantic-release/commit-analyser](https://github.com/semantic-release/commit-analyzer) plugin can determine the correct new version using one of the following strategies:
 
@@ -170,7 +176,7 @@ module: {
 ## Running NPM packages as binaries in CI
 Various Node libraries can be run over the CLI using tools like `npx` or `yarn dlx`.
 
-The `npx` and `yarn dlx` tools are not deterministic as they do not work off a lockfile, they will install dependencies 
+The `npx` and `yarn dlx` tools are not deterministic as they do not work off a lockfile, they will install dependencies
 according to the library's `package.json`.
 That is if the library depends on `^1.0.0` of a library, `npx` can resolve this to `1.0.0` today and `1.99.0` tomorrow.
 
