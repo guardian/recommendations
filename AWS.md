@@ -1,7 +1,21 @@
 General
 -------
 
- * Use CloudFormation or ElasticBeanStalk to define infrastructure in AWS.
+ * Provision and manage all AWS resources using infrastructure as code
+   * Prefer to use [CDK](https://github.com/guardian/cdk) to generate CloudFormation. You might find that older projects still use CloudFormation directly; these should be migrated to CDK where possible.
+   * Prefer to [import resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) into CFN over manually configuring them
+ * Tag resources with:
+   * `Stack` - the broad umbrella the service sits under e.g. `media-service`
+   * `Stage` - the environment, typical values are:
+     * `PROD` for production
+     * `CODE` for pre-production
+     * `INFRA` for infrastructure or singleton resources e.g. [elasticsearch-node-rotation](https://github.com/guardian/elasticsearch-node-rotation)
+   * `App` - the individual service e.g. `image-loader`
+ * If a resource needs to be shared across multiple environments, prefer to define it in it's own CFN template as the same resource cannot be defined in multiple templates
+ * Prefer continuous delivery of infrastructure via Riff-Raff over manual deployment
+   * This provides a better audit trail
+   * This decreases risk as, by default, Riff-Raff will protect stateful resources from being accidentally deleted 
+ * Do not have private or secret information in a CFN template. Prefer to use Parameters or [private-infrastructure-config](https://github.com/guardian/private-infrastructure-config)
 
 Permissions
 -----------
@@ -34,6 +48,9 @@ SQS
 S3
 --
 
+ * Create buckets with CloudFormation, one per stage
+ * Block public access
+ * If public access is needed, enable this via a bucket policy rather than per object
  * Don't delete S3 buckets once they're not used any more
    * S3 bucket names are global and someone else could pick up the same name
    * This may pose a security risk if we inadvertently still use or reference the bucket
