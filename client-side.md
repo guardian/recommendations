@@ -23,6 +23,7 @@ See the separate [npm-packages.md](./npm-packages.md).
 -   Have an [.editorconfig](http://editorconfig.org/) file in your repo.
 -   Automate linting as part of your test phase (e.g. jshint, eslint,
     csslint).
+    -   Use the [departmental linting rules](https://github.com/guardian/configs)
 -   Don’t enforce coding styles in pull requests. Add linting dot files
     (e.g. .jshintrc) to your project instead.
 
