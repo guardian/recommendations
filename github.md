@@ -47,6 +47,43 @@ For example, when configuring [auto-publishing for an npm library][npm-publishin
 
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use.
 
+## Repository contents
+
+There are three tiers of information, defined below. In short:
+  - Never commit secret information
+  - Avoid private information in public repositories
+
+### Public
+Things we could happily put on the front page of the Guardian.
+
+Examples:
+  - source code
+  - diagrams
+  - architecture decision records
+
+### Private
+Things we do not want to be common knowledge, but knowing them does not directly compromise anything.
+
+Generally this means that knowing that detail would make an exploit (technical or people-wise) easier to achieve, especially when combining a few of them.
+
+Not for public repositories. Fine for private repositories.
+
+Examples:
+  - AWS account IDs
+  - S3 bucket names
+
+### Secret
+Information that directly causes problems! These should be kept out of VCS completely.
+
+Secrets should be rotated regularly.
+
+If leaked, it is a security incident and the [incident doc] should be followed.
+
+Examples:
+  - API keys
+  - Passwords
+  - Authentication tokens
+
 
 <!-- only links below here -->
 
@@ -56,3 +93,4 @@ If none of the above topics fit your need, a PR should be opened to add the new 
 [gh-environments]: https://docs.github.com/en/actions/reference/environments
 [gh-topics]: https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics
 [npm-publishing]: ./npm-packages.md#continuous-delivery
+[incident doc]: https://docs.google.com/document/d/1HQxblYg0nh48UJlmh_qlWHfXB5EYJRStcKvoWAqyM_Y/edit#
