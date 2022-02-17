@@ -2,6 +2,12 @@
 
 ## Repository Configuration
 
+### Default branch name
+
+Use `main`.
+
+The [`master-to-main` tool][master-to-main] can be used to rename the default branch.
+
 ### Branch Protection
 
 Branch protection should be enabled for the default/release branch of a repository, particularly when continuous delivery is configured. The following settings are recommended:
@@ -44,6 +50,7 @@ If none of the above topics fit your need, a PR should be opened to add the new 
 
 <!-- only links below here -->
 
+[master-to-main]: https://github.com/guardian/master-to-main
 [gh-archived]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/archiving-a-github-repository/archiving-repositories
 [gh-codeowners]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 [gh-environments]: https://docs.github.com/en/actions/reference/environments
