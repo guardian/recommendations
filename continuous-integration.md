@@ -3,7 +3,7 @@
 [RiffRaff]: https://github.com/guardian/riff-raff
 [`node-riffraff-artifact`]: https://www.npmjs.com/package/@guardian/node-riffraff-artifact
 [`sbt-riffraff-artifact`]: https://github.com/guardian/sbt-riffraff-artifact
-[`guardian/actions-assume-aws-role`]: https://github.com/guardian/actions-assume-aws-role
+[`aws-actions/configure-aws-credentials`]: https://github.com/aws-actions/configure-aws-credentials
 
 Continuous Integration
 ======================
