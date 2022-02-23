@@ -1,17 +1,15 @@
 # GitHub
 
 ## Repository Configuration
-
 ### Default branch name
-
 Use `main`.
 
-The [`master-to-main` tool][master-to-main] can be used to rename the default branch.
+Words matter. See docs from the [`master-to-main` tool][master-to-main] for more information. This tool can also be used to rename the default branch.
 
 ### Branch Protection
+Enable branch protection for the default branch.
 
-Branch protection should be enabled for the default/release branch of a repository, particularly when continuous delivery is configured. The following settings are recommended:
-
+Particularly when [continuous delivery] is configured, branch protection reduces risk as it means changes get reviewed before being deployed.  The following settings are recommended:
 - Require pull request reviews before merging
 - Require review from Code Owners (see [Codeowners](#codeowners))
 - Require status checks to pass before merging
@@ -19,31 +17,30 @@ Branch protection should be enabled for the default/release branch of a reposito
 - Include administrators
 
 ### Access
-- Access should be granted to [GitHub teams][gh-teams]
-  - Should an individual leave the GitHub organisation, they'll automatically lose access to any repository in the organisation
-- Avoid individual access
-  - Should the individual leave the GitHub organisation, they'll retain access until manually removed
-- Open the repository to the department
-  - [`@guardian/guardian-developers-read`][gh-read] should have read access
-  - [`@guardian/guardian-developers-write`][gh-write] should have write access
+Access should be granted to [GitHub teams][gh-teams]. Avoid individual access.
 
-### Codeowners
+Should an individual leave the GitHub organisation, they'll automatically lose access to all repositories when access is granted via teams.
+When individual access is granted, they'll retain access to a repository until manually removed.
 
-Include a [`CODEOWNERS`][gh-codeowners] file which references the GitHub team(s) responsible for the repository.
-Where this file is present, enable `Require review from Code Owners`.
+Generally, repositories should be open to the department via these teams:
+- [`@guardian/guardian-developers-read`][gh-read] should have read access
+- [`@guardian/guardian-developers-write`][gh-write] should have write access
+
+### CODEOWNERS
+Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for the repository.
+
+From a practical point of view, this allows the team responsible team to receive notifications of contributions and review changes.
+At an organisational level, this identifies owners for every repository, so that we can better ensure security and maintenance work is under the remit of a team for all our (production) code.
 
 ### Archiving
-
 Repositories that are no longer used should be [archived][gh-archived].
 
 ### Environments
-
 [GitHub environments][gh-environments] can be configured with protection rules and secrets. Workflows that reference an environment will then be bound by its protection rules and, if allowed, get access to it's secrets. When configuring workflows that require secrets, consider whether an environment can be used in conjunction with the [branch protection rules](#branch-protection) to limit the use of the secret.
 
 For example, when configuring [auto-publishing for an npm library][npm-publishing] it is recommended that you create a new environment for this purpose, containing the NPM and GitHub tokens and with the protection rules set so that it can only be used from the release branch. The release workflow should then reference this environment.
 
 ### Topics
-
 [Topics][gh-topics] should be used to categorise repositories that are not destined for production. These topics make it clear to others what the purpose of the repository is and allow projects to be filtered out of searches where required.
 
 | Topic      | Description                                                        |
@@ -57,12 +54,10 @@ For example, when configuring [auto-publishing for an npm library][npm-publishin
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use.
 
 ## Repository contents
+- Never commit secret information. See also the [security recommendations].
+- Avoid private information in public repositories
 
-There are three tiers of information, defined below. In short:
-  - Never commit secret information
-  - Avoid private information in public repositories
-
-### Public
+### Public information
 Things we could happily put on the front page of the Guardian.
 
 Examples:
@@ -70,7 +65,7 @@ Examples:
   - diagrams
   - architecture decision records
 
-### Private
+### Private information
 Things we do not want to be common knowledge, but knowing them does not directly compromise anything.
 
 Generally this means that knowing that detail would make an exploit (technical or people-wise) easier to achieve, especially when combining a few of them.
@@ -81,7 +76,7 @@ Examples:
   - AWS account IDs
   - S3 bucket names
 
-### Secret
+### Secret information
 Information that directly causes problems! These should be kept out of VCS completely.
 
 Secrets should be rotated regularly.
@@ -96,7 +91,7 @@ Examples:
 
 <!-- only links below here -->
 
-[master-to-main]: https://github.com/guardian/master-to-main
+[master-to-main]: https://github.com/guardian/master-to-main/blob/main/migrating.md
 [gh-archived]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/archiving-a-github-repository/archiving-repositories
 [gh-codeowners]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 [gh-environments]: https://docs.github.com/en/actions/reference/environments
@@ -106,3 +101,5 @@ Examples:
 [gh-teams]: https://github.com/orgs/guardian/teams
 [gh-read]: https://github.com/orgs/guardian/teams/guardian-developers-read
 [gh-write]: https://github.com/orgs/guardian/teams/guardian-developers-write
+[continuous delivery]: ./continuous-deployment.md
+[security recommendations]: ./security.md
