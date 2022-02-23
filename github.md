@@ -18,6 +18,15 @@ Branch protection should be enabled for the default/release branch of a reposito
 - Require branches to be up to date before merging
 - Include administrators
 
+### Access
+- Access should be granted to [GitHub teams][gh-teams]
+  - Should an individual leave the GitHub organisation, they'll automatically lose access to any repository in the organisation
+- Avoid individual access
+  - Should the individual leave the GitHub organisation, they'll retain access until manually removed
+- Open the repository to the department
+  - [`@guardian/guardian-developers-read`][gh-read] should have read access
+  - [`@guardian/guardian-developers-write`][gh-write] should have write access
+
 ### Codeowners
 
 Include a [`CODEOWNERS`][gh-codeowners] file which references the GitHub team(s) responsible for the repository.
@@ -94,3 +103,6 @@ Examples:
 [gh-topics]: https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics
 [npm-publishing]: ./npm-packages.md#continuous-delivery
 [incident doc]: https://docs.google.com/document/d/1HQxblYg0nh48UJlmh_qlWHfXB5EYJRStcKvoWAqyM_Y/edit#
+[gh-teams]: https://github.com/orgs/guardian/teams
+[gh-read]: https://github.com/orgs/guardian/teams/guardian-developers-read
+[gh-write]: https://github.com/orgs/guardian/teams/guardian-developers-write
