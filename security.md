@@ -166,7 +166,9 @@ fixes become available.** More guidance can be found on
 
 ## HTTPS everywhere
 
-**_All_ endpoints should be served over HTTPS.** Use HSTS to enforce it.
+**_All_ endpoints should be served over HTTPS.** Use HSTS to enforce it. 
+More broadly, no plain text protocol services should be exposed externally 
+(not just HTTP, but also FTP etc.)
 
 ## Personal hygiene
 
