@@ -89,7 +89,15 @@ Also see the guidance on
 Centralised Reporting from AWS services and guidance is available in
 [Security HQ](https://security-hq.gutools.co.uk).
 
+### Infrastructure provisioning
+
+**Infrastructure should be provisioned via cloudformation using the 
+[Guardian CDK library](https://github.com/guardian/cdk).** Many of the 
+following recommendations are encoded as defaults in the library, making
+their adoption simple.
+
 ### Security patches for Compute services
+
 See the [patching guidance below](#patching)
 
 ### Credentials
@@ -119,7 +127,12 @@ executing commands on EC2 instances authenticated by IAM credentials.
 The SSM Agent is baked into many of our AMI images and should be
 preferentially used to permanent keys.
 
-### Security Groups
+### VPC / Security Groups
+
+**EC2 instances should be run in the private subnet of a VPC.** Only the
+load balancer of an application should reside in the public subnet. For 
+more information on VPCs and AWS see: 
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html.
 
 **Security Groups egress/ingress rules should be locked down as much as
 possible.** There's no reason to allow open access to any EC2 instances; 
@@ -135,10 +148,13 @@ It is surprisingly easy to accidentally make public an S3 bucket or object
 public. There are a number of ways of controlling access, all of which must
 be correctly configured to keep private objects private.
 
-**Prefer using a bucket for a single logical purpose, either public or 
+**Prefer single logical purpose buckets, either public or 
 private.** Mixing concerns makes it more complicated to configure access and
-easier to get it wrong. This allows access to be configured at the bucket 
-level, which is preferred to the object level.
+easier to get it wrong. 
+
+**Prefer bucket-level policies to control access.** Object-level access control
+is generally not recommended due to the extra risk its complexity brings. 
+
 
 **For non-public buckets block all public access.**
 ![](./S3-block-public-access.png)
