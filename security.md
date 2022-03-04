@@ -155,6 +155,11 @@ easier to get it wrong.
 **Prefer bucket-level policies to control access.** Object-level access control
 is generally not recommended due to the extra risk its complexity brings. 
 
+**Avoid deleting buckets.** Prefer emptying the bucket and creating a single
+file indicating its archived status e.g. a README. This helps to prevent 
+issues such as subdomain takeover when buckets are used as static websites and
+the subdomain routing is leftover. (S3 bucket names are global to all customers)
+
 
 **For non-public buckets block all public access.**
 ![](./S3-block-public-access.png)
