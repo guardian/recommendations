@@ -35,6 +35,11 @@ EC2
  * Use AMIs baked by Amigo.
  * Ensure that instances are kept up to date with new AMIs using Riff Raff scheduled deploys.
 
+
+VPC
+---
+* Ensure you have added the correct [Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html) for the AWS services being accessed from your private subnets to avoid incurring unnecessary networking costs.
+
 ELB
 ---
 
