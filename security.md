@@ -131,8 +131,11 @@ preferentially used to permanent keys.
 
 **EC2 instances should be run in the private subnet of a VPC.** Only the
 load balancer of an application should reside in the public subnet. For 
-more information on VPCs and AWS see: 
-https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html.
+more information see [aws documentation on VPCs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html). 
+
+Be aware instances in private subnets that make calls to the internet will 
+require a [NAT gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html),
+and incur associated costs.
 
 **Security Groups egress/ingress rules should be locked down as much as
 possible.** There's no reason to allow open access to any EC2 instances; 
