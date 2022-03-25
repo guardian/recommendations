@@ -5,7 +5,7 @@ General
    * Prefer to use [CDK](https://github.com/guardian/cdk) to generate CloudFormation. You might find that older projects still use CloudFormation directly; these should be migrated to CDK where possible.
    * Prefer to [import resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) into CFN over manually configuring them
  * Tag resources with:
-   * `Stack` - the broad umbrella the service sits under e.g. `media-service`
+   * `Stack` - the broad umbrella the service sits under e.g. `media-service`. Useful to denote ownership within a shared AWS account.
    * `Stage` - the environment, typical values are:
      * `PROD` for production
      * `CODE` for pre-production
