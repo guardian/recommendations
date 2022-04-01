@@ -137,9 +137,9 @@ When using EC2 and ELB/ALB there are two different counts for 5XX
 
 To the client/consumer it doesn't matter what the source of the 5XX (application server or load balancer).. it's still a 5XX - and we as engineers need to hear about it.
 
-If you are using `@guardian/cdk`, it is trivial to configure a 5XX alarm which combines these two metrics. For example see https://github.com/guardian/support-frontend/pull/3614.
+If you are using [`@guardian/cdk`](https://github.com/guardian/cdk), it is trivial to configure a 5XX alarm which combines these two metrics. For example see https://github.com/guardian/support-frontend/pull/3614.
 
-If you are still using CloudFormation, you will need to use 'Metric Math', to change any 5XX alarms to use the SUM of these metrics to capture ALL 5XX scenarios. For example see https://github.com/guardian/members-data-api/pull/425.
+If you are using CloudFormation, you will need to use 'Metric Math', to change any 5XX alarms to use the SUM of these metrics to capture ALL 5XX scenarios. For example see https://github.com/guardian/members-data-api/pull/425.
 
 ![image](5XX-department-email.png)
 
