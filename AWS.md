@@ -133,9 +133,9 @@ Alarming on 5XX Errors (CloudWatch Metrics)
 ---
 When using EC2 and ELB/ALB there are two different counts for 5XX
 - `HTTPCode_Backend_5XX` (ELB) / `HTTPCode_Target_5XX_Count` (ALB) produced by your application server
-- `HTTPCode_ELB_5XX` / `HTTPCode_ELB_5XX_Count` (ALB) produced by the load balancer
+- `HTTPCode_ELB_5XX` (ELB) / `HTTPCode_ELB_5XX_Count` (ALB) produced by the load balancer
 
-To the client/consumer it doesn't matter what the source of the 5XX (application servers or load balancer).. it's still a 5XX - and we as engineers need to hear about it.
+To the client/consumer it doesn't matter what the source of the 5XX (application server or load balancer).. it's still a 5XX - and we as engineers need to hear about it.
 
 If you are using `@guardian/cdk`, it is trivial to configure a 5XX alarm which combines these two metrics. For example see https://github.com/guardian/support-frontend/pull/3614.
 
