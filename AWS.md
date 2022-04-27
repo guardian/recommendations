@@ -42,7 +42,7 @@ VPC
 * Avoid using the default VPC. 
 * Make sure the teams consider whether the account will need to be allocated a block of our IP address space to support peering.
 * If it is likely that AWS resources will need to communicate with our on-prem infrastructure, then contact the networking team to request a CIDR allocation for the VPC.
-* Security of the VPC and security groups must be considered. Limit the inbound traffic to known Guardian or trusted IP ranges. Use SSM-Scala to securely connect to your instances instead of opening SSH ports.
+* Security of the VPC and security groups must be considered. See [here](https://github.com/guardian/recommendations/blob/main/security.md#vpc--security-groups) for details.
 
 
 ELB
