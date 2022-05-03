@@ -38,10 +38,18 @@ EC2
 
 VPC
 ---
-* Ensure you have added the correct [Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html) for the AWS services being accessed from your private subnets to avoid incurring unnecessary networking costs. 
-* Avoid using the default VPC. 
-* Make sure the teams consider whether the account will need to be allocated a block of our IP address space to support peering.
+
+* Avoid using the default VPC - see [here](https://konekti.us/post/are-you-using-the-aws-default-vpc-stop-now/#:~:text=The%20default%20VPC%20lacks%20the,for%20auditing%20and%20troubleshooting%20purposes.) for a list of reasons why this is a bad idea. 
+* Make sure the teams consider whether the account will need to be allocated a block of our IP address space to support peering (see [here](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html) for more info on AWS peering rules.
 * If it is likely that AWS resources will need to communicate with our on-prem infrastructure, then contact the networking team to request a CIDR allocation for the VPC.
+* If your project uses [guardian/cdk](https://github.com/guardian/cdk) to manage environments and resources, define the VPC using the CDK construct for VPC's [details here](https://github.com/guardian/cdk/blob/main/src/constructs/vpc/vpc.ts#L32-L59). 
+* Ensure you have added the correct [Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html) for the AWS services being accessed from your private subnets to avoid incurring unnecessary networking costs. 
+* For general-purposes, there should be one VPC per AWS account and they should have the following properties (which our VPC construct ensures/asks for in its docs):
+  - A public and private subnet per AZ
+  - A /21 mask (to ensure big enough to meet needs over time)
+  - A CIDR block provided by Ent Tech to allow for any future peering needs
+  - gateway endpoints for key services (s3 and dynamo are the starting points here)
+* Use of ad-hoc VPCs seperate to the general VPC for that account is usually discouraged and should be limited to very specific security-sensitive or risky services such as interacting with Tor/Onion servers.  
 * Security of the VPC and security groups must be considered. See [here](https://github.com/guardian/recommendations/blob/main/security.md#vpc--security-groups) for details.
 
 
