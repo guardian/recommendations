@@ -40,7 +40,7 @@ VPC
 ---
 
 * To follow best practice for VPCs, ensure you have a single CDK-generated VPC in your account that is used to house your applications. You can find the docs for it [here](https://github.com/guardian/cdk/blob/main/src/constructs/vpc/vpc.ts#L32-L59). 
-* While generally discouraged, in some exceptional cases, such as security-sensitive services, you may want to use the construct to generate further VPCs in order to isolate specific applications. It is worth discussing with DevX Security and InfoSec if you are think you have a service that requires this.
+* While generally discouraged, in some exceptional cases, such as security-sensitive services, you may want to use the construct to generate further VPCs in order to isolate specific applications. It is worth discussing with DevX Security and InfoSec if you think you have a service that requires this.
 * Avoid using the default VPC - The default VPC is designed to make it easy to get up and running but with many negative tradeoffs:
   - It lacks the proper security and auditing controls. 
   - Network Access Control Lists (NACLs) are unrestricted.
