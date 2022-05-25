@@ -113,7 +113,8 @@ cannot be replaced by temporary credentials.)
 **Ensure that at least 2 people have IAM logins for each AWS account.**  
 In the event of a VPN or Janus outage this will ensure that teams can
 still access their account. These IAM users should have 2FA enabled and no
-active access keys.
+active access keys. Note that Infosec can also provide access if necessary
+but this is much less convenient.
 
 ### SSH Access
 
