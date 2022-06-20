@@ -45,17 +45,18 @@ Repositories that are no longer used should be [archived][gh-archived].
 For example, when configuring [auto-publishing for an npm library][npm-publishing] it is recommended that you create a new environment for this purpose, containing the NPM and GitHub tokens and with the protection rules set so that it can only be used from the release branch. The release workflow should then reference this environment.
 
 ### Topics
-[Topics][gh-topics] should be used to categorise repositories that are not destined for production. These topics make it clear to others what the purpose of the repository is and allow projects to be filtered out of searches where required.
+[Topics][gh-topics] must be used to categorise repositories that are, or are not, destined for production. These topics make it clear to others what the purpose of the repository is and allow projects to be filtered out of monitoring and searches where required. More than one topic can be added, and if both `production` and a non-production topic are combined, a repository will be assumed to contain production code.
 
-| Topic      | Description                                                        |
-| ---------- | ------------------------------------------------------------------ |
-| prototype  | Repositories that are used to prove a new concept                  |
-| learning   | Repositories that have been created as part of a learning exercise |
-| hackday    | Repositories that are created during hack days                     |
-| testing    | Repositories that are used for test purposes                       |
-| production | Repositories that are deployed to production                       |
+| Topic         | Description                                                        |
+| ------------- | ------------------------------------------------------------------ |
+| prototype     | Repositories that are used to prove a new concept                  |
+| learning      | Repositories that have been created as part of a learning exercise |
+| hackday       | Repositories that are created during hack days                     |
+| testing       | Repositories that are used for test purposes                       |
+| documentation | Repositories that contain only documentation and no source code    |
+| production    | Repositories that are deployed to production                       |
 
-If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use.
+If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use. 
 
 ## Repository contents
 - Never commit secret information. See also the [security recommendations].
