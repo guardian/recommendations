@@ -31,7 +31,7 @@ Include at least one GitHub team as a collaborator with admin access. *At an org
 
 In general, avoid giving individual access to repositories and prefer teams.
 
-Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for different parts of the repository. *This allows the team responsible team to receive notifications of contributions and review changes.*
+Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for different parts of the repository. *This allows the responsible team to receive notifications of contributions and review changes.*
 
 
 
