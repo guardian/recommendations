@@ -25,7 +25,7 @@ authentication, network security, encryption, secret management. Expert guidance
 - All new 3rd party software / vendors used as part of a service should have approval via the [official process](https://spike.gnmremote.com/content/178/requesting-software-for-your-gnm)
 
 ### Infrastructure
-- AWS infrastructure should *not* be deployed to the Developer Playground account
+- AWS infrastructure should *not* be deployed to the Developer Playground account. *Production services and data should not be included in a test environment for cost/scale and security/privacy reasons. We also periodically purge infrastructure from that account.*
 - All new AWS infrastructure should be defined using [CDK](https://github.com/guardian/cdk), and legacy services should be migrated when possible
 - Infrastructure costs should be estimated and within existing budget (unless otherwise approved by Head/Director of Engineering)
 
