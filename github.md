@@ -26,11 +26,15 @@ Generally, repositories should be open to the department via these teams:
 - [`@guardian/guardian-developers-read`][gh-read] should have read access
 - [`@guardian/guardian-developers-write`][gh-write] should have write access
 
-### CODEOWNERS
-Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for the repository.
+### Collaborators and CODEOWNERS
+Include at least one GitHub team as a collaborator with admin access. *At an organisational level, this identifies owners for every repository, so that we can better ensure security and maintenance work is under the remit of a team for all our (production) code.*
 
-From a practical point of view, this allows the team responsible team to receive notifications of contributions and review changes.
-At an organisational level, this identifies owners for every repository, so that we can better ensure security and maintenance work is under the remit of a team for all our (production) code.
+In general, avoid giving individual access to repositories and prefer teams.
+
+Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for different parts of the repository. *This allows the responsible team to receive notifications of contributions and review changes.*
+
+
+
 
 ### Archiving
 Repositories that are no longer used should be [archived][gh-archived].
