@@ -19,7 +19,9 @@ N.B. This guidance only intended as a minimum baseline; in practice the expectat
 - A basic [security](./security.md) assessment should be performed to understand the risks and available controls. E.g. 
 authentication, network security, encryption, secret management. Expert guidance from outside the team should sought for high risk applications (e.g. processing user data)
 - Any dependency manifest files should be scanned using [Snyk Open Source](https://security-hq.gutools.co.uk/documentation/snyk)
-- Internal tools should be behind Google Auth. (Network-layer restrictions may also be recommended based on the context)
+- Internal tools should be behind Google Authentication 
+    - A helper exists for [Scala](https://github.com/guardian/play-googleauth) and authentication can be added to an [ALB directly](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html)
+    - Network-layer restrictions may also be recommended based on the context
 - All new 3rd party software / vendors used as part of a service should have approval via the [official process](https://spike.gnmremote.com/content/178/requesting-software-for-your-gnm)
 
 ### Infrastructure
@@ -30,23 +32,23 @@ authentication, network security, encryption, secret management. Expert guidance
 ### Observability and support
 - Monitoring and alerting should exist to ensure the owner is notified when the core functionality of a service is unavailable or impaired
 - Application logs and (if necessary/applicable) telemetry data should be [shipped](https://github.com/guardian/deploy-tools-platform/tree/main/elk), so that service impairment can be debugged effectively for common problems (e.g. application errors, resource constraints)
-- For high priority applications, a runbook should be created to describe to other engineers how to debug and address service impairment incidents
+- For high priority applications, a runbook should be created to describe to other engineers how to debug and address service impairment incidents ([example](https://docs.google.com/document/d/1Mz0cp0Ktq1IaOoVd-kqWF_VK25g9E6QQXiiXCTqbXno/edit#heading=h.y64rwxfd5dwk))
 
 ## High level maintenance expectations
 
 The broad expectations of ongoing maintenance of a production application are:
-1. Security vulnerabilities are addressed *as a priority*
-1. Dependencies are kept up to date, so that security patching requirements can be met efficiently
+1. Security vulnerabilities are [addressed](/security.md#vulnerability-management) *as a priority*
+1. Dependencies are [kept up to date](https://github.com/guardian/security-hq/blob/73d5174a49efcfda009c804305d748edced6a8af/hq/markdown/vulnerability-management.md#vulnerabilities-via-3rd-party-libraries), so that security patching requirements can be met efficiently
 1. Unused functionality is removed
 1. Impaired functionality is addressed, with priority determined by its importance
 1. Costs are monitored. [Baseline monitoring](https://github.com/guardian/aws-cost-management) is added globally
 1. Architecture/design is reviewed periodically to ensure adherence to best practices and any SLA/SLOs at the team or org level
 
 ### Orphaned Projects
-In the vast majority of cases we address these by assigning ownership of source code to an official engineering team. Official engineering teams have useful properties for this task, like resourcing oversight and planning ceremonies.
+In the vast majority of cases we address these by assigning [ownership](./github.md#collaborators-and-codeowners) of source code to an official engineering team. Official engineering teams have useful properties for this task, like resourcing oversight and planning ceremonies.
 
 However there are some repositories (containing production software) we have created that have no obvious official engineering team owner. Instead we expect a small group of volunteers to be responsible for the above maintenance tasks. We expect these volunteers to:
-- Create a Github team and add volunteers as team members. Notify the Developer Experience team of this (the team should be admins of all relevant GitHub repos)
+- Create a GitHub team and add volunteers as team members. Notify the Developer Experience team of this (the team should be admins of all relevant GitHub repos)
 - Create a Google group / email address
 - Find replacements for any leavers (can be delegated to their line manager if needed)
 - Create a lightweight process for regular maintenance work (e.g. a recurring meeting)
