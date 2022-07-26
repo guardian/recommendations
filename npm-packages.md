@@ -19,7 +19,7 @@ Do not include or depend on [polyfills](https://developer.mozilla.org/en-US/docs
 
 #### Compiling
 
-Use [Rollup](https://rollupjs.org/guide/en/) to bundle you code.
+Use [Rollup](https://rollupjs.org/guide/en/) to bundle your code.
 
 - Enable [`preserveModules`](https://rollupjs.org/guide/en/#outputpreservemodules) in the rollup output config to maximise treeshakability
 - Use [rollup-plugin-ts](https://www.npmjs.com/package/rollup-plugin-ts) to transpile and generate TypeScript [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
