@@ -38,6 +38,7 @@ See the separate [npm-packages.md](./npm-packages.md).
 -   Prefer using the _Current_ even-numbered [version of Node.js](https://nodejs.org/en/about/releases/)
     - Odd-numbered versions become unsupported more quickly than even-numbered
 -   Use an `.nvmrc` file to indicate the exact version of Node.js your project uses
+	- It's the only node version file that is supported by all current node version management tools
     - `asdf` users must configure their tool to use [legacy version files](https://github.com/asdf-vm/asdf-nodejs#nvmrc-and-node-version-support)
 
 
