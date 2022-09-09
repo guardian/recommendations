@@ -33,6 +33,12 @@ See the separate [npm-packages.md](./npm-packages.md).
     otherwise.
 -   Prefer locking your dependencies (direct and transitive) using a lockfile rather than committing them into Git.
 
+## Node.js
+
+-   Prefer using the _Current_ even-numbered [version of Node.js](https://nodejs.org/en/about/releases/)
+-   Use an `.nvmrc` file to indicate the exact version of Node.js your project uses
+
+
 ## Strategies
 
 Rather than enforcing strict rules that may differ across constraints
