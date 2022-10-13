@@ -104,6 +104,138 @@ The CommonJS version should be referenced by the `main` field.
 }
 ```
 
+### `peerDependencies`
+
+#### `peerDependencies` ranges should be a wide as possible
+
+This ensures compatibility with the maximum number of installations.
+
+#### Pin the lowest possible version of `peerDependencies` in `devDependencies`
+
+This ensures your library is developed against the sparest possible version of its dependencies.
+
+##### Example
+
+```js
+// my-lib/package.json
+{
+	"name": "my-lib",
+	"version": "1.0.0",
+    "devDependencies": {
+        "your-lib": "1.2.3"
+    },
+    "peerDependencies": {
+        "your-lib": "^1.2.3"
+    }
+}
+```
+
+#### Changes to `peerDependencies` ranges are breaking
+
+This is because it could require the consumer to make changes to their project, so would not a drop-in change.
+
+> In an npm module, any peer dep change that removes a previously valid version from being valid is a major/breaking change. Peer deps are part of the public API.
+
+— <cite>[@ljharb](https://github.com/semver/semver/issues/502#issuecomment-466501843)</cite>
+
+##### Example
+
+```js
+// my-app/package.json
+{
+	"name": "my-app",
+	"version": "1.0.0",
+    "dependencies": {
+        "your-lib": "1.2.3",
+        "their-lib": "4.5.6"
+    }
+}
+```
+
+```js
+// your-lib/package.json
+{
+	"name": "your-lib",
+	"version": "1.2.3",
+    "devDependencies": {
+        "their-lib": "4.5.6"
+    },
+    "peerDependencies": {
+        // if this range starts higher, the version of `their-lib` in
+        // `my-app` will need to change too
+        "their-lib": "^4.5.6"
+    }
+}
+```
+
+#### Do not use local copies of `peerDependencies` in a monorepo
+
+One of the benefits of a monorepo is that apps can directly consume dependencies that they live in the same workspace.
+
+This means the app is always up-to-date with their latest version, e.g.:
+
+```js
+// my-app/package.json
+{
+	"name": "my-app",
+    "dependencies": {
+        "my-lib": "workspace:*"
+    }
+}
+```
+
+It is tempting to do the same with `peerDependencies`, e.g.:
+
+```js
+// lib-a/package.json
+{
+	"name": "lib-a",
+	"version": "1.2.3"
+}
+```
+
+```js
+// lib-b/package.json
+{
+	"name": "lib-b",
+	"version": "4.5.6",
+    "devDependencies": {
+        "lib-a": "workspace:*" // resolves to 1.2.3 when published
+    },
+    "peerDependencies": {
+        "lib-a": "workspace:^" // resolves to ^1.2.3 when published
+    }
+}
+```
+
+However, this would mean that for any new version of `lib-a` – even a patch – we will need a new _major_ version of `lib-b` (because changes `peerDependencies` are breaking – see above).
+
+Therefore, even though it means `lib-b` would no longer be consuming the version of `lib-a` that sits alongside it in the repo, `lib-b` should still consume the earliest version of `lib-a` it can (whether or not that's the workspace version).
+
+##### Example
+
+```js
+// lib-a/package.json
+{
+	"name": "lib-a",
+	"version": "1.6.7"
+}
+```
+
+```js
+// lib-b/package.json
+{
+	"name": "lib-b",
+	"version": "4.5.6",
+    "devDependencies": {
+        "lib-a": "1.2.3" // now comes from NPM, not the workspace
+    },
+    "peerDependencies": {
+        "lib-a": "^1.2.3"
+    }
+}
+```
+
 ### Publishing
 
 #### Continuous delivery
