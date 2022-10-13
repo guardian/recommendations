@@ -147,7 +147,7 @@ This is because it could require the consumer to make changes to their project, 
 	"version": "1.0.0",
     "dependencies": {
         "your-lib": "1.2.3",
-        "their-lib": "4.5.6"
+        "their-lib": "4.5.6" // a peer dependency of `your-lib`
     }
 }
 ```
