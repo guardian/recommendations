@@ -170,9 +170,9 @@ This is because it could require the consumer to make changes to their project, 
 
 #### Do not use local copies of `peerDependencies` in a monorepo
 
-One of the benefits of a monorepo is that apps can directly consume dependencies that they live in the same workspace.
+One of the benefits of a monorepo is that projects can directly consume dependencies that live in the same workspace.
 
-This means the app is always up-to-date with their latest version, e.g.:
+This means they are always up-to-date with the latest versions of their deps, e.g.:
 
 ```js
 // my-app/package.json
@@ -208,7 +208,7 @@ It is tempting to do the same with `peerDependencies`, e.g.:
 }
 ```
 
-However, this would mean that for any new version of `lib-a` – even a patch – we will need a new _major_ version of `lib-b` (because changes `peerDependencies` are breaking – see above).
+However, this would mean that for any new version of `lib-a` – even a patch – we will need a new _major_ version of `lib-b` (because changes to `peerDependencies` are breaking – see above).
 
 Therefore, even though it means `lib-b` would no longer be consuming the version of `lib-a` that sits alongside it in the repo, `lib-b` should still consume the earliest version of `lib-a` it can (whether or not that's the workspace version).
 
