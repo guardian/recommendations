@@ -35,32 +35,31 @@ Generate two versions of your library:
 
 ```js
 // rollup.config.js
-import ts from 'rollup-plugin-ts';
-import pkg from './package.json';
+import ts from "rollup-plugin-ts";
+import pkg from "./package.json";
 
 export default [
 	{
-		input: 'src/index.ts',
+		input: "src/index.ts",
 		output: {
-			dir: pkg.module.replace('/index.js', ''),
-			format: 'es',
+			dir: pkg.module.replace("/index.js", ""),
+			format: "es",
 			sourcemap: true,
 			preserveModules: true,
 		},
-		plugins: [ts({ tsconfig: './tsconfig.es.json' })],
+		plugins: [ts({ tsconfig: "./tsconfig.es.json" })],
 	},
 	{
-		input: 'src/index.ts',
+		input: "src/index.ts",
 		output: {
-			dir: pkg.main.replace('/index.js', ''),
-			format: 'cjs',
+			dir: pkg.main.replace("/index.js", ""),
+			format: "cjs",
 			sourcemap: true,
 			preserveModules: true,
 		},
-		plugins: [ts({ tsconfig: './tsconfig.cjs.json' })],
+		plugins: [ts({ tsconfig: "./tsconfig.cjs.json" })],
 	},
 ];
-
 ```
 
 This is only an example, there are many ways of configuring this.
@@ -76,10 +75,12 @@ Publish under the [`@guardian`](https://www.npmjs.com/org/guardian) scope.
 
 ##### Example
 
+Imagine you're working on a re-usable slideshow widget for Guardian web pages:
+
 ```js
 // package.json
 {
-	"name": "@guardian/my-package",
+	"name": "@guardian/slideshow",
 	...
 }
 ```
@@ -88,14 +89,25 @@ Publish under the [`@guardian`](https://www.npmjs.com/org/guardian) scope.
 
 The ES module version of your library should be referenced by the `module` field.
 
-The CommonJS version should be referenced by the `main` field. 
+The CommonJS version should be referenced by the `main` field.
 
 `.d.ts` files should be published alongside their JS counterparts or be referenced by the `types` field.
 
 ##### Example
 
 ```js
-// package.json – based on the `tsconfig.json` above
+// package.json
+{
+	"main": "dist/cjs/index.js", // dist/cjs/index.d.ts is included
+	"module": "dist/esm/index.js", // dist/esm/index.d.ts is included
+	...
+}
+```
+
+or
+
+```js
+// package.json
 {
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
@@ -106,33 +118,60 @@ The CommonJS version should be referenced by the `main` field.
 
 ### `peerDependencies`
 
+If your library depends on other libraries, list them as `peerDependencies` in your `package.json`.
+
+> `dependencies` are automatically installed alongside your library.
+>
+> If two libraries require different versions of the same library in their `dependencies`, both versions can end up in the final bundle when consumers build their apps.
+>
+> This is also true if the consumer uses the same library in their app's `dependencies` too.
+>
+> Using `peerDependencies` instead allows consumers to control which version of a single instance of the dependency they install, while still making sure everything can find what it needs.
+
 #### `peerDependencies` ranges should be a wide as possible
 
 This ensures compatibility with the maximum number of installations.
 
-#### Pin the lowest possible version of `peerDependencies` in `devDependencies`
+##### Example
 
-This ensures your library is developed against the sparest possible version of its dependencies.
+Imagine `@guardian/slideshow` uses `_.zipObjectDeep`, which was [added to Lodash in v4.1.0](https://github.com/lodash/lodash/wiki/Changelog#v410):
+
+```js
+// package.json
+{
+	"name": "@guardian/slideshow",
+	"version": "1.0.0",
+	"peerDependencies": {
+		"lodash": "^4.1.0"
+	}
+}
+```
+
+The latest version is v4.17.21, but any version of v4 from v4.1.0 onwards will work fine.
+
+#### Pin the lowest possible version of `peerDependencies` in your package's `devDependencies`
+
+This prevents you accidentally developing against a feature of a dependency that was released _after_ the earliest version in your `peerDependencies` range.
 
 ##### Example
 
 ```js
-// my-lib/package.json
+// package.json
 {
-	"name": "my-lib",
+	"name": "@guardian/slideshow",
 	"version": "1.0.0",
-    "devDependencies": {
-        "your-lib": "1.2.3"
-    },
-    "peerDependencies": {
-        "your-lib": "^1.2.3"
-    }
+	"devDependencies": {
+		"lodash": "4.1.0"
+	},
+	"peerDependencies": {
+		"lodash": "^4.1.0"
+	}
 }
 ```
 
 #### Changes to `peerDependencies` ranges are breaking
 
-This is because it could require the consumer to make changes to their project, so would not a drop-in change.
+This is because it will require the consumer to make changes to their project, so it would not be a drop-in change.
 
 > In an npm module, any peer dep change that removes a previously valid version from being valid is a major/breaking change. Peer deps are part of the public API.
 
@@ -140,99 +179,138 @@ This is because it could require the consumer to make changes to their project, 
 
 ##### Example
 
+Here's an application that consumes `@guardian/slideshow`:
+
 ```js
-// my-app/package.json
+// package.json
 {
-	"name": "my-app",
-	"version": "1.0.0",
-    "dependencies": {
-        "your-lib": "1.2.3",
-        "their-lib": "4.5.6" // a peer dependency of `your-lib`
-    }
+	"name": "new-website",
+	"dependencies": {
+		"@guardian/slideshow": "^1.0.0",
+		"lodash": "^4.1.0" // a peer dependency of @guardian/slideshow@1.0.0
+	}
 }
 ```
 
+Now imagine a new version `@guardian/slideshow` adds a feature that uses `_.update`, which was [added to Lodash in v4.6.0](https://github.com/lodash/lodash/wiki/Changelog#v460):
+
 ```js
-// your-lib/package.json
+// package.json
 {
-	"name": "your-lib",
-	"version": "1.2.3",
-    "devDependencies": {
-        "their-lib": "4.5.6"
-    },
-    "peerDependencies": {
-        // if this range starts higher, the version of `their-lib` in
-        // `my-app` will need to change too
-        "their-lib": "^4.5.6"
-    }
+	"name": "@guardian/slideshow",
+	"version": "1.1.0", // minor bump for the new feature
+	"devDependencies": {
+		"lodash": "4.6.0"
+	},
+	"peerDependencies": {
+		"lodash": "^4.6.0" // the minimum version we need has risen from ^4.1.0
+	}
 }
 ```
 
-#### Do not use local copies of `peerDependencies` in a monorepo
+I update my app to use the new version of `@guardian/slideshow`:
+
+```js
+// package.json
+{
+	"name": "new-website",
+	"dependencies": {
+		"@guardian/slideshow": "^1.1.0", // new version
+		"lodash": "^4.1.0" // I don't change this
+	}
+}
+```
+
+My version of Lodash might not have `_.update`, so my app could break. To fix it, I need to update my version of Lodash to `^4.6.0` as well.
+
+Even though bumping Lodash is only a small change, the fact I could not update `@guardian/slideshow` without making _any_ other changes means it's a breaking change.
+
+`@guardian/slideshow` should have been released at `v2.0.0` instead.
+
+#### Packages should not consume local copies of `peerDependencies` in a monorepo
 
 One of the benefits of a monorepo is that projects can directly consume dependencies that live in the same workspace.
 
-This means they are always up-to-date with the latest versions of their deps, e.g.:
-
-```js
-// my-app/package.json
-{
-	"name": "my-app",
-    "dependencies": {
-        "my-lib": "workspace:*"
-    }
-}
-```
-
-It is tempting to do the same with `peerDependencies`, e.g.:
-
-```js
-// lib-a/package.json
-{
-	"name": "lib-a",
-	"version": "1.2.3"
-}
-```
-
-```js
-// lib-b/package.json
-{
-	"name": "lib-b",
-	"version": "4.5.6",
-    "devDependencies": {
-        "lib-a": "workspace:*" // resolves to 1.2.3 when published
-    },
-    "peerDependencies": {
-        "lib-a": "workspace:^" // resolves to ^1.2.3 when published
-    }
-}
-```
-
-However, this would mean that for any new version of `lib-a` – even a patch – we will need a new _major_ version of `lib-b` (because changes to `peerDependencies` are breaking – see above).
-
-Therefore, even though it means `lib-b` would no longer be consuming the version of `lib-a` that sits alongside it in the repo, `lib-b` should still consume the earliest version of `lib-a` it can (whether or not that's the workspace version).
+This means they are always up-to-date with the latest versions of their deps.
 
 ##### Example
 
+Imagine `new-website` and `@guardian/slideshow` both live in the same monorepo:
+
 ```js
-// lib-a/package.json
+// package.json
 {
-	"name": "lib-a",
-	"version": "1.6.7"
+	"name": "new-website",
+	"dependencies": {
+		"@guardian/slideshow": "workspace:*", // always use the local version
+		"lodash": "^4.6.0"
+	}
+}
+```
+
+It is tempting to do the same with `peerDependencies` of packages.
+
+Imagine `@guardian/slideshow` starts using something from `@guardian/libs`, which is also in the monorepo:
+
+```js
+// package.json
+{
+	"name": "@guardian/libs",
+	"version": "6.0.0"
 }
 ```
 
 ```js
-// lib-b/package.json
+// package.json
 {
-	"name": "lib-b",
-	"version": "4.5.6",
-    "devDependencies": {
-        "lib-a": "1.2.3" // now comes from NPM, not the workspace
-    },
-    "peerDependencies": {
-        "lib-a": "^1.2.3"
-    }
+	"name": "@guardian/slideshow",
+	"version": "2.1.0",
+	"devDependencies": {
+		"@guardian/libs": "workspace:*",
+		"lodash": "4.6.0"
+	},
+	"peerDependencies": {
+		"@guardian/libs": "workspace:^", // resolves to "^6.0.0" when published
+		"lodash": "^4.6.0"
+	}
+}
+```
+
+The lowest version of the range for `@guardian/libs` in `peerDependencies` needs to be the version that's currently in the repo (since that's the version we're developing/testing against).
+
+Although, for us, `@guardian/slideshow` is using `@guardian/libs` directly and not worrying about the version, if `@guardian/libs` code changes we still need to release a new version so that other consumers can pick up the changes.
+
+The new version means we will also need to update the `peerDependencies` range for `@guardian/slideshow`, to ensure consumers are using a compatible version of `@guardian/libs`.
+
+But because changes to `peerDependencies` are breaking (see above), we will also then need a new _major_ version of `@guardian/slideshow` (even if the original change to `@guardian/libs` was just a patch).
+
+This is obviously not great for consumers of `@guardian/slideshow`!
+
+Therefore it is a bad idea for published packages to consume the local version of any deps that live alongside them in a repo.
+
+They should still specify the widest `peerDependencies` range for a dependency that they can, and pin the lowest possible version in `devDependencies` in development/testing.
+
+Effectively, published packages in a monorepo should act as if they were in their own, isolated repo.
+
+##### Example
+
+Imagine `@guardian/slideshow` uses `ArticleDesign.Gallery` from `@guardian/libs`, which was [added in v5.0.0](https://github.com/guardian/libs/releases/tag/v5.0.0), and [didn't change in v6.0.0](https://github.com/guardian/libs/releases/tag/v6.0.0).
+
+Although `@guardian/libs` is at v6.5.2 in the repo and would work fine, we still won't use it directly:
+
+```js
+// package.json
+{
+	"name": "@guardian/slideshow",
+	"version": "2.1.0",
+	"devDependencies": {
+		"@guardian/libs": "5.0.0",
+		"lodash": "4.6.0"
+	},
+	"peerDependencies": {
+		"@guardian/libs": "^5.0.0 || ^6.0.0", // either of these work fine with @guardian/slideshow
+		"lodash": "^4.6.0"
+	}
 }
 ```
 
@@ -267,7 +345,7 @@ module: {
 		{
 			test: /\.m?(j|t)sx?$/,
 			use: {
-				loader: 'babel-loader',
+				loader: "babel-loader",
 			},
 			exclude: {
 				test: /node_modules/,
@@ -276,11 +354,12 @@ module: {
 				exclude: /@guardian\//,
 			},
 		},
-	]
+	];
 }
 ```
 
 ## Running NPM packages as binaries in CI
+
 Various Node libraries can be run over the CLI using tools like `npx` or `yarn dlx`.
 
 The `npx` and `yarn dlx` tools are not deterministic as they do not work off a lockfile, they will install dependencies
@@ -291,15 +370,16 @@ To ensure a deterministic and repeatable CI build, it is recommended to directly
 This will result in entries in your project's lockfile as the library is treated like any other dependency.
 
 ### Example
+
 Rather than `npx @guardian/node-riffraff-artifact`, prefer to update `package.json`:
 
 ```
 {
   "devDependencies": {
-    "@guardian/node-riffraff-artifact": "^0.2.1"
+	"@guardian/node-riffraff-artifact": "^0.2.1"
   },
   "scripts": {
-    "riffraff-upload": "node-riffraff-artifact"
+	"riffraff-upload": "node-riffraff-artifact"
   }
 }
 ```
