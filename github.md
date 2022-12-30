@@ -1,5 +1,14 @@
 # GitHub
 
+## User Configuration
+> **Note**
+> These are also checked by [gu-who](https://github.com/guardian/gu-who#enforced-requirements).
+
+- [MFA](https://help.github.com/articles/about-two-factor-authentication) must be enabled
+- A human name should be added to your account
+
+These requirements are intended to make it easier to manage user accounts and understand if they should be in the organisation or not.
+
 ## Repository Configuration
 ### Default branch name
 Use `main`.
