@@ -58,7 +58,7 @@ We can currently enforce as part of configuring an OAuth client in a Google Clou
 
 > Authentication verifies the identity of a user or service, and authorisation determines their access rights.
 
-Currently there are libraries for common languages mentioned above that allow you to perform access management by restricting Google group: [guardian/play-googleauth](https://github.com/guardian/play-googleauth) (Scala), or [guardian/pan-domain-authentication](https://github.com/guardian/pan-domain-authentication/#to-verify-login-in-nodejs) (Node).  However these solutions require you to encode this logic in your application, and it would be  to push this logic into the ALB configuration as discussed in the [Cognito authentication proposal](https://docs.google.com/document/d/1bEyL_Hn7DRs7XNyhvjvDK0PGXRzxgFzCbMcnaVyXbA0/edit#heading=h.nchxv8vlw2w5) above.
+Currently there are libraries for common languages mentioned above that allow you to perform access management by restricting Google group: [guardian/play-googleauth](https://github.com/guardian/play-googleauth) (Scala), or [guardian/pan-domain-authentication](https://github.com/guardian/pan-domain-authentication/#to-verify-login-in-nodejs) (Node).  However these solutions require you to encode this logic in your application, and it would be preferable to push this logic into the ALB configuration as discussed in the [Cognito authentication proposal](https://docs.google.com/document/d/1bEyL_Hn7DRs7XNyhvjvDK0PGXRzxgFzCbMcnaVyXbA0/edit#heading=h.nchxv8vlw2w5) above.
 
 
 
