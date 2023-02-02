@@ -8,7 +8,7 @@ Restricting access to IP ranges as a method of protecting our tools became impra
 
 In addition the security offered by IP restriction relies on trusting all access from within the network which is less secure than authenticating each users identity with a trusted identity provider.
 
-In order to improve the security of our services, and restore access to previously IP restricted services in the absence of a working VPN we have established the proposed pattern in conjunction for InfoSec.
+In order to improve the security of our services, and restore access to previously IP restricted services in the absence of a working VPN we have established this pattern in conjunction for InfoSec.
 
 ## Problem statement
 
@@ -20,13 +20,13 @@ To improve security for our staff tools available on the internet we need to be 
 - Authenticate requests that come from within our network
 - Handle authorization and access management to restrict access to specific users
 
-## Proposed solution
+## Solution
 
-This proposal brings together multiple components to provide a single secure solution:
+This solution brings together multiple components to provide a single secure solution:
 
 ### Authentication at the ALB
 
-For the case where an application is served via an [Application Load Balancer (ALB)](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html) in AWS we propose using [authentication at the ALB](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html) with Google as an OpenID Connect (OIDC) compliant Identity Provider (IdP). This will require a Google OAuth client to be configured for your application as part of a Google Cloud project. 
+For the case where an application is served via an [Application Load Balancer (ALB)](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html) in AWS we will use [authentication at the ALB](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html) with Google as an OpenID Connect (OIDC) compliant Identity Provider (IdP). This will require a Google OAuth client to be configured for your application as part of a Google Cloud project. 
 
 This approach allows us to authenticate external requests before they reach our applications.
 
@@ -36,7 +36,7 @@ This will remove the requirement to perform authentication within application co
 
 ### Web Application Firewall (WAF)
 
-To provide a standard way to recognise and prevent common attacks than can come via web requests we propose using AWS WAF [Web Access Control Lists (ACLs)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html). These can be integrated with various AWS solutions including AWS ALBs. See the following [Architecture Decision Record](https://github.com/guardian/waf/blob/main/adr/waf-management.md) for further context.
+To provide a standard way to recognise and prevent common attacks than can come via web requests we will use AWS WAF [Web Access Control Lists (ACLs)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html). These can be integrated with various AWS solutions including AWS ALBs. See the following [Architecture Decision Record](https://github.com/guardian/waf/blob/main/adr/waf-management.md) for further context.
 
 This solution allows centrally managing Web ACL rules so that they are easily understood, contain an audit trail via source control and can easily be reviewed by InfoSec. In addition this solution can provide a [stream of request events](https://github.com/guardian/waf/blob/main/lib/primary-waf.ts#L62) that can be centrally audited.
 
