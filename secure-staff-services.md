@@ -8,7 +8,7 @@ Restricting access to IP ranges as a method of protecting our tools became impra
 
 In addition the security offered by IP restriction relies on trusting all access from within the network which is less secure than authenticating each users identity with a trusted identity provider.
 
-In order to improve the security of our services, and restore access to previously IP restricted services in the absence of a working VPN we have established this pattern in conjunction for InfoSec.
+In order to improve the security of our services, and restore access to previously IP restricted services in the absence of a working VPN we have established this pattern in conjunction with InfoSec.
 
 ## Problem statement
 
@@ -20,7 +20,7 @@ To improve security for our staff tools available on the internet we need to be 
 - Authenticate requests that come from within our network
 - Handle authorization and access management to restrict access to specific users
 
-## Solution
+## Recommendation
 
 This solution brings together multiple components to provide a single secure solution:
 
@@ -33,6 +33,8 @@ This approach allows us to authenticate external requests before they reach our 
 A proposed extension to this would be this [Cognito authentication proposal](https://docs.google.com/document/d/1bEyL_Hn7DRs7XNyhvjvDK0PGXRzxgFzCbMcnaVyXbA0/edit#heading=h.nchxv8vlw2w5) that provides further custom authentication with Google as an IdP but allows potential access management based on Google groups, and enforces MFA requirements. 
 
 This will remove the requirement to perform authentication within application code and provide a standard way of authenticating all our applications that can easily be [encoded in a GuCDK pattern](https://docs.google.com/document/d/1SfvjNRIzv1bNYRho7s5i_YZv6YyWadp4j9rNOqvpnJg/edit#heading=h.812bucjdpfq7).
+
+As a baseline services should require Guardian Google organisation membership with 2FA enabled, with the ability to perform tighter access management to a subset of Guardian staff.
 
 ### Web Application Firewall (WAF)
 
@@ -51,6 +53,8 @@ This can be done by verifying the token passed from the ALB during the authentic
 In the future we hope to develop a common pattern for verifying tokens from the ALB to prevent the need to re-authenticate at the application.
 
 ### Authorisation / Access Management
+
+You should follow the [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), when deciding who has access to your services and consider the sensitivity of any data or operations your service makes available. For example a service which provides read-only data on what's for lunch in the canteen may be accessed by all Guardian staff, but a service that publishes content to our site must be tightly controlled to a known set of users.
 
 Even if we establish the identity of a user using Google as our IdP, we must further establish that they are a Guardian staff member and in many cases as a member of a specific group of Guardian users.
 
