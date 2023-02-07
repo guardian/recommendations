@@ -40,7 +40,7 @@ As a baseline services should require Guardian Google organisation membership wi
 
 To provide a standard way to recognise and prevent common attacks than can come via web requests we will use AWS WAF [Web Access Control Lists (ACLs)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html). These can be integrated with various AWS solutions including AWS ALBs. See the following [Architecture Decision Record](https://github.com/guardian/waf/blob/main/adr/waf-management.md) for further context.
 
-This solution allows centrally managing Web ACL rules so that they are easily understood, contain an audit trail via source control and can easily be reviewed by InfoSec. In addition this solution can provide a [stream of request events](https://github.com/guardian/waf/blob/main/lib/primary-waf.ts#L62) that can be centrally audited.
+This solution allows centrally managing Web ACL rules so that they are easily understood, contain an audit trail via source control and can easily be reviewed by InfoSec. In addition this solution can provide a [stream of request events](https://github.com/guardian/waf/blob/bd6fa3a45e9b1892b6207cdd6e8fff27930ca40a/lib/primary-waf.ts#L62) that can be centrally audited.
 
 ### Authentication at the application
 
