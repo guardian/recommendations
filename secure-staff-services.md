@@ -34,7 +34,7 @@ A proposed extension to this would be this [Cognito authentication proposal](htt
 
 This will remove the requirement to perform authentication within application code and provide a standard way of authenticating all our applications that can easily be [encoded in a GuCDK pattern](https://docs.google.com/document/d/1SfvjNRIzv1bNYRho7s5i_YZv6YyWadp4j9rNOqvpnJg/edit#heading=h.812bucjdpfq7).
 
-As a baseline services should require Guardian Google organisation membership with 2FA enabled, with the ability to perform tighter access management to a subset of Guardian staff.
+**Your application should require Guardian Google organisation membership with 2FA enabled, with the ability to perform tighter access management to a subset of Guardian staff.**
 
 ### Web Application Firewall (WAF)
 
@@ -42,19 +42,22 @@ To provide a standard way to recognise and prevent common attacks than can come 
 
 This solution allows centrally managing Web ACL rules so that they are easily understood, contain an audit trail via source control and can easily be reviewed by InfoSec. In addition this solution can provide a [stream of request events](https://github.com/guardian/waf/blob/bd6fa3a45e9b1892b6207cdd6e8fff27930ca40a/lib/primary-waf.ts#L62) that can be centrally audited.
 
-### Authentication at the application
+**Your application should make use of a WAF with centrally managed Web ACL rules provisioned from the https://github.com/guardian/waf repository after review from a member of InfoSec.**
 
-In order to ensure that requests that reach services (EC2 instances or Lambdas) inside our networks we should re-authenticate requests either by validating any tokens generated at the ALB or entirely re-authenticating the user.
+### Authentication & Authorisation at the Application
 
-Ensuring that we re-authenticate internal requests prevents lateral movement of attacks inside our network should external access be compromised.
+**Your application, either developed or off the shelf has authentication (verifies the identity of a user or service) and authorization (determines their access rights). The application must carry out these and not rely solely on authentication at the ALB.**
 
-This can be done by verifying the token passed from the ALB during the authentication step (no current example) or by re-authenticating the user in the application using an existing auth library such as [guardian/play-googleauth](https://github.com/guardian/play-googleauth) (Scala), or [guardian/pan-domain-authentication](https://github.com/guardian/pan-domain-authentication/#to-verify-login-in-nodejs) (Node). 
+You should use OpenID Connect (OIDC) with Google as an IdP to achieve this. The following mechanisms are acceptable:
 
-In the future we hope to develop a common pattern for verifying tokens from the ALB to prevent the need to re-authenticate at the application.
+- [Verify any access token](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html) and any claims they contain passed from the ALB during the authentication step.
+- Authenticate and authorise the user in your application using an existing auth library such as:
+  - Scala: [guardian/play-googleauth](https://github.com/guardian/play-googleauth)
+  - Node: [guardian/pan-domain-authentication](https://github.com/guardian/pan-domain-authentication/#to-verify-login-in-nodejs). 
 
 ### Authorisation / Access Management
 
-You should follow the [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), when deciding who has access to your services and consider the sensitivity of any data or operations your service makes available. For example a service which provides read-only data on what's for lunch in the canteen may be accessed by all Guardian staff, but a service that publishes content to our site must be tightly controlled to a known set of users.
+**You should follow the [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), when deciding who has access to your application** and consider the sensitivity of any data or operations your service makes available. For example a service which provides read-only data on what's for lunch in the canteen may be accessed by all Guardian staff, but a service that publishes content to our site must be tightly controlled to a known set of users.
 
 Even if we establish the identity of a user using Google as our IdP, we must further establish that they are a Guardian staff member and in many cases as a member of a specific group of Guardian users.
 
