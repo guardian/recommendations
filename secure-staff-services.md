@@ -22,7 +22,7 @@ To improve security for our staff tools available on the internet we need to be 
 
 ## Recommendation
 
-This solution brings together multiple components to provide a single secure solution:
+This solution brings together multiple components to provide a single design pattern with baseline security controls. It is important to note that every applicaiton has its own threat profile and the threat model for certain applications might inform requirements for a higher security baseline and additional security controls implementation
 
 ### Authentication at the ALB
 
