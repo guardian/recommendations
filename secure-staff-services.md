@@ -4,11 +4,11 @@
 
 We have a need to make services securely available to both our editorial and engineering staff. In the past we have relied on IP restricting access to internal IP ranges accessible on premises and via VPN by [AWS Security Groups](https://docs.aws.amazon.com/managedservices/latest/userguide/about-security-groups.html).
 
-Restricting access to IP ranges as a method of protecting our tools became impractical after the [network incident at the start of 2023](https://www.theguardian.com/media/2022/dec/21/guardian-hit-by-serious-it-incident-believed-to-be-ransomware-attack). 
+Restricting access to IP ranges as a method of protecting our tools was reviewed following the [network incident at the start of 2023](https://www.theguardian.com/media/2022/dec/21/guardian-hit-by-serious-it-incident-believed-to-be-ransomware-attack). 
 
-In addition the security offered by IP restriction relies on trusting all access from within the network which is less secure than authenticating each users identity with a trusted identity provider.
+Sole reliance on IP restriction assumes implicit trust in the network. This is considered less secure than an approach in which one builds trust into users, devices and services by using authentication and authorisation mechanisms. IP restrictions could still be considered as additional layer of control.
 
-In order to improve the security of our services, and restore access to previously IP restricted services in the absence of a working VPN we have established this pattern in conjunction with InfoSec.
+In order to improve the security of our services we have established this pattern in conjunction with InfoSec.
 
 ## Problem statement
 
