@@ -8,7 +8,7 @@ Restricting access to IP ranges as a method of protecting our tools was reviewed
 
 Sole reliance on IP restriction assumes implicit trust in the network. This is considered less secure than an approach in which one builds trust into users, devices and services by using authentication and authorisation mechanisms. IP restrictions could still be considered as additional layer of control.
 
-In order to improve the security of our services we have established this pattern in conjunction with InfoSec.
+In order to improve the security of our services as part of a move closer to establishing a [zero trust security model](https://en.wikipedia.org/wiki/Zero_trust_security_model) we have established this pattern in conjunction with InfoSec.
 
 ## Problem statement
 
