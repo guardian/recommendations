@@ -61,7 +61,7 @@ You should use OpenID Connect (OIDC) with Google as an IdP to achieve this. The 
 
 Even if we establish the identity of a user using Google as our IdP, we must further establish that they are a Guardian staff member and in many cases as a member of a specific group of Guardian users.
 
-We can currently enforce as part of configuring an OAuth client in a Google Cloud project that any user authenticated with that client are an internal user, but cannot further restrict access to specific users or Google groups.
+We can currently enforce as part of configuring an OAuth client in a Google Cloud project that any user authenticated with that client has a Guardian google account, but cannot further classify or restrict access to specific organisational roles or Google groups.
 
 > Authentication verifies the identity of a user or service, and authorisation determines their access rights.
 
