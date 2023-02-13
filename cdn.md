@@ -26,6 +26,6 @@ When using Fastly it is recommended that you enable [shielding](https://docs.fas
 We suggest using the London-LCY point of presence as your shield.
 
 ## Logging
-Fastly has extensive logging capabilities. This can be useful for debugging and data analysis. We advise [streaming logs to Amazon S3](https://docs.fastly.com/en/guides/log-streaming-amazon-s3).
+Fastly has extensive logging capabilities. This can be useful for debugging and data analysis. We advise [streaming logs to Amazon S3](https://docs.fastly.com/en/guides/log-streaming-amazon-s3). When logging to S3 you should [create an IAM role for Fastly](https://docs.fastly.com/en/guides/creating-an-aws-iam-role-for-fastly-logging) using Fastly's AWS account as the principal rather than creating static credentials.
 
 Reader facing services will generate a high volume of logs so you should only enable logging where it is needed. You may consider [logging a sample of requests](https://docs.fastly.com/en/guides/useful-conditions-for-logging#logging-samples).
