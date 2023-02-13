@@ -32,6 +32,7 @@ provides simpler scalability and greater robustness
 -   [Client Side](client-side.md)
 -   [Coding with empathy](coding-with-empathy.md)
 -   [Config](config.md)
+-   [Content Delivery Network (CDN)](cdn.md)
 -   [Continuous Deployment](continuous-deployment.md)
 -   [Continuous Integration](continuous-integration.md)
 -   [Elasticsearch](elasticsearch.md)
