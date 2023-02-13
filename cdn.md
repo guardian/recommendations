@@ -19,3 +19,13 @@ A lot can be achieved with minimal Fastly configuration, and careful use of cach
 If this is insufficient, the next step is making use of VCL snippets, which can be easily edited in the Fastly console and provide a useful way of providing a little extra functionality.
 
 If you find that your VCL snippets are becoming quite large, you should consider switching to custom VCL, which should be versioned in Github and deployed using riff-raff.
+
+## Shielding
+When using Fastly it is recommended that you enable [shielding](https://docs.fastly.com/en/guides/shielding#caveats-of-shielding) as it will improve cache performance. Bear in mind that when using shielding any VCL may be executed more than once - see [caveats of shielding](https://docs.fastly.com/en/guides/shielding#caveats-of-shielding). 
+
+We suggest using the London-LCY point of presence as your shield.
+
+## Logging
+Fastly has extensive logging capabilities. This can be useful for debugging and data analysis. We advise [streaming logs to Amazon S3](https://docs.fastly.com/en/guides/log-streaming-amazon-s3).
+
+Reader facing services will generate a high volume of logs so you should only enable logging where it is needed. You may consider [logging a sample of requests](https://docs.fastly.com/en/guides/useful-conditions-for-logging#logging-samples).
