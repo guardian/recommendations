@@ -1,5 +1,4 @@
-Scala
------
+# Scala
 
  * Always specify an explicit sbt.version
  * Ensure you run in production with GC logging enabled
@@ -19,5 +18,70 @@ Most of the time, dependency injection does not solve a real business problem. Y
 With [The play framework](https://www.playframework.com/) you should always use [compile-time dependency injection](https://www.playframework.com/documentation/2.5.x/ScalaCompileTimeDependencyInjection) which refers to an object oriented way to specify your components declaratively in scala.
 
 
+## Continuous dependency management
 
+Use [Scala Steward](https://github.com/scala-steward-org/scala-steward) to manage the dependencies of your Scala
+codebases.  It's important to keep up with changes to dependencies so that when a large-scale security problem occurs
+there's no need to do a massive update of multiple dependencies all at once.
+Scala Steward works in a similar way to Dependabot, by monitoring a codebase on a schedule and raising a PR whenever
+a new version of a dependency becomes available. Here's an 
+[example of a generated PR](https://github.com/guardian/identity/pull/2282), showing the dependency changelog
+and diff between the version currently in use and the new one.
 
+Scala Steward also makes use of Scalafix code fixups, where they're available, to reduce the workload a little.
+This can be of variable benefit. The fix will be applied as a separate commit.
+([Example](https://github.com/guardian/identity-admin-api/pull/313))
+
+Once Scala Steward has been integrated into a repo, it's best to get into the habit of testing and either merging or 
+closing all the outstanding PRs it has generated before doing any work on the codebase.
+
+Bear in mind that the first run of Scala Steward on an old repo is likely to generate a lot of PRs!
+The number of PRs gives an idea of the state of the codebase.
+Don't be overwhelmed by it.
+Work out a strategy for prioritising updates.
+This might be picking off the PRs that only affect the test scope first and then patches, or focusing on a certain
+technology area first, or looking for redundant dependencies that could be removed first.
+Have a daily target of reducing the number of PRs to a certain level.
+
+### Integration steps
+
+To integrate Scala Steward into a Guardian repo:
+1. If the repo is public, add it to our [list of public repos](https://github.com/guardian/scala-steward-public-repos).
+   Otherwise, if it's a private repo, add it to the [list of private repos](https://github.com/guardian/scala-steward-private-repos).
+   These are separate because GHA workflow runs in public repos are free of charge.
+2. If the repo needs
+   [custom configuration](https://github.com/scala-steward-org/scala-steward/blob/main/docs/repo-specific-configuration.md),
+   add a config file to its root.
+   ([Example](https://github.com/guardian/identity-processes/blob/main/.scala-steward.conf)).
+   In most cases you won't need to do this but have a look over the available options.
+3. GHA workflow runs are scheduled in the 
+   [public](https://github.com/guardian/scala-steward-public-repos/blob/main/.github/workflows/public-repos-scala-steward.yml)
+   and 
+   [private](https://github.com/guardian/scala-steward-private-repos/blob/main/.github/workflows/private-repos-scala-steward.yml)
+   repos.
+   Have a look over the output of the first run of the workflow after your repo has been added to make sure it is
+   successful.
+   ([Example](https://github.com/guardian/scala-steward-public-repos/actions/runs/4302760549/jobs/7501659987#step:6:76)) 
+
+### Bundling dependency updates
+
+It can be convenient to merge all the recent updates in a single PR depending on your team practices.
+Instructions on how to bundle updates together are 
+[here](https://github.com/guardian/.github/blob/main/.github/workflows/docs/pr-batching.md).
+
+### Things to consider
+
+* You'll still need to monitor your dependencies to see if any have been abandoned or are no
+  longer in use by the codebase.
+* Sometimes the name of a dependency can change between releases.
+  In this case, Scala Steward won't pick up the new version.
+  An example is the transition between v2 and v3 of
+  [STTP](https://mvnrepository.com/artifact/com.softwaremill.sttp.client/core). 
+* The effect of an updated dependency on transitive dependencies can often be surprisingly extensive, occasionally even
+  with just a patch update.
+* As well as a set of tests that give you confidence at compile time, you'll also need to inspect the effect of the
+  update on runtime behaviour, either by automated or manual smoke tests.  You'll save yourself a lot of pain if you can
+  do this in an automated way.
+
+It has to be said that all these factors to take into account would apply regardless of the mechanism
+you used to manage your dependencies.
