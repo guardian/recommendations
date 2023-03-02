@@ -78,4 +78,11 @@ Instead, ignore the directory by default and add back things you explicity want 
 
 ### `.vscode/settings.json`
 
-**Do not commit this, ever!** This overrides user settings. Instead, commit a `.vscode/settings.json.default` file with your project's recommended settings. Individual developers can then pick and choose the bits that will help them the most.
+**Do not commit this, ever!** This overrides user settings. Instead, commit a `.vscode/settings.json.default` file with your project's recommended settings. Individual developers can then pick and choose the bits that will help them the most:
+
+```
+# .gitignore
+.vscode/*
+!.vscode/settings.json.default
+
+```
