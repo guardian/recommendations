@@ -49,6 +49,7 @@ The following settings may be useful to you:
 
 ```js
 {
+    "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
