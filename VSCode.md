@@ -63,3 +63,19 @@ The following settings may be useful to you:
     }
 }
 ```
+### Do not commit `.vscode`
+
+The `.vscode` project directory can contain project-specific configurations but also things which override user preferences, and not everyone will find this useful.
+
+Instead, ignore the directory by default and add back things you explicity want to share, e.g.:
+
+```
+# .gitignore
+.vscode/*
+!.vscode/*.code-snippets
+
+```
+
+### `.vscode/settings.json`
+
+**Do not commit this, ever!** This overrides user settings. Instead, commit a `.vscode/settings.json.default` file with your project's recommended settings. Individual developers can then pick and choose the bits that will help them the most.
