@@ -77,7 +77,7 @@ It is tempting, if there are general problems with the code being examined, to s
 
 ## Code changes
 The following are some things to consider when examining the code:
-- Does it meet the team’s guidelines and style guides? For example [these Scala recommendations](../scala.md).
+- Does it meet the team’s guidelines and style guides? For example [these Scala recommendations](./scala.md).
 - Does the code work? Check whether function, and logic are correct.
 - Are functions, methods, and variables adequately named?
 - Does the change need any additional unit tests? For example:
