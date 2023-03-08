@@ -9,6 +9,15 @@
 
 These requirements are intended to make it easier to manage user accounts and understand if they should be in the organisation or not.
 
+## Creating a new repository
+
+The recommended methods for spawning a new repository are:
+
+- [https://repo-genesis.herokuapp.com](https://repo-genesis.herokuapp.com), and
+- [https://repo.new](https://repo.new).
+
+The benefit of repo-genesis is that it configures your newly created repository in a way that more closely follows best practice - it grants access to the repository to a GitHub team of your choosing. However, it still leaves you as an individual with admin access to the repository. Individual access is undesired, as you retain it should you leave the organisation.
+
 ## Repository Configuration
 ### Default branch name
 Use `main`.
