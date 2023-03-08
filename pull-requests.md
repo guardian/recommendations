@@ -23,7 +23,7 @@ There should be a manageable number of changes in a PR. Try to make your PR as s
 
 If a PR is too complex, it is much easier for issues to be missed. In addition if trying to understand an aspect of the code change in the future, it becomes harder to understand if buried in a very large and complex PR.
 
-Aim to deploy a PR before submitting the next one. Frequently small deployments of functionality are easier to review and easier to understand in production.
+Aim to deploy a PR before submitting the next one. Frequently small deployments of functionality are easier to review and easier to understand in PROD.
 
 ## Releasable
 A PR should be releasable once its review is complete.
@@ -60,7 +60,7 @@ When someone reviews a PR they do not take responsibility for whether the code i
 
 A review simply confirms that the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
 
-The ultimate responsibility for the change lies with the person who submitted the PR, and who releases it to production.
+The ultimate responsibility for the change lies with the person who submitted the PR, and who releases it to PROD.
 
 ## DRY
 No-one loves someone who writes the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
@@ -141,7 +141,7 @@ Note: If a different reviewer has requested a code change using the “request c
 # Merging is not the end!
 A PR is not finished when you merge it - check your change in PROD after it's deployed! Although unit and integration tests can add a lot of confidence that your change is good, looking at your change in PROD is the ultimate, and most important place to check your PR is delivering what's wanted.
 
-For webapps you can use [Prout](https://github.com/guardian/prout) to let you know when your change has reached Production, and is ready to be looked at.
+For webapps you can use [Prout](https://github.com/guardian/prout) to let you know when your change has reached PROD, and is ready to be looked at.
 
 A good way to get into the habit of doing post-merge checks is to write one final comment on your PR, detailing what you looked at:
 
@@ -150,7 +150,7 @@ A good post-merge comment on a PR can provide evidence that the PR works, or sho
 
 Here are some examples of what you could put in a post-merge comment - if your PR was adding:
 * **Metrics or Logging** : Include a sample or screenshot of the newly gathered data, with a link to the ELK or dashboard to make it easy to get to that data in the future ([example](https://github.com/guardian/ophan/pull/4065#issuecomment-802200900))
-* **A new UI feature** : A screenshot or even video of the feature in action in Production. This doesn't need to be too extensive, because you should already have screenshots/video in the main PR description! If the new feature is being A/B tested, you may want to link to the results. ([example](https://github.com/guardian/ophan/pull/3406#issuecomment-522595859))
+* **A new UI feature** : A screenshot or even video of the feature in action in PROD. This doesn't need to be too extensive, because you should already have screenshots/video in the main PR description! If the new feature is being A/B tested, you may want to link to the results. ([example](https://github.com/guardian/ophan/pull/3406#issuecomment-522595859))
 * **Performance improvements** : A graph showing how performance has improved post-deployment! ([example](https://github.com/guardian/ophan/pull/4435#issuecomment-1056778719))
 * **A security/bug fix** : any evidence that the bug is no longer there, eg a screenshot, video, or log-search. ([example](https://github.com/guardian/ophan/pull/2896#issuecomment-415489771))
 
