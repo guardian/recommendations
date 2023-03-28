@@ -70,7 +70,8 @@ It can be convenient to merge all the recent updates in a single PR depending on
 To do this, add a `pullRequests.grouping` section to the custom config in your repo. ([Example](https://github.com/guardian/typerighter/blob/e18501786f0b6749aecd863e7a949b137390e8a6/.scala-steward.conf#L7-L10)).
 Instructions on how to group updates together are 
 [here](https://github.com/scala-steward-org/scala-steward/pull/2714).  
-Partitioning PRs into a group for frequently updating repos and another group for everything else is under consideration.
+Partitioning PRs into a group for frequently updating repos and another group for everything else is under consideration
+in the central configuration for the Guardian's Scala-Steward managed repos.
 
 
 ### Dependency migrations
