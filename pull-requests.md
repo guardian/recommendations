@@ -1,63 +1,161 @@
-# The art of the pull request
+# Why do we review PRs?
+Code review is an essential part of the continuous deployment pipeline. It enables a second pair of eyes to:
+- Examine your change and find any problems you may have missed
+- Identify opportunities to optimise or improve your change
+- Provide a separate perspective from someone who may also have to work on your code
+- Highlight which parts might be difficult to understand for future developers
+- Coordinate across subject matter experts and teams, in order to maintain awareness and quality control over complex projects
 
-It is worth reading [Github's pull request conventions](https://github.com/blog/1943-how-to-write-the-perfect-pull-request) as this seem to cover most of the basics.
+This last aspect is especially important in mono-repos as:
+- Multiple teams might be submitting changes to the repository
+- Some code changes may have non-obvious impact. For example, whether a code change directly or indirectly impacts data security. Understanding the impact of a change can be hard without the insight and input of a subject matter expert.
 
-Pull requests are:
+# The art of raising a PR
+> **Note**
+> See also the Additional resources below!
 
-## Small and frequent
+The following are generally applicable to PRs, but are not hard rules.
 
-A good pull request is easy to understand. There should be a manageable number of changes in each pull request. Try to make your pull request as small as possible while still advancing the functionality of the product.
+## Small
+A PR should be easy to understand, and address a single concern.
 
-Aim to deploy a pull request before submitting the next one. Frequently small deployments of functionality are easier to review and easier to understand in production.
+There should be a manageable number of changes in a PR. Try to make your PR as small as possible while still advancing the functionality of the product.
 
-* Don't mix multiple changes into the same pull request.
-* If you are doing bulk moves and deletions only have one kind of operation in a pull request
+If a PR is too complex, it is much easier for issues to be missed. In addition if trying to understand an aspect of the code change in the future, it becomes harder to understand if buried in a very large and complex PR.
+
+Aim to deploy a PR before submitting the next one. Frequently small deployments of functionality are easier to review and easier to understand in PROD.
 
 ## Releasable
+A PR should be releasable once its review is complete.
 
-A pull request should be releasable once its review is complete. The person submitting the pull request should be prepared to merge and release the change.
+The person submitting the PR should be prepared to merge and release the change.
 
-If these things are not true then you should address the blockers before raising the pull request.
+If these things are not true then you should address the blockers before raising the PR.
+
+>**Note**
+>Consider deploying the change to a pre-PROD environment to test your change in the wild.
+
+## Descriptive
+A PR's description should include sufficient information on what the change is and why it is necessary.
+
+This is an investment in your own future peace of mind. Once a PR is merged it will effectively be documentation of how the code has changed. There should be enough information on the reasoning behind the change to enable it to be understood by someone reading it for the first time.
+
+Where necessary, it should also describe how to test, what success looks like, and what a rollback would involve.
+
+## Narrative
+It should be clear what the aim of each commit was.
+
+A commit message should talk about _what_ changed, and _why_. Not _how_. How is the diff itself, and you don’t need to repeat it.
+
+# The art of reviewing a PR
+> **Note**
+> See also the Additional resources below!
+
+Good PR reviews are extremely valuable. They help share understanding of both the problem being addressed, and its solution.
+
+The following are generally applicable to PR reviews, but are not hard rules.
+
+## A reviewer isn't responsible
+When someone reviews a PR they do not take responsibility for whether the code in the PR is correct, whether it will work, and that it will not have any side-effects elsewhere in the codebase.
+
+A review simply confirms that the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
+
+The ultimate responsibility for the change lies with the person who submitted the PR, and who releases it to PROD.
+
+## DRY
+No-one loves someone who writes the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
+
+## Talk is better
+Don't try and hold a conversation in a PR. If you have more than three comments or three paragraphs in a PR then consider talking through the issues with the person who raised the PR.
+
+Record the outcome and actions of the conversation on the PR so everyone else can follow the review.
+
+## Scope and complexity
+While looking at the PR you should remember to focus on the changes in the PR.
+
+It is tempting, if there are general problems with the code being examined, to start requesting changes to improve the pre-existing code. Small improvements are sometimes fine, however large amounts of refactoring pre-existing code should not be done via comments in a PR. If such work is needed it should have its own pull request (and potentially go into team planning as a discrete piece of work).
+
+## Code changes
+The following are some things to consider when examining the code:
+- Does it meet the team’s guidelines and style guides? For example [these Scala recommendations](./scala.md).
+- Does the code work? Check whether function, and logic are correct.
+- Are functions, methods, and variables adequately named?
+- Does the change need any additional unit tests? For example:
+	- Is it changing or adding critical functionality?
+	- Is the code complex enough that it needs a unit test to help document its behaviour?
+- Does the code take the most out of frameworks and language? Is there any custom implementation of native or already-existing functions?
+- Is documentation on functions, methods, classes, contexts, and behaviors adequate?
+- Is the code as modular as possible?
+- Are the critical spots adequately logged?
+- Does the code consider failures? Is it just considering the happy path?
+- Are there better or simpler solutions?
+- Is there any performance issue?
+- Are input data sanitized?
+- Is there any SQL Injection point?
+- Is sensitive information being encoded or encrypted?
+- Is the code making assumptions not documented in the ticket / PR or code itself?
 
 
-## The art of the pull request review
+## What type of review to use?
+_This section is collapsed to seperate recommendations from the mechanics of a PR review._
 
-Good pull request reviews are extremely valuable and help share understanding of both the problem being addressed and its solution.
+<details>
+<summary>Expand</summary>
 
-### A reviewer isn't responsible
+There are 3 types of review that can be applied to a PR.
 
-When someone reviews a pull request they do not take responsibility for whether the code in the pull request is correct, whether it will work and that it will not have any side-effects elsewhere in the codebase.
+### Comment
+This adds a comment to the PR at a selected position in the code display. The comment will be visible within the pull request both in the changes tab and the discussion tab.
 
-A review simply confirms that the pull request addresses its stated problem in a reasonable way and the solution has no obvious problems.
+This should be the most common kind of review. Use it to discuss changes, to ask questions and to recommend most code changes.
 
-The ultimate responsibility for the change always lies with the person who submitted the pull request and who releases it to production.
+Adding a comment does not prevent merging the pull request. It is the PR owners responsibility to ensure that all comments in a PR are addressed and responded to before merging.
 
-### DRY
+### Request change
+A review that requests a code change will block any deployment of the PR.
 
-No-one loves someone who writes the same comment fifteen times on a pull request. If there is a recurring issue like naming, code formatting or code structure in a pull request then point one example out and make a general comment explaining there are multiple occurrences.
+This will remain until the reviewer who requested the change approves the PR - even if another user reviews and approves the code change.  No one can merge this change until the reviewer approves it.
 
-### Talk is better
+This is a very “heavy-handed” action and should be reserved for situations where the requested change is needed to prevent significant problems.
 
-Don't try and hold a conversation in a pull request. If you have more than three comments or three paragraphs in a pull request then consider simply talking through the issues with the person who raised the pull request.
+It is up to the developers discretion as to what constitutes a significant problem as this will be different in every code base, but some generic examples are:
+- Change will introduce a run-time error.
+- Change will introduce a performance problem.
+- Change will introduce a problem with other parts of the system.
 
-Record the outcome and actions of the conversation on the pull request so everyone else can follow the review.
+If a reviewer applies the “Request change” action, then they take ownership of getting that change applied. It is their responsibility to pair with and assist the developer to apply the fix they have requested.
 
-## Merging is not the end!
+If the requested change is in dispute, for example, the author of the PR disagrees with the change or thinks it should be applied separately, the process for resolution is as follows:
+- PR author and change requester speak face-to-face (or on chat), and attempt to resolve their differences. The outcome of this discussion should be summarised and recorded in the PR.
+- If the PR author and change requester are unable to agree, a third party should be brought into the discussion to facilitate, and if necessary make a final decision on the item under consideration. The outcome of this discussion should be summarised and recorded in the PR.
 
-A PR is not finished when you merge it - check your PR in Production after it's deployed! Although unit & integration tests can add a lot of confidence that your change is good, looking at your change in Production is the ultimate and most important place to check your PR is delivering what's wanted.
+### Approve
+Approving the PR will allow the author to merge the code. The author should address, and respond to comments on the PR before they do so.
 
-For webapps you can use [Prout](https://github.com/guardian/prout) to let you know when your change has reached Production and is ready to be looked at.
+PR approval allows the addition of a general comment that will be displayed in the conversation tab.
+
+Note: If a different reviewer has requested a code change using the “request change” option, you will not be able to approve the PR.  It is effectively blocked until the requester has approved the PR.
+
+</details>
+
+# Merging is not the end!
+A PR is not finished when you merge it - check your change in PROD after it's deployed! Although unit and integration tests can add a lot of confidence that your change is good, looking at your change in PROD is the ultimate, and most important place to check your PR is delivering what's wanted.
+
+For webapps you can use [Prout](https://github.com/guardian/prout) to let you know when your change has reached PROD, and is ready to be looked at.
 
 A good way to get into the habit of doing post-merge checks is to write one final comment on your PR, detailing what you looked at:
 
-### Writing an informative post-merge PR comment
-
-A good post-merge comment on a PR can provide evidence that the PR works, or showcase the benefits of doing the PR in the first place! It can answer questions future developers may have, like "Did this stuff _ever_ work?" or "Did this help? Should I make a similar change in my repo?".
+## Writing an informative post-merge PR comment
+A good post-merge comment on a PR can provide evidence that the PR works, or showcase the benefits of doing the PR in the first place. It can answer questions future developers may have, like "Did this stuff _ever_ work?" or "Did this help? Should I make a similar change in my repo?".
 
 Here are some examples of what you could put in a post-merge comment - if your PR was adding:
-
 * **Metrics or Logging** : Include a sample or screenshot of the newly gathered data, with a link to the ELK or dashboard to make it easy to get to that data in the future ([example](https://github.com/guardian/ophan/pull/4065#issuecomment-802200900))
-* **A new UI feature** : A screenshot or even video of the feature in action in Production. This doesn't need to be too extensive, because you should already have screenshots/video in the main PR description! If the new feature is being A/B tested, you may want to link to the results. ([example](https://github.com/guardian/ophan/pull/3406#issuecomment-522595859))
+* **A new UI feature** : A screenshot or even video of the feature in action in PROD. This doesn't need to be too extensive, because you should already have screenshots/video in the main PR description! If the new feature is being A/B tested, you may want to link to the results. ([example](https://github.com/guardian/ophan/pull/3406#issuecomment-522595859))
 * **Performance improvements** : A graph showing how performance has improved post-deployment! ([example](https://github.com/guardian/ophan/pull/4435#issuecomment-1056778719))
 * **A security/bug fix** : any evidence that the bug is no longer there, eg a screenshot, video, or log-search. ([example](https://github.com/guardian/ophan/pull/2896#issuecomment-415489771))
 
+# Additional resources
+- [On committing well (slides)](https://www.slideshare.net/jaylett/on-committing-well)
+- [A Branch in Time (a story about revision histories) (video)](https://tekin.co.uk/2019/02/a-talk-about-revision-histories)
+- [GitHub's blog post "How to write the perfect pull request"](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
+- [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/)

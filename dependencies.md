@@ -48,9 +48,9 @@ This is especially important for [published packages](./npm-packages.md).
 There are a few examples of packages which **do not** follow SemVer, and for
 which a specific version should be specified:
 
-- [`aws-cdk`][]: minor and patch versions can introduce breaking changes
+- [`aws-cdk`](https://www.npmjs.com/package/aws-cdk): minor and patch versions can introduce breaking changes
+- [`typescript`](https://www.npmjs.com/package/aws-cdk): major and minor versions can introduce breaking changes
 
-[`aws-cdk`]: https://www.npmjs.com/package/aws-cdk
 ## Peer and Development dependencies
 
 ### `devDependencies`
