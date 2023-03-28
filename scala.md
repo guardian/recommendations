@@ -63,20 +63,27 @@ To integrate Scala Steward into a Guardian repo:
    successful.
    ([Example](https://github.com/guardian/scala-steward-public-repos/actions/runs/4302760549/jobs/7501659987#step:6:76)) 
 
-### Bundling dependency updates
 
-It can be convenient to merge all the recent updates in a single PR depending on your team practices.
-Instructions on how to bundle updates together are 
-[here](https://github.com/guardian/.github/blob/main/.github/workflows/docs/pr-batching.md).
+### Grouping dependency updates
+
+It can be convenient to merge all the recent updates in a single PR depending on your team practices.  
+To do this, add a `pullRequests.grouping` section to the custom config in your repo. ([Example](https://github.com/guardian/typerighter/blob/e18501786f0b6749aecd863e7a949b137390e8a6/.scala-steward.conf#L7-L10)).
+Instructions on how to group updates together are 
+[here](https://github.com/scala-steward-org/scala-steward/pull/2714).  
+Partitioning PRs into a group for frequently updating repos and another group for everything else is under consideration.
+
+
+### Dependency migrations
+
+When the group or artifact ID of a dependency changes, it's possible to configure Scala Steward to continue updating it
+using the new name.
+This feature is documented [here](https://github.com/scala-steward-org/scala-steward/blob/main/docs/artifact-migrations.md).
+
 
 ### Things to consider
 
 * You'll still need to monitor your dependencies to see if any have been abandoned or are no
   longer in use by the codebase.
-* Sometimes the name of a dependency can change between releases.
-  In this case, Scala Steward won't pick up the new version.
-  An example is the transition between v2 and v3 of
-  [STTP](https://mvnrepository.com/artifact/com.softwaremill.sttp.client/core). 
 * The effect of an updated dependency on transitive dependencies can often be surprisingly extensive, occasionally even
   with just a patch update.
 * As well as a set of tests that give you confidence at compile time, you'll also need to inspect the effect of the
