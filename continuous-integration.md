@@ -1,8 +1,7 @@
 [Scripts To Rule Them All pattern]: https://github.com/github/scripts-to-rule-them-all
 [GitHub Actions]: https://docs.github.com/en/actions
 [RiffRaff]: https://github.com/guardian/riff-raff
-[`node-riffraff-artifact`]: https://www.npmjs.com/package/@guardian/node-riffraff-artifact
-[`sbt-riffraff-artifact`]: https://github.com/guardian/sbt-riffraff-artifact
+[`actions-riff-raff`]:https://github.com/guardian/actions-riff-raff/
 [`aws-actions/configure-aws-credentials`]: https://github.com/aws-actions/configure-aws-credentials
 
 Continuous Integration
@@ -32,16 +31,13 @@ Every minute you reduce your building time is a minute saved when you will need 
 
 ## Platforms
 
-* Use TeamCity or GitHub Actions (with [`aws-actions/configure-aws-credentials`]) to run continuous integration tasks
+* Use GitHub Actions (with [`aws-actions/configure-aws-credentials`]) to run continuous integration tasks
 * Where possible, have CI execute a single, centralised script in the repository named `script/ci` 
     - This adheres to GitHub's [Scripts To Rule Them All pattern]
 
 ## Publishing artifacts
 
 You should publish artifacts to [RiffRaff]. 
-Two useful libraries for doing so are:
- 
-* [`node-riffraff-artifact`] for publishing Node project artifacts (such as AWS Lambdas)
-* [`sbt-riffraff-artifact`] for publishing artifacts from Scala projects
+A useful action for doing so is [`actions-riff-raff`]
 
 **See [continuous deployment](continuous-deployment.md)**
