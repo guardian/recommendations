@@ -124,7 +124,7 @@ It is up to the developers discretion as to what constitutes a significant probl
 - Change will introduce a performance problem.
 - Change will introduce a problem with other parts of the system.
 
-If a reviewer applies the “Request change” action, then they take ownership of getting that change applied. It is their responsibility to pair with and assist the developer to apply the fix they have requested.
+If a reviewer applies the “Request change” action, they commit to being responsive to the original author. It is their responsibility to pair with and assist the developer to apply the fix they have requested.
 
 If the requested change is in dispute, for example, the author of the PR disagrees with the change or thinks it should be applied separately, the process for resolution is as follows:
 - PR author and change requester speak face-to-face (or on chat), and attempt to resolve their differences. The outcome of this discussion should be summarised and recorded in the PR.
