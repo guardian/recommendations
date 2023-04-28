@@ -56,11 +56,11 @@ Good PR reviews are extremely valuable. They help share understanding of both th
 The following are generally applicable to PR reviews, but are not hard rules.
 
 ## A reviewer isn't responsible
-When someone reviews a PR they do not take responsibility for whether the code in the PR is correct, whether it will work, and that it will not have any side-effects elsewhere in the codebase.
+The primary aim of a review is to confirm the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
 
-A review simply confirms that the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
+"Reasonable" covers various aspects. For example: long-term maintainability by the team, monetary cost, security, etc.
 
-The ultimate responsibility for the change lies with the person who submitted the PR, and who releases it to PROD.
+The reviewer does not take responsibility for whether the code is correct, or will have unintended side-effects.
 
 ## DRY
 No-one loves someone who writes the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
