@@ -92,7 +92,7 @@ The following are some things to consider when examining the code:
 - Is there any performance issue?
 - Are input data sanitized?
 - Is there any SQL Injection point?
-- Is sensitive information being encoded or encrypted?
+- Is sensitive information being encoded or encrypted and not logged?
 - Is the code making assumptions not documented in the ticket / PR or code itself?
 - Does it meet the team’s guidelines and style guides? For example [these Scala recommendations](./scala.md). Although ideally you will use ScalaFmt, ESLint or similar to remove the need for manual review
 
