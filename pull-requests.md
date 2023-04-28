@@ -78,16 +78,17 @@ It is tempting, if there are general problems with the code being examined, to s
 ## Code changes
 The following are some things to consider when examining the code:
 - Does the code work? Check whether function, and logic are correct.
-- Are functions, methods, and variables adequately named?
 - Does the change need any additional unit tests? For example:
 	- Is it changing or adding critical functionality?
 	- Is the code complex enough that it needs a unit test to help document its behaviour?
 - Does the code take the most out of frameworks and language? Is there any custom implementation of native or already-existing functions?
 - Is documentation on functions, methods, classes, contexts, and behaviors adequate?
-- Is the code as modular as possible?
 - Are the critical spots adequately logged?
 - Does the code consider failures? Is it just considering the happy path?
-- Are there better or simpler solutions?
+- How maintainable is the code in the long term by the wider team?
+    - Are there simpler solutions?
+    - Is the code as modular as possible?
+    - Are functions, methods, and variables adequately named?
 - Is there any performance issue?
 - Are input data sanitized?
 - Is there any SQL Injection point?
