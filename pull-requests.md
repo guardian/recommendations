@@ -98,7 +98,7 @@ The following are some things to consider when examining the code:
 
 
 ## What type of review to use?
-_This section is collapsed to seperate recommendations from the mechanics of a PR review._
+_This section is collapsed to separate recommendations from the mechanics of a PR review._
 
 <details>
 <summary>Expand</summary>
