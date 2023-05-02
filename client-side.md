@@ -22,16 +22,17 @@ See the separate [npm-packages.md](./npm-packages.md).
 
 -   Have an [.editorconfig](http://editorconfig.org/) file in your repo.
 -   Automate linting as part of your test phase (e.g. jshint, eslint,
-    csslint).
-    -   Use the [departmental linting rules](https://github.com/guardian/configs)
+    csslint) using the department linting rules:
+    - [@guardian/eslint-config](https://github.com/guardian/csnx/tree/main/libs/%40guardian/eslint-config)
+    - [@guardian/eslint-config-typescript](https://github.com/guardian/csnx/tree/main/libs/%40guardian/eslint-config-typescript)
+    - [@guardian/tsconfig](https://github.com/guardian/csnx/tree/main/libs/%40guardian/tsconfig)
+    - [@guardian/prettier](https://github.com/guardian/csnx/tree/main/libs/%40guardian/prettier)
 -   Don’t enforce coding styles in pull requests. Add linting dot files
     (e.g. .jshintrc) to your project instead.
 
 ## Dependencies
 
--   If starting a new project, favour ES6 modules unless you can justify
-    otherwise.
--   Prefer locking your dependencies (direct and transitive) using a lockfile rather than committing them into Git.
+See the separate [dependencies.md](./dependencies.md#javascript).
 
 ## Node.js
 

@@ -66,8 +66,7 @@ This is only an example, there are many ways of configuring this.
 
 ### Configuring your package
 
-NPM packages are described in a `package.json` file.
-Dependencies should specify [allowed version ranges](./dependencies.md#JavaScript-NPM-Dependencies).
+NPM packages are described in a [`package.json` file](https://docs.npmjs.com/cli/v9/configuring-npm/package-json).
 
 #### NPM scope
 
@@ -131,6 +130,13 @@ If your library depends on other libraries, list them as `peerDependencies` in y
 #### `peerDependencies` ranges should be a wide as possible
 
 This ensures compatibility with the maximum number of installations.
+Read more about [NPM’s range syntax](https://docs.npmjs.com/cli/v6/using-npm/semver#advanced-range-syntax).
+
+Generally, this means using a leading caret which accepts any subsequent minor or patch version (e.g. `^1.0.1`).
+However, there are a few of packages which **do not** follow semantic versioning, and for which narrower ranges should be specified:
+
+- [`aws-cdk`](https://www.npmjs.com/package/aws-cdk): minor and patch versions can introduce breaking changes, use a pinned version
+- [`typescript`](https://www.npmjs.com/package/aws-cdk): major and minor versions can introduce breaking changes, use a leading tilde (e.g. `~4.9.5`)
 
 ##### Example
 
