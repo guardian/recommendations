@@ -56,11 +56,11 @@ Good PR reviews are extremely valuable. They help share understanding of both th
 The following are generally applicable to PR reviews, but are not hard rules.
 
 ## A reviewer isn't responsible
-When someone reviews a PR they do not take responsibility for whether the code in the PR is correct, whether it will work, and that it will not have any side-effects elsewhere in the codebase.
+The primary aim of a review is to confirm the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
 
-A review simply confirms that the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
+"Reasonable" covers various aspects. For example: long-term maintainability by the team, monetary cost, security, etc.
 
-The ultimate responsibility for the change lies with the person who submitted the PR, and who releases it to PROD.
+The reviewer does not take responsibility for whether the code is correct, or will have unintended side-effects.
 
 ## DRY
 No-one loves someone who writes the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
@@ -77,27 +77,28 @@ It is tempting, if there are general problems with the code being examined, to s
 
 ## Code changes
 The following are some things to consider when examining the code:
-- Does it meet the team’s guidelines and style guides? For example [these Scala recommendations](./scala.md).
 - Does the code work? Check whether function, and logic are correct.
-- Are functions, methods, and variables adequately named?
 - Does the change need any additional unit tests? For example:
 	- Is it changing or adding critical functionality?
 	- Is the code complex enough that it needs a unit test to help document its behaviour?
 - Does the code take the most out of frameworks and language? Is there any custom implementation of native or already-existing functions?
 - Is documentation on functions, methods, classes, contexts, and behaviors adequate?
-- Is the code as modular as possible?
 - Are the critical spots adequately logged?
 - Does the code consider failures? Is it just considering the happy path?
-- Are there better or simpler solutions?
+- How maintainable is the code in the long term by the wider team?
+    - Are there simpler solutions?
+    - Is the code as modular as possible?
+    - Are functions, methods, and variables adequately named?
 - Is there any performance issue?
 - Are input data sanitized?
 - Is there any SQL Injection point?
-- Is sensitive information being encoded or encrypted?
+- Is sensitive information being encoded or encrypted and not logged?
 - Is the code making assumptions not documented in the ticket / PR or code itself?
+- Does it meet the team’s guidelines and style guides? For example [these Scala recommendations](./scala.md). Although ideally you will use ScalaFmt, ESLint or similar to remove the need for manual review
 
 
 ## What type of review to use?
-_This section is collapsed to seperate recommendations from the mechanics of a PR review._
+_This section is collapsed to separate recommendations from the mechanics of a PR review._
 
 <details>
 <summary>Expand</summary>
@@ -123,7 +124,7 @@ It is up to the developers discretion as to what constitutes a significant probl
 - Change will introduce a performance problem.
 - Change will introduce a problem with other parts of the system.
 
-If a reviewer applies the “Request change” action, then they take ownership of getting that change applied. It is their responsibility to pair with and assist the developer to apply the fix they have requested.
+If a reviewer applies the “Request change” action, they commit to being responsive to the original author. It is their responsibility to pair with and assist the developer to apply the fix they have requested.
 
 If the requested change is in dispute, for example, the author of the PR disagrees with the change or thinks it should be applied separately, the process for resolution is as follows:
 - PR author and change requester speak face-to-face (or on chat), and attempt to resolve their differences. The outcome of this discussion should be summarised and recorded in the PR.
