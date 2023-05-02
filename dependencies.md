@@ -32,12 +32,9 @@ See the [Scala-specific recommendations](./scala.md)
 Dependencies in JavaScript can be either imported directly from a URL,
 or managed with Node and a build system based on `package.json` declaration.
 
-Node package managers like, `yarn` and `npm` use lock files to resolve
-dependencies, as it’s common for various packages to depend on a third one.
-To prevent duplication in the final package, it is important to specify
-acceptable ranges using the _caret_ or _tilde_ notation.
+Ensure that all dependencies in deployed applications are pinned to a `patch` version.
+When using a package manager, use a lock file to prevent prevent mismatches in transitive
+dependencies between environments.
 
-- A leading caret `^1.0.0` accepts any subsequent minor or patch version.
-- A leading tilde `~1.1.0` accepts any subsequent patch version.
-
-When developing libraries to be published as NPM packages, [see specific recommendations](./npm-packages.md).
+When developing libraries to be published as NPM packages,
+[use ranges for peer dependencies](./npm-packages.md#peerDependencies).
