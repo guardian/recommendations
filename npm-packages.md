@@ -35,29 +35,29 @@ Generate two versions of your library:
 
 ```js
 // rollup.config.js
-import ts from "rollup-plugin-ts";
-import pkg from "./package.json";
+import ts from 'rollup-plugin-ts';
+import pkg from './package.json';
 
 export default [
 	{
-		input: "src/index.ts",
+		input: 'src/index.ts',
 		output: {
-			dir: pkg.module.replace("/index.js", ""),
-			format: "es",
+			dir: pkg.module.replace('/index.js', ''),
+			format: 'es',
 			sourcemap: true,
 			preserveModules: true,
 		},
-		plugins: [ts({ tsconfig: "./tsconfig.es.json" })],
+		plugins: [ts({ tsconfig: './tsconfig.es.json' })],
 	},
 	{
-		input: "src/index.ts",
+		input: 'src/index.ts',
 		output: {
-			dir: pkg.main.replace("/index.js", ""),
-			format: "cjs",
+			dir: pkg.main.replace('/index.js', ''),
+			format: 'cjs',
 			sourcemap: true,
 			preserveModules: true,
 		},
-		plugins: [ts({ tsconfig: "./tsconfig.cjs.json" })],
+		plugins: [ts({ tsconfig: './tsconfig.cjs.json' })],
 	},
 ];
 ```
@@ -351,7 +351,7 @@ module: {
 		{
 			test: /\.m?(j|t)sx?$/,
 			use: {
-				loader: "babel-loader",
+				loader: 'babel-loader',
 			},
 			exclude: {
 				test: /node_modules/,
