@@ -66,8 +66,7 @@ This is only an example, there are many ways of configuring this.
 
 ### Configuring your package
 
-NPM packages are described in a `package.json` file.
-Dependencies should specify [allowed version ranges](./dependencies.md#JavaScript-NPM-Dependencies).
+NPM packages are described in a [`package.json` file](https://docs.npmjs.com/cli/v9/configuring-npm/package-json).
 
 #### NPM scope
 
@@ -77,7 +76,7 @@ Publish under the [`@guardian`](https://www.npmjs.com/org/guardian) scope.
 
 Imagine you're working on a re-usable slideshow widget for Guardian web pages:
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/slideshow",
@@ -95,7 +94,7 @@ The CommonJS version should be referenced by the `main` field.
 
 ##### Example
 
-```js
+```jsonc
 // package.json
 {
 	"main": "dist/cjs/index.js", // dist/cjs/index.d.ts is included
@@ -106,7 +105,7 @@ The CommonJS version should be referenced by the `main` field.
 
 or
 
-```js
+```jsonc
 // package.json
 {
 	"main": "dist/cjs/index.js",
@@ -131,12 +130,19 @@ If your library depends on other libraries, list them as `peerDependencies` in y
 #### `peerDependencies` ranges should be a wide as possible
 
 This ensures compatibility with the maximum number of installations.
+Read more about [NPM’s range syntax](https://docs.npmjs.com/cli/v6/using-npm/semver#advanced-range-syntax).
+
+Generally, this means using a leading caret which accepts any subsequent minor or patch version (e.g. `^1.0.1`).
+However, there are a few of packages which **do not** follow semantic versioning, and for which narrower ranges should be specified:
+
+- [`aws-cdk`](https://www.npmjs.com/package/aws-cdk): minor and patch versions can introduce breaking changes, use a pinned version
+- [`typescript`](https://www.npmjs.com/package/aws-cdk): major and minor versions can introduce breaking changes, use a leading tilde (e.g. `~4.9.5`)
 
 ##### Example
 
 Imagine `@guardian/slideshow` uses `_.zipObjectDeep`, which was [added to Lodash in v4.1.0](https://github.com/lodash/lodash/wiki/Changelog#v410):
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/slideshow",
@@ -155,7 +161,7 @@ This prevents you accidentally developing against a feature of a dependency that
 
 ##### Example
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/slideshow",
@@ -181,7 +187,7 @@ This is because it will require the consumer to make changes to their project, s
 
 Here's an application that consumes `@guardian/slideshow`:
 
-```js
+```jsonc
 // package.json
 {
 	"name": "new-website",
@@ -194,7 +200,7 @@ Here's an application that consumes `@guardian/slideshow`:
 
 Now imagine a new version `@guardian/slideshow` adds a feature that uses `_.update`, which was [added to Lodash in v4.6.0](https://github.com/lodash/lodash/wiki/Changelog#v460):
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/slideshow",
@@ -210,7 +216,7 @@ Now imagine a new version `@guardian/slideshow` adds a feature that uses `_.upda
 
 I update my app to use the new version of `@guardian/slideshow`:
 
-```js
+```jsonc
 // package.json
 {
 	"name": "new-website",
@@ -237,7 +243,7 @@ This means they are always up-to-date with the latest versions of their deps.
 
 Imagine `new-website` and `@guardian/slideshow` both live in the same monorepo:
 
-```js
+```jsonc
 // package.json
 {
 	"name": "new-website",
@@ -252,7 +258,7 @@ It is tempting to do the same with `peerDependencies` of packages.
 
 Imagine `@guardian/slideshow` starts using something from `@guardian/libs`, which is also in the monorepo:
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/libs",
@@ -260,7 +266,7 @@ Imagine `@guardian/slideshow` starts using something from `@guardian/libs`, whic
 }
 ```
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/slideshow",
@@ -298,7 +304,7 @@ Imagine `@guardian/slideshow` uses `ArticleDesign.Gallery` from `@guardian/libs`
 
 Although `@guardian/libs` is at v6.5.2 in the repo and would work fine, we still won't use it directly:
 
-```js
+```jsonc
 // package.json
 {
 	"name": "@guardian/slideshow",
@@ -373,14 +379,14 @@ This will result in entries in your project's lockfile as the library is treated
 
 Rather than `npx @guardian/node-riffraff-artifact`, prefer to update `package.json`:
 
-```
+```json
 {
-  "devDependencies": {
-	"@guardian/node-riffraff-artifact": "^0.2.1"
-  },
-  "scripts": {
-	"riffraff-upload": "node-riffraff-artifact"
-  }
+	"devDependencies": {
+		"@guardian/node-riffraff-artifact": "^0.2.1"
+	},
+	"scripts": {
+		"riffraff-upload": "node-riffraff-artifact"
+	}
 }
 ```
 
