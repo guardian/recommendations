@@ -38,6 +38,7 @@ provides simpler scalability and greater robustness
 -   [Elasticsearch](elasticsearch.md)
 -   [Emotion](emotion.md)
 -   [GitHub](github.md)
+-   [Logging](logging.md)
 -   [NPM packages](npm-packages.md)
 -   [Production Services, Ownership and Maintenance](ownership.md)
 -   [Pull requests](pull-requests.md)
