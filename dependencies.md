@@ -32,9 +32,24 @@ See the [Scala-specific recommendations](./scala.md)
 Dependencies in JavaScript can be either imported directly from a URL,
 or managed with Node and a build system based on `package.json` declaration.
 
-Ensure that all dependencies in deployed applications are pinned to a `patch` version.
 When using a package manager, use a lock file to prevent prevent mismatches in transitive
 dependencies between environments.
+
+Ensure that all dependencies in deployed applications are pinned to a `patch` version.
+This provides more [consistency and safety between the `package.json` file and the lock file](https://docs.renovatebot.com/dependency-pinning/#what-a-lock-file-doesnt-do-for-you).
+
+```JSONC
+{
+    "dependencies": {
+        // ✅ Good
+        "@guardian/package": "18.2.1",
+
+        // ❌ bad
+        "@guardian/package": "^18.2.1",
+        "@guardian/package": "~18.2.1",
+    }
+}
+```
 
 When developing libraries to be published as NPM packages,
 [use ranges for peer dependencies](./npm-packages.md#peerDependencies).
