@@ -41,7 +41,7 @@ This provides more [consistency and safety between the `package.json` file and t
 ```JSONC
 {
     "dependencies": {
-        // ✅ Good
+        // ✅ good
         "@guardian/package": "18.2.1",
 
         // ❌ bad
