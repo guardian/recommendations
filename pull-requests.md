@@ -18,6 +18,11 @@ Code review also allows for knowledge sharing in both directions between code au
 
 The following are generally applicable to PRs, but are not hard rules.
 
+## Ready
+Read over your code before opening the PR for review. The main point of code review is to get a second perspective, but having a final look at your own code can help catch common mistakes, such as blocks of commented-out code or build files that shouldn't have been committed.
+
+Tip: Github allows you to open a PR in 'draft' state, which can often be helpful if you want to review your own code, or have remote CI checks run, before others review it. (Remember to change the status to `ready for review` later on though!)
+
 ## Small
 A PR should be easy to understand, and address a single concern.
 
