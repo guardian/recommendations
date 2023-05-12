@@ -10,11 +10,18 @@ This last aspect is especially important in mono-repos as:
 - Multiple teams might be submitting changes to the repository
 - Some code changes may have non-obvious impact. For example, whether a code change directly or indirectly impacts data security. Understanding the impact of a change can be hard without the insight and input of a subject matter expert.
 
+Code review also allows for knowledge sharing in both directions between code authors and reviewers at all levels of experience. Reviewing PRs is a great way to understand a new codebase, and to stay in touch with what's happening in your team. And although a review might not be the best place for long discussions, reviews can help to surface new patterns and techniques for both code authors and reviewers.
+
 # The art of raising a PR
 > **Note**
 > See also the Additional resources below!
 
 The following are generally applicable to PRs, but are not hard rules.
+
+## Ready
+Read over your code before opening the PR for review. The main point of code review is to get a second perspective, but having a final look at your own code can help catch common mistakes, such as blocks of commented-out code or build files that shouldn't have been committed.
+
+Tip: Github allows you to open a PR in 'draft' state, which can often be helpful if you want to review your own code, or have remote CI checks run, before others review it. (Remember to change the status to `ready for review` later on though!)
 
 ## Small
 A PR should be easy to understand, and address a single concern.
