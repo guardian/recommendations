@@ -1,8 +1,8 @@
 # How to make pairing sessions more accessible:
 
 ## Table of Contents
-* Detail
-* Checklist
+* [Detail](#detail)
+* [Checklist](#checklist)
 
 ## Detail
 
@@ -42,7 +42,7 @@
 * **Breaks** - The teacher and student can aim to have a break in the middle of the session by default and ask one another if they need additional breaks. They should both feel free to take impromptu breaks as needed.
 
 Sometimes it might not be practical to ask questions:
-* **Derailing** - The questions would derail the session.
+* **Derailing** - The questions would derail (disrupt the original goal of) the session.
 * **Too many people** - There are multiple participants in the session.
 * **Deadlines** - The pairing sessions involves a task that needs to be completed in a short time-frame.
 * **N.B.** This is why considering the structure of the pairing sessions beforehand is so important.
