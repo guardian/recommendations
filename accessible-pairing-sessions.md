@@ -61,7 +61,7 @@ If this is the case, then:
 
 # Checklist:
 - [ ] Scheduling the pairing session
-	- [ ] Checking suitable time, length, and surroundings
+	- [ ] Checking suitable time, length and surroundings
 	- [ ] Checking suitable assistive technology
 	- [ ] Providing calendar invite information and structure of sessions
 	- [ ] Determining if 1:1 or group session
