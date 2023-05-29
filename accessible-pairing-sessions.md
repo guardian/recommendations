@@ -60,7 +60,8 @@ If this is the case, then:
 * The teacher and student should decide how success will be evaluated from the sessions:
     * **Completion of task** - Is it by the completion of the pull request / code review?
     * **Quizzing** - Is it by the teacher verbally quizzing the student at the end of the session on the key points or at a later date?
-    * **Documenting** Is it by asking the student to write documentation or flashcards about the pairing session afterwards?
+    * **Documenting** - Is it by asking the student to write documentation or flashcards about the pairing session afterwards?
+    * **Feedback** - Can the teacher and the student provide each other feedback on the pairing session to see what went well and what could improve?
 
 ## Opportunities to improve documentation and working processes
 * **Documentation** - Are there opportunities to improve documentation?
