@@ -50,7 +50,7 @@ If this is the case, then:
 
 ## Success-measuring:
 * The teacher and student should decide how success will be evaluated from the sessions:
-    * Is it by the completion of the pull request?
+    * Is it by the completion of the pull request / code review?
     * Is it by the teacher verbally quizzing the student at the end of the session on the key points or at a later date?
     * Is it by asking the student to write flashcards about the pairing session afterwards?
 
