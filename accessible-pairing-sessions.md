@@ -4,6 +4,8 @@
 * Detail
 * Checklist
 
+## Detail
+
 >It's always best to ask a person about their specific, individual requirements. However, many employees may not be open about this information for various reasons. Moreover, more staff members have accessibility requirements than you might think, so it's wise to assume that the person you're pairing with has some sort of accessibility requirement.
 
 >In terms of language, I could use 'senior' and 'junior' instead of 'teacher' and 'student', but I believe it's beneficial to encourage people at similar levels to teach each other how to write software.
