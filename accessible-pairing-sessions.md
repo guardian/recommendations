@@ -21,7 +21,7 @@
 * **Tip**: As the meeting host on Zoom, the teacher can click ‘Live Transcript’ and then ‘Enable Auto Transcription’.
 
 ## Preparing materials and questions in advance:
-* **For the teacher**: The teacher should try to provide the student with as much information as possible beforehand, e.g., steps that will be taken during the pairing session. This will allow the student to familiarise themselves with the steps on their own and ask the teacher learning questions during the pairing session itself. This information, whether in the form of a document or links to documentation, should be accessible and readable by a screen reader.
+* **For the teacher**: The teacher should try to provide the student with as much information as possible beforehand, e.g., steps that will be taken during the pairing session. This will allow the student to familiarise themselves with the steps on their own and ask the teacher learning questions during the pairing session itself. This information, whether in the form of a document or links to documentation, should be accessible e.g. readable by a screen reader, direct, uncomplicated language.
 * **For the student**: The student should try to prepare questions for the teacher in advance of the session.
 * **Why**: Compiling information benefits both the teacher and student, because it prompts them to think more carefully about what they are teaching/learning and provides them with material for further teaching/learning and documentation at a later date.
 
@@ -29,6 +29,7 @@
 * When material is provided, the teacher should emphasise that reading the materials is optional and that there's no expectation to read the materials in advance. They can highlight the benefits of preparing before the pairing session, but should also be mindful that the individual may require flexibility due to responsibilities like caregiving or energy management.
 
 ## The pairing session itself: 
+* Communication - The teacher can ensure that they are communicating information at an appropriate technical level, speed and style. Where possible, language should be direct and uncomplicated.
 * Active learning - The teacher can ensure the student is engaged by asking them questions.
 * Check-ins - The teacher can regularly check in to ensure that the student has the opportunity to ask questions.
 * Breaks - The teacher and student can aim to have a break in the middle of the session by default and ask one another if they need additional breaks. They should both feel free to take impromptu breaks as needed.
@@ -72,6 +73,7 @@ If this is the case, then:
 	- [ ] Advance questions for teacher
 - [ ] Sensitive advice that optional prep is recommended
 - [ ] Pairing session
+	- [ ] Ensuring the right communication
 	- [ ] Active learning/questioning during the pairing session
 	- [ ] Regular check-in for questions
 	- [ ] Arranging breaks
