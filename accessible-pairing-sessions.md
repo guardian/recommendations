@@ -13,6 +13,7 @@
 ## Scheduling the pairing session
 * **Time** - Is the proposed time suitable for both the teacher and student? Do either of them have specific schedules due to caregiving responsibilities, gender-affirming care, disabilities, chronotypes, energy levels etc? Are both parties in relatively good health, both emotionally and physically? Are either of them overloaded with work or meetings?
 * **Length of time** - How much time does each party need? Do they require extra time to learn or process information? Is there ample time for breaks?
+* **Necessity** - Is the pairing session necessary / desired? Is pairing the ideal format for providing this information or would another format be preferred e.g. async?
 * **Surroundings** - Besides time, are both the teacher and student in suitable surroundings for the pairing session? This includes a lack of background noise, a reliable WiFi connection, etc.
 * **Assistive technologies** - Do both parties have all the assistive technology they need, e.g. a virtual overlay, or does this need to be provided? Do they have any workarounds for this? Are there noticeable patterns in either of them, which could help both parties obtain help they didn't know they needed? Could they try out assistive technologies in the session to see if anything proves beneficial?
 * **Calendar invites** - Does the calendar invite contain information about what will be covered in the pairing session for future reference? Are there clear goals for the session? Could these goals be divided into smaller sessions instead of one large session?
@@ -68,7 +69,7 @@ If this is the case, then:
 
 ## Checklist
 - [ ] Scheduling the pairing session
-	- [ ] Checking suitable time, length and surroundings
+	- [ ] Checking suitable time, length, necessity and surroundings 
 	- [ ] Checking suitable assistive technology
 	- [ ] Providing calendar invite information and structure of sessions
 	- [ ] Determining if 1:1 or group session
