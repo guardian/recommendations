@@ -44,7 +44,7 @@ Sometimes it might not be practical to ask questions:
 * **Derailing** - The questions would derail the session.
 * **Too many people** - There are multiple participants in the session.
 * **Deadlines** - The pairing sessions involves a task that needs to be completed in a short time-frame.
-* N.B. This is why considering the structure of the pairing sessions beforehand is so important.
+* **N.B.** This is why considering the structure of the pairing sessions beforehand is so important.
 
 If this is the case, then:
 * **1:1s** - The teacher should try to schedule a 1:1, where the student has the opportunity to ask questions.
