@@ -1,5 +1,9 @@
 # How to make pairing sessions more accessible:
 
+## Table of Contents
+* Detail
+* Checklist
+
 >It's always best to ask a person about their specific, individual requirements. However, many employees may not be open about this information for various reasons. Moreover, more staff members have accessibility requirements than you might think, so it's wise to assume that the person you're pairing with has some sort of accessibility requirement.
 
 >In terms of language, I could use 'senior' and 'junior' instead of 'teacher' and 'student', but I believe it's beneficial to encourage people at similar levels to teach each other how to write software.
@@ -20,15 +24,15 @@
 * **Why**: This is particularly important for people with disabilities, individuals for whom English is a second language, or those who rely on closed captions for other reasons.
 * **Tip**: As the meeting host on Zoom, the teacher can click ‘Live Transcript’ and then ‘Enable Auto Transcription’.
 
-## Preparing materials and questions in advance:
+## Preparing materials and questions in advance
 * **For the teacher**: The teacher should try to provide the student with as much information as possible beforehand, e.g., steps that will be taken during the pairing session. This will allow the student to familiarise themselves with the steps on their own and ask the teacher learning questions during the pairing session itself. This information, whether in the form of a document or links to documentation, should be accessible e.g. readable by a screen reader, direct, uncomplicated language.
 * **For the student**: The student should try to prepare questions for the teacher in advance of the session.
 * **Why**: Compiling information benefits both the teacher and student, because it prompts them to think more carefully about what they are teaching/learning and provides them with material for further teaching/learning and documentation at a later date.
 
-## Sensitive advice that optional prep is recommended:
+## Sensitive advice that optional prep is recommended
 * When material is provided, the teacher should emphasise that reading the materials is optional and that there's no expectation to read the materials in advance. They can highlight the benefits of preparing before the pairing session, but should also be mindful that the individual may require flexibility due to responsibilities like caregiving or energy management.
 
-## The pairing session itself: 
+## The pairing session itself
 * Communication - The teacher can ensure that they are communicating information at an appropriate technical level, speed and style. Where possible, language should be direct and uncomplicated.
 * Active learning - The teacher can ensure the student is engaged by asking them questions.
 * Check-ins - The teacher can regularly check in to ensure that the student has the opportunity to ask questions.
@@ -45,16 +49,16 @@ If this is the case, then:
 * If the teacher does not have time or is taking leave, they should delegate this task to someone else e.g. a developer they know is familiar with the task, the student’s mentor (if they don’t have one, they should be signed up to a mentorship or mini-mentorship scheme) or ask for someone of the student’s choice.
 * **N.B.** This should also be arranged in cases when questioning was planned, but disrupted in some way.
 
-## Summary/Further Resources:
+## Summary/Further Resources
 * The teacher should aim to provide a summary of the key points of the pairing sessions through a preferred communication channel e.g. chat (ideally immediately) afterwards. They can also provide additional resources that the student might find helpful. This is a two-way thing, so the student should also feel encouraged to provide the teacher with any resources they find useful on the topic.
 
-## Success-measuring:
+## Success-measuring
 * The teacher and student should decide how success will be evaluated from the sessions:
     * Is it by the completion of the pull request / code review?
     * Is it by the teacher verbally quizzing the student at the end of the session on the key points or at a later date?
     * Is it by asking the student to write flashcards about the pairing session afterwards?
 
-## Opportunities to improve documentation and working processes:
+## Opportunities to improve documentation and working processes
 * Are there opportunities to improve documentation?
 * Can working processes be improved?
 * Is there room to improve inclusivity? Has the pairing session prompted more questions about the software's accessibility and how it may affect users? If so, do any actions need to be taken to address this?
