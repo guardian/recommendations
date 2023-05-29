@@ -65,7 +65,7 @@ If this is the case, then:
 * Can working processes be improved?
 * Is there room to improve inclusivity? Has the pairing session prompted more questions about the software's accessibility and how it may affect users? If so, do any actions need to be taken to address this?
 
-# Checklist:
+## Checklist
 - [ ] Scheduling the pairing session
 	- [ ] Checking suitable time, length and surroundings
 	- [ ] Checking suitable assistive technology
