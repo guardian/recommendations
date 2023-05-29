@@ -11,7 +11,7 @@
 >In terms of language, I could use 'senior' and 'junior' instead of 'teacher' and 'student', but I believe it's beneficial to encourage people at similar levels to teach each other how to write software.
 
 ## Scheduling the pairing session
-* **Time** - Is the proposed time suitable for both the teacher and student? Do either of them have specific schedules due to caregiving responsibilities, gender-affirming care, disabilities, chronotypes (sleep-wake cycles), energy levels etc? Are both parties in relatively good health, both emotionally and physically? Are either of them overloaded with work or meetings?
+* **Time** - Is the proposed time suitable for both the teacher and student? Do either of them have specific schedules due to caregiving responsibilities, gender-affirming care, disabilities, chronotypes (sleep-wake cycles), energy levels etc? Are both parties in relatively good health for them, both emotionally and physically? Are either of them overloaded with work or meetings?
 * **Length of time** - How much time does each party need? Do they require extra time to learn or process information? Is there ample time for breaks?
 * **Necessity** - Is the pairing session necessary / desired? Is pairing the ideal format for providing this information or would another format be preferred e.g. async?
 * **Surroundings** - Besides time, are both the teacher and student in suitable surroundings for the pairing session? This includes a lack of background noise, a reliable WiFi connection etc.
