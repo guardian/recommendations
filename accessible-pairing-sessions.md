@@ -52,7 +52,8 @@ If this is the case, then:
 * **N.B.** This should also be arranged in cases when questioning was planned, but disrupted in some way.
 
 ## Summary/Further Resources
-* The teacher should aim to provide a summary of the key points of the pairing sessions through a preferred communication channel e.g. chat (ideally immediately) afterwards. They can also provide additional resources that the student might find helpful. This is a two-way thing, so the student should also feel encouraged to provide the teacher with any resources they find useful on the topic.
+* **For the teacher**: The teacher should aim to provide a summary of the key points of the pairing sessions through a preferred communication channel e.g. chat (ideally immediately) afterwards. They can also provide additional resources that the student might find helpful. 
+* **For the student**: The student should also feel encouraged to give a summary of the session and provide the teacher with any resources they find useful on the topic.
 
 ## Success-measuring
 * The teacher and student should decide how success will be evaluated from the sessions:
