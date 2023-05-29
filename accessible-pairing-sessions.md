@@ -11,15 +11,15 @@
 >In terms of language, I could use 'senior' and 'junior' instead of 'teacher' and 'student', but I believe it's beneficial to encourage people at similar levels to teach each other how to write software.
 
 ## Scheduling the pairing session
-* Is the proposed time suitable for both the teacher and student? Do either of them have specific schedules due to caregiving responsibilities, gender-affirming care, disabilities, chronotypes, energy levels etc? Are both parties in relatively good health, both emotionally and physically? Are either of them overloaded with work or meetings?
-* How much time does each party need? Do they require extra time to learn or process information? Is there ample time for breaks?
-* Besides time, are both the teacher and student in suitable surroundings for the pairing session? This includes a lack of background noise, a reliable WiFi connection, etc.
-* Do both parties have all the assistive technology they need, e.g. a virtual overlay, or does this need to be provided? Do they have any workarounds for this? Are there noticeable patterns in either of them, which could help both parties obtain help they didn't know they needed? Could they try out assistive technologies in the session to see if anything proves beneficial?
-* Does the calendar invite contain information about what will be covered in the pairing session for future reference? Are there clear goals for the session? Could these goals be divided into smaller sessions instead of one large session?
-* How many people need to be present? A 1:1 session would allow for a more in-depth exploration of the material, while a larger group might promote knowledge sharing and a greater variety of questions.
-* Will there be a recording or transcription for the meeting?
-* Which meeting software will be used (see also below)?
-* Is there time for a follow-up session if the student wants to ask more questions? Or would it be better for them to pair with someone else to provide this opportunity at a later date?
+* **Time** - Is the proposed time suitable for both the teacher and student? Do either of them have specific schedules due to caregiving responsibilities, gender-affirming care, disabilities, chronotypes, energy levels etc? Are both parties in relatively good health, both emotionally and physically? Are either of them overloaded with work or meetings?
+* **Length of time** - How much time does each party need? Do they require extra time to learn or process information? Is there ample time for breaks?
+* **Surroundings** - Besides time, are both the teacher and student in suitable surroundings for the pairing session? This includes a lack of background noise, a reliable WiFi connection, etc.
+* **Assistive Technologies** - Do both parties have all the assistive technology they need, e.g. a virtual overlay, or does this need to be provided? Do they have any workarounds for this? Are there noticeable patterns in either of them, which could help both parties obtain help they didn't know they needed? Could they try out assistive technologies in the session to see if anything proves beneficial?
+* **Calendar invites** - Does the calendar invite contain information about what will be covered in the pairing session for future reference? Are there clear goals for the session? Could these goals be divided into smaller sessions instead of one large session?
+* **Number of people** - How many people need to be present? A 1:1 session would allow for a more in-depth exploration of the material, while a larger group might promote knowledge sharing and a greater variety of questions.
+* **Recording/Transcription** - Will there be a recording or transcription for the meeting?
+* **Meeting software** - Which meeting software will be used (see also below)?
+* **Follow-up sessions** - Is there time for a follow-up session if the student wants to ask more questions? Or would it be better for them to pair with someone else to provide this opportunity at a later date?
 
 ## Consider the meeting software (video conferencing) 
 * Google Meet's closed captions are subpar, so the teacher might consider hosting the pairing session using Zoom or another superior alternative instead. 
@@ -35,20 +35,20 @@
 * When material is provided, the teacher should emphasise that reading the materials is optional and that there's no expectation to read the materials in advance. They can highlight the benefits of preparing before the pairing session, but should also be mindful that the individual may require flexibility due to responsibilities like caregiving or energy management.
 
 ## The pairing session itself
-* Communication - The teacher can ensure that they are communicating information at an appropriate technical level, speed and style. Where possible, language should be direct and uncomplicated.
-* Active learning - The teacher can ensure the student is engaged by asking them questions.
-* Check-ins - The teacher can regularly check in to ensure that the student has the opportunity to ask questions.
-* Breaks - The teacher and student can aim to have a break in the middle of the session by default and ask one another if they need additional breaks. They should both feel free to take impromptu breaks as needed.
+* **Communication** - The teacher can ensure that they are communicating information at an appropriate technical level, speed and style. Where possible, language should be direct and uncomplicated.
+* **Active learning** - The teacher can ensure the student is engaged by asking them questions.
+* **Check-ins** - The teacher can regularly check in to ensure that the student has the opportunity to ask questions.
+* **Breaks** - The teacher and student can aim to have a break in the middle of the session by default and ask one another if they need additional breaks. They should both feel free to take impromptu breaks as needed.
 
 Sometimes it might not be practical to ask questions:
-* The questions would derail the session.
-* There are multiple participants in the session.
-* The pairing sessions involves a task that needs to be completed in a short time-frame.
+* **Derailing** - The questions would derail the session.
+* **Too many people** - There are multiple participants in the session.
+* **Deadlines** - The pairing sessions involves a task that needs to be completed in a short time-frame.
 * N.B. This is why considering the structure of the pairing sessions beforehand is so important.
 
 If this is the case, then:
-* The teacher should try to schedule a 1:1, where the student has the opportunity to ask questions.
-* If the teacher does not have time or is taking leave, they should delegate this task to someone else e.g. a developer they know is familiar with the task, the student’s mentor (if they don’t have one, they should be signed up to a mentorship or mini-mentorship scheme) or ask for someone of the student’s choice.
+* **1:1s** - The teacher should try to schedule a 1:1, where the student has the opportunity to ask questions.
+* **Delegation** - If the teacher does not have time or is taking leave, they should delegate this task to someone else e.g. a developer they know is familiar with the task, the student’s mentor (if they don’t have one, they should be signed up to a mentorship or mini-mentorship scheme) or ask for someone of the student’s choice.
 * **N.B.** This should also be arranged in cases when questioning was planned, but disrupted in some way.
 
 ## Summary/Further Resources
@@ -56,14 +56,14 @@ If this is the case, then:
 
 ## Success-measuring
 * The teacher and student should decide how success will be evaluated from the sessions:
-    * Is it by the completion of the pull request / code review?
-    * Is it by the teacher verbally quizzing the student at the end of the session on the key points or at a later date?
-    * Is it by asking the student to write flashcards about the pairing session afterwards?
+    * **Completion of task** - Is it by the completion of the pull request / code review?
+    * **Quizzing** - Is it by the teacher verbally quizzing the student at the end of the session on the key points or at a later date?
+    * **Documenting** Is it by asking the student to write documentation or flashcards about the pairing session afterwards?
 
 ## Opportunities to improve documentation and working processes
-* Are there opportunities to improve documentation?
-* Can working processes be improved?
-* Is there room to improve inclusivity? Has the pairing session prompted more questions about the software's accessibility and how it may affect users? If so, do any actions need to be taken to address this?
+* **Documentation** - Are there opportunities to improve documentation?
+* **Working practices** - Can working processes be improved?
+* **Inclusivity/accessibility** - Is there room to improve inclusivity? Has the pairing session prompted more questions about the software's accessibility and how it may affect users? If so, do any actions need to be taken to address this?
 
 ## Checklist
 - [ ] Scheduling the pairing session
