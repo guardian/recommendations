@@ -3,25 +3,20 @@
  *
  * Add new best practices to the definitions.ts file.
  */
-
-import * as path from "https://deno.land/std/path/mod.ts";
 import { markdownTable } from "npm:markdown-table";
 import { AllBestPractices } from "./definitions.ts";
 
-const markdownFile = path.join(
-  path.dirname(path.fromFileUrl(import.meta.url)),
-  "..",
-  "best-practices.md",
-);
+const markdownFilepath =
+  new URL(import.meta.resolve("../best-practices.md")).pathname;
 
-const file = await Deno.readTextFile(markdownFile);
+const file = await Deno.readTextFile(markdownFilepath);
 
 const startMark = "<!-- contentstart -->";
 const endMark = "<!-- contentend -->";
 
 if (!file.includes(startMark) || !file.includes(endMark)) {
   throw new Error(
-    `Could not find start (${startMark}) and end markers (${endMark}) in ${markdownFile}`,
+    `Could not find start (${startMark}) and end markers (${endMark}) in ${markdownFilepath}`,
   );
 }
 
@@ -64,4 +59,4 @@ const updatedFile = resetFile.replace(
 );
 
 // save changes
-await Deno.writeTextFile(markdownFile, updatedFile);
+await Deno.writeTextFile(markdownFilepath, updatedFile);
