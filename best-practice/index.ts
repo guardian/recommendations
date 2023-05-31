@@ -48,15 +48,10 @@ const markdownContent = Object.entries(AllBestPractices).flatMap(
   },
 );
 
-// Find text between markers and replace it with the start marker
+// FInd the markers, and replace them, and any text in between, with the new content.
 const re = new RegExp(`${startMark}(.|\n)*${endMark}`, "m");
-const resetFile = file.replace(re, startMark);
-
-// replace the now singular start marker with the start marker, content, and end marker
-const updatedFile = resetFile.replace(
-  startMark,
+const updatedFile = file.replace(
+  re,
   [startMark, ...markdownContent, endMark].join("\n"),
 );
-
-// save changes
 await Deno.writeTextFile(markdownFilepath, updatedFile);
