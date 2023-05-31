@@ -35,4 +35,4 @@ export interface IBestPractice {
  * A list of best practices, grouped by section.
  * The section will be used as a heading in the Markdown file.
  */
-export type IAllBestPractice = Record<string, IBestPractice[]>;
+export type IAllBestPractice = Record<string, readonly IBestPractice[]>;

@@ -1,6 +1,6 @@
 import { IAllBestPractice, IBestPractice } from "./types.ts";
 
-const github: IBestPractice[] = [
+const github: readonly IBestPractice[] = [
   {
     name: "Default Branch Name",
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
@@ -9,9 +9,9 @@ const github: IBestPractice[] = [
     howToCheck: "Manual. View the repository on https://github.com",
     howToExempt: "N/A",
   },
-];
+] as const satisfies readonly IBestPractice[];
 
-const aws: IBestPractice[] = [
+const aws: readonly IBestPractice[] = [
   {
     name: "Resource Tagging",
     owner:
@@ -21,7 +21,7 @@ const aws: IBestPractice[] = [
     howToCheck: "TBD",
     howToExempt: "N/A",
   },
-];
+] as const satisfies readonly IBestPractice[];
 
 export const AllBestPractices: IAllBestPractice = {
   GitHub: github,
