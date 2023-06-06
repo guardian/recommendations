@@ -21,6 +21,6 @@ This will help readers to more easily understand your rationale.
 Comments on Google docs or GitHub discussions are good ways of collecting people's thoughts alongside your original proposal.
 
 ## How to comment on an RFC
-A RFC is a request for help – someone is asking for your insight and the benefit of your experience. Be candid but be kind. Ultimately, the aim is to collaborate until collectively, we arrive at the best possible version of the idea.
+An RFC is a request for help – someone is asking for your insight and the benefit of your experience. Be candid but be kind. Ultimately, the aim is to collaborate until collectively, we arrive at the best possible version of the idea.
 
 At the same time, remember you are being asked for help. No one is trying to embarrass you! It’s a test of ideas, not the people who have them. There are no wrong comments – the more contributors to an RFC, the more effective they are.
