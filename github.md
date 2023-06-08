@@ -86,7 +86,7 @@ Things we could happily put on the front page of the Guardian.
 Examples:
   - source code
   - diagrams
-  - architecture decision records
+  - [architecture decision records](architecture-decision-records.md)
 
 ### Private information
 Things we do not want to be common knowledge, but knowing them does not directly compromise anything.
