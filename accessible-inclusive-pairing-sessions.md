@@ -1,4 +1,4 @@
-# How to make pairing sessions more accessible:
+# How to make pairing sessions more accessible and inclusive:
 
 ## Table of Contents
 * [Detail](#detail)
