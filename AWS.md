@@ -72,6 +72,8 @@ SES
 
 Using a `guardian.co.uk` or `theguardian.com` domain for internal tools is not recommended to reduce the risk of identity spoofing. Similarly having differing domains per environment reduces the risk of confusion e.g. a `CODE` environment sending emails that are confused for real `PROD` emails by users.
 
+See [usage of SES to send emails in our projects](https://github.com/search?q=org%3Aguardian+EmailIdentity+language%3ATypeScript&type=code&l=TypeScript).
+
 S3
 --
 
