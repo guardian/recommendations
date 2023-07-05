@@ -74,7 +74,40 @@ const aws: readonly IBestPractice[] = [
   },
 ] as const satisfies readonly IBestPractice[];
 
+const galaxies: readonly IBestPractice[] = [
+  {
+    name: "GitHub Usernames",
+    owner:
+      "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
+    description:
+      "Developers should update their [Galaxies profiles](https://forms.gle/7Yye3KfHefgYqg3c7) with their GitHub usernames",
+    howToCheck: "View on Galaxies",
+    howToExempt:
+      "Your Galaxies role is something other than an engineer/data analyst",
+  },
+  {
+    name: "Github Team",
+    owner:
+      "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
+    description:
+      "Teams should have their github team names in their galaxies entry",
+    howToCheck:
+      "Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo",
+    howToExempt: "Non-development teams are exempt",
+  },
+  {
+    name: "Team Emails",
+    owner:
+      "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
+    description: "Team emails in Galaxies should be up to date",
+    howToCheck:
+      "Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo",
+    howToExempt: "N/A",
+  },
+] as const satisfies readonly IBestPractice[];
+
 export const AllBestPractices: IAllBestPractice = {
   GitHub: github,
   AWS: aws,
+  Galaxies: galaxies,
 };
