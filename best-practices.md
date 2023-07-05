@@ -4,12 +4,15 @@ Do not edit it directly, but instead run `./best-practice/generate.sh`.
 -->
 
 # Best Practices
-This document defines a list of best practices we have defined. 
+
+This document defines a list of best practices we have defined.
 
 <!-- contentstart -->
+
 ## GitHub
+
 | ID        | Name                | Owner                                                                     | Description                                                                                                                                    | How to check compliance                           | How to exempt                                                                                     |
-| --------- | ------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+|-----------|---------------------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | GITHUB-01 | Default Branch Name | [@guardian](https://github.com/orgs/guardian/teams/all)                   | The default branch name should be `main`.<br>See the [master-to-main tool](https://github.com/guardian/master-to-main/blob/main/migrating.md). | Manual. View the repository on https://github.com | N/A                                                                                               |
 | GITHUB-02 | Branch Protection   | [@guardian](https://github.com/orgs/guardian/teams/all)                   | Enable branch protection for the default branch, ensuring changes are reviewed before being deployed.                                          | Manual. View the repository on https://github.com | N/A                                                                                               |
 | GITHUB-03 | Access              | [@guardian](https://github.com/orgs/guardian/teams/all)                   | Grant access on a team basis, rather than directly to individuals.                                                                             | Manual. View the repository on https://github.com | N/A                                                                                               |
@@ -17,8 +20,19 @@ This document defines a list of best practices we have defined.
 | GITHUB-05 | Archiving           | [DevX Operations](https://github.com/orgs/guardian/teams/devx-operations) | Repositories that are no longer used should be archived.                                                                                       | Manual. View the repository on https://github.com | N/A                                                                                               |
 | GITHUB-06 | Topics              | [DevX Security](https://github.com/orgs/guardian/teams/devx-security)     | Repositories should have a topic, to help understand what is in production.                                                                    | Manual. View the repository on https://github.com | Repositories owned *only* by non-P&E teams are exempt.                                            |
 | GITHUB-07 | Contents            | [DevX Security](https://github.com/orgs/guardian/teams/devx-security)     | Never commit secret information. Avoid private information in public repositories.                                                             | Manual. View the repository on https://github.com | N/A                                                                                               |
+
 ## AWS
+
 | ID     | Name             | Owner                                                                     | Description                                                                                                                             | How to check compliance | How to exempt |
-| ------ | ---------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------- |
+|--------|------------------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------|---------------|
 | AWS-01 | Resource Tagging | [DevX Operations](https://github.com/orgs/guardian/teams/devx-operations) | AWS resources should be tagged (where supported) with `Stack`, `Stage`, and `App`.<br>This aids service discovery, and cost allocation. | TBD                     | N/A           |
+
+## Galaxies
+
+| ID          | Name             | Owner                                                                 | Description                                                                                                         | How to check compliance                                                                                        | How to exempt                                                       |
+|-------------|------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| GALAXIES-01 | GitHub Usernames | ???                                                                   | Developers should update their [Galaxies profiles](https://forms.gle/7Yye3KfHefgYqg3c7) with their GitHub usernames | View on Galaxies                                                                                               | Your Galaxies role is something other than an engineer/data analyst |
+| GALAXIES-02 | Github Team Ids  | ???                                                                   | Teams should have their github team names in their galaxies entry                                                   | Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo | Non-development teams are exempt                                    |
+| GALAXIES-03 | Team Emails      | ???                                                                   | Team emails in Galaxies should be up to date                                                                        | Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo | N/A                                                                 |
+
 <!-- contentend -->
