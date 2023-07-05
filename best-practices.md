@@ -1,11 +1,13 @@
-<!--
-This file is auto-generated via `best-practice/generate.sh`.
-Do not edit it directly, but instead run `./best-practice/generate.sh`.
--->
+
 
 # Best Practices
 
+
+This file is auto-generated via `best-practice/generate.sh`. Do not edit it directly, but instead run `./best-practice/generate.sh`.
+
 This document defines a list of best practices we have defined.
+
+An Owner is someone/a team that is responsible for tracking compliance of the best practice. They can also be approached for guidance on how to adhere. Typically this will be a DevX team.
 
 <!-- contentstart -->
 
