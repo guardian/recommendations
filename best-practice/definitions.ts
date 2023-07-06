@@ -90,7 +90,7 @@ const galaxies: readonly IBestPractice[] = [
     owner:
       "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
     description:
-      "Teams should have their github team names in their galaxies entry",
+      "Teams should have their GitHub team names in their galaxies entry",
     howToCheck:
       "Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo",
     howToExempt: "Non-development teams are exempt",
