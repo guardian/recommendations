@@ -1,10 +1,13 @@
-<!--
-This file is auto-generated via `best-practice/generate.sh`.
-Do not edit it directly, but instead run `./best-practice/generate.sh`.
--->
+
 
 # Best Practices
-This document defines a list of best practices we have defined. 
+
+
+This file is auto-generated via `best-practice/generate.sh`. Do not edit it directly, but instead run `./best-practice/generate.sh`.
+
+This document defines a list of best practices we have defined.
+
+An Owner is someone/a team that is responsible for tracking compliance of the best practice. They can also be approached for guidance on how to adhere. Typically this will be a DevX team.
 
 <!-- contentstart -->
 ## GitHub
@@ -21,4 +24,10 @@ This document defines a list of best practices we have defined.
 | ID     | Name             | Owner                                                                     | Description                                                                                                                             | How to check compliance | How to exempt |
 | ------ | ---------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------- |
 | AWS-01 | Resource Tagging | [DevX Operations](https://github.com/orgs/guardian/teams/devx-operations) | AWS resources should be tagged (where supported) with `Stack`, `Stage`, and `App`.<br>This aids service discovery, and cost allocation. | TBD                     | N/A           |
+## Galaxies
+| ID          | Name             | Owner                                                                     | Description                                                                                                         | How to check compliance                                                                                        | How to exempt                                                       |
+| ----------- | ---------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| GALAXIES-01 | GitHub Usernames | [DevX Operations](https://github.com/orgs/guardian/teams/devx-operations) | Developers should update their [Galaxies profiles](https://forms.gle/7Yye3KfHefgYqg3c7) with their GitHub usernames | View on Galaxies                                                                                               | Your Galaxies role is something other than an engineer/data analyst |
+| GALAXIES-02 | Github Team      | [DevX Operations](https://github.com/orgs/guardian/teams/devx-operations) | Teams should have their GitHub team names in their galaxies entry                                                   | Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo | Non-development teams are exempt                                    |
+| GALAXIES-03 | Team Emails      | [DevX Operations](https://github.com/orgs/guardian/teams/devx-operations) | Team emails in Galaxies should be up to date                                                                        | Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo | N/A                                                                 |
 <!-- contentend -->
