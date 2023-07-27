@@ -11,12 +11,22 @@ These requirements are intended to make it easier to manage user accounts and un
 
 ## Creating a new repository
 
-The recommended methods for spawning a new repository are:
+The recommended method for spawning a new repository is using https://repo.new/ (which redirects to https://github.com/new/).
 
-- [https://repo-genesis.herokuapp.com](https://repo-genesis.herokuapp.com), and
-- [https://repo.new](https://repo.new).
+![image](https://github.com/guardian/recommendations/assets/52038/3acc15cf-0465-4133-9a18-0d4cb6eca754)
 
-The benefit of repo-genesis is that it configures your newly created repository in a way that more closely follows best practice - it grants access to the repository to a GitHub team of your choosing. However, it still leaves you as an individual with admin access to the repository. Individual access is undesired, as you retain it should you leave the organisation.
+Bear in mind:
+
+* The repository Owner should be `guardian`
+* The best visibility for most repositories is `Public`, rather than `Internal` or `Private`.
+  [Developing in the Open](https://www.theguardian.com/info/developer-blog/2014/nov/28/developing-in-the-open) makes better software!
+* Make sure you grant an appropriate focussed [GitHub team](https://github.com/orgs/guardian/teams) full
+  [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the just the dev team that will be owning this project, it shouldn't be a huge team with hundreds of members!
+
+We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
+way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring
+service which will ensure many more aspects of Guardian repos are checked and adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
+
 
 ## Repository Configuration
 ### Default branch name
