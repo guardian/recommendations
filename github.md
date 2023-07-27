@@ -23,9 +23,9 @@ Bear in mind:
 * Make sure you grant an appropriate focussed [GitHub team](https://github.com/orgs/guardian/teams) full
   [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the just the dev team that will be owning this project, it shouldn't be a huge team with hundreds of members!
 
-We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo in the best possible
+We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
 way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring
-service which will ensure many more aspects of Guardian repos are checked and adhere to best practice.
+service which will ensure many more aspects of Guardian repos are checked and adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
 
 
 ## Repository Configuration
