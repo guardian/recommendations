@@ -18,7 +18,7 @@ const github: readonly IBestPractice[] = [
     howToExempt: "N/A",
   },
   {
-    name: "Access",
+    name: "Team-based Access",
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
     description:
       "Grant access on a team basis, rather than directly to individuals.",
@@ -26,10 +26,10 @@ const github: readonly IBestPractice[] = [
     howToExempt: "N/A",
   },
   {
-    name: "Collaborators",
+    name: "Admin Access",
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
     description:
-      "Include at least one GitHub team as a collaborator with admin access.",
+      "Grant at least one GitHub team Admin access - typically, the dev team that own the project.",
     howToCheck: "Manual. View the repository on https://github.com",
     howToExempt:
       "Repositories *without* the one of following topics are exempt: production, testing, documentation",
