@@ -7,7 +7,7 @@ It can be used with and without React, but this guide covers our standard use, w
 ## Getting started
 
 ```shell
-$ yarn add @emotion/react
+$ npm add @emotion/react
 ```
 
 > You need to install `@emotion/react` to use [Source components](https://github.com/guardian/source)
@@ -17,7 +17,7 @@ $ yarn add @emotion/react
 Emotion can be configured for TypeScript or Babel, depending on your setup. If you are using both, you only need to do one (TypeScript is simplest).
 ### TypeScript
 
-If you are using TypeScript <= 4.1 and React <=17, it's simplest to use [React's automatic runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) with TypeScript's attendant [jsx](https://www.typescriptlang.org/tsconfig#jsx) and [jsxImportSource](https://www.typescriptlang.org/tsconfig#jsxImportSource) compiler options.
+If you are using TypeScript >= 4.1 and React >= 17, it's simplest to use [React's automatic runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) with TypeScript's attendant [jsx](https://www.typescriptlang.org/tsconfig#jsx) and [jsxImportSource](https://www.typescriptlang.org/tsconfig#jsxImportSource) compiler options.
 
 For earlier versions, use the Babel setup described below.
 
@@ -39,7 +39,7 @@ In your `tsconfig.json`:
 You can use the `css` prop, in conjunction with `@emotion/babel-preset-css-prop`:
 
 ```shell
-$ yarn add @emotion/babel-preset-css-prop -D
+$ npm add @emotion/babel-preset-css-prop -D
 ```
 
 In your `.babelrc`:
@@ -84,3 +84,4 @@ We recommend reading at least the following pages on the Emotion documentation s
 - [Composition](https://emotion.sh/docs/composition)
 - [Object styles](https://emotion.sh/docs/object-styles)
 - [Nested selectors](https://emotion.sh/docs/nested)
+- [Best Practices](https://emotion.sh/docs/best-practices)
