@@ -51,7 +51,7 @@ VPC
 * The account should be allocated a block of our IP address space to support peering. Often you may not know you need peering up front, so better to plan for it just in case. See [here](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html) for more info on AWS peering rules.
 * If it is likely that AWS resources will need to communicate with our on-prem infrastructure, then contact the networking team to request a CIDR allocation for the VPC.
 * Ensure you have added the correct [Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html) for the AWS services being accessed from your private subnets to avoid incurring unnecessary networking costs. 
-* Security of the VPC and security groups must be considered. See [here](https://github.com/guardian/security-recommendations/blob/97eb61e3520c348eefb0b656717b7856a91a61fa/recommendations/aws.md?plain=1#L57) for details.
+* Security of the VPC and security groups must be considered. See [here](https://github.com/guardian/security-recommendations/blob/main/recommendations/aws.md#vpc--security-groups) for details.
 
 
 ELB
