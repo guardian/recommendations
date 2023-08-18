@@ -1,6 +1,6 @@
 import { IAllBestPractice, IBestPractice } from "./types.ts";
 
-const github: readonly IBestPractice[] = [
+const repository: readonly IBestPractice[] = [
   {
     name: "Default Branch Name",
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
@@ -74,7 +74,20 @@ const aws: readonly IBestPractice[] = [
   },
 ] as const satisfies readonly IBestPractice[];
 
-const galaxies: readonly IBestPractice[] = [
+const galaxiesPerson: readonly IBestPractice[] = [
+  {
+    name: "GitHub Usernames",
+    owner:
+      "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
+    description:
+      "Developers should update their [Galaxies profiles](https://forms.gle/7Yye3KfHefgYqg3c7) with their GitHub usernames",
+    howToCheck: "View on Galaxies",
+    howToExempt:
+      "Your Galaxies role is something other than an engineer/data analyst",
+  },
+];
+
+const galaxiesTeam: readonly IBestPractice[] = [
   {
     name: "GitHub Usernames",
     owner:
@@ -107,7 +120,8 @@ const galaxies: readonly IBestPractice[] = [
 ] as const satisfies readonly IBestPractice[];
 
 export const AllBestPractices: IAllBestPractice = {
-  GitHub: github,
+  Repository: repository,
   AWS: aws,
-  Galaxies: galaxies,
+  GalaxiesPerson: galaxiesPerson,
+  GalaxiesTeam: galaxiesTeam,
 };
