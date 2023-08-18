@@ -49,6 +49,10 @@ response** Using `Cache-Control: no-cache` is NOT sufficient, use
 and 
 [Fastly config](https://developer.fastly.com/learning/concepts/cache-freshness/#preventing-content-from-being-cached)
 
+**Avoid the use of Personally Identifiable Information (PII) in debug or 
+test data.** Representative test data is important, but not at the cost of 
+breaching GDPR or disregarding personal privacy preferences.
+
 ## Secrets
 
 **Keep secrets out of repositories.** Application secrets must not be
