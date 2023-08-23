@@ -14,7 +14,8 @@ const repository: readonly IBestPractice[] = [
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
     description:
       "Enable branch protection for the default branch, ensuring changes are reviewed before being deployed.",
-    howToCheck: "Manual. View the repository on https://github.com",
+    howToCheck:
+      "Manual. View the repository on https://github.com. Repos with _no_ protected branches [are on Grafana](https://metrics.gutools.co.uk/d/aqd0U_rVk/branch-protections?orgId=1). Nb. this dashboard does not tell you whether protections follow best practices on repos which _are_ already protected.",
     howToExempt: "Archived repositories are exempt.",
   },
   {
