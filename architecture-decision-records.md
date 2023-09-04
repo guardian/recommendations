@@ -11,7 +11,7 @@ Excellent in-depth introductions to ADRs are:
 
 Often, ADRs help people who come to projects after the original designers understand:
 
-1. THE conditions that they observe are not accidental but, instead, were the result to purposeful decisions (for instance the choice of programming languages, the use of specific libraries or the adoption of specific software patterns).
+1. The conditions that they observe are not accidental but, instead, were the result to purposeful decisions (for instance the choice of programming languages, the use of specific libraries or the adoption of specific software patterns).
 
 1. The explanation of why those decisions where made, including but not limited to which constraints lead to them and, if relevant, in which conditions they could be reconsidered.
 
