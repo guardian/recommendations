@@ -7,7 +7,7 @@ const repository: readonly IBestPractice[] = [
     description:
       "The default branch name should be `main`.<br>See the [master-to-main tool](https://github.com/guardian/master-to-main/blob/main/migrating.md).",
     howToCheck: "Manual. View the repository on https://github.com",
-    howToExempt: "N/A",
+    howToExempt: "Archived repositories are exempt.",
   },
   {
     name: "Branch Protection",
@@ -15,7 +15,7 @@ const repository: readonly IBestPractice[] = [
     description:
       "Enable branch protection for the default branch, ensuring changes are reviewed before being deployed.",
     howToCheck: "Manual. View the repository on https://github.com",
-    howToExempt: "N/A",
+    howToExempt: "Archived repositories are exempt.",
   },
   {
     name: "Team-based Access",
@@ -32,7 +32,7 @@ const repository: readonly IBestPractice[] = [
       "Grant at least one GitHub team Admin access - typically, the dev team that own the project.",
     howToCheck: "Manual. View the repository on https://github.com",
     howToExempt:
-      "Repositories *without* the one of following topics are exempt: production, testing, documentation",
+      "Repositories *without* the one of following topics are exempt: production, testing, documentation. Archived repositories are exempt.",
   },
   {
     name: "Archiving",
@@ -49,7 +49,8 @@ const repository: readonly IBestPractice[] = [
     description:
       "Repositories should have a topic, to help understand what is in production.",
     howToCheck: "Manual. View the repository on https://github.com",
-    howToExempt: "Repositories owned *only* by non-P&E teams are exempt.",
+    howToExempt:
+      "Repositories owned *only* by non-P&E teams are exempt. Archived repositories are exempt.",
   },
   {
     name: "Contents",
