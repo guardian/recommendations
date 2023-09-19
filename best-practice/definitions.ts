@@ -95,16 +95,6 @@ const galaxiesPerson: readonly IBestPractice[] = [
 
 const galaxiesTeam: readonly IBestPractice[] = [
   {
-    name: "GitHub Usernames",
-    owner:
-      "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
-    description:
-      "Developers should update their [Galaxies profiles](https://forms.gle/7Yye3KfHefgYqg3c7) with their GitHub usernames",
-    howToCheck: "View on Galaxies",
-    howToExempt:
-      "Your Galaxies role is something other than an engineer/data analyst",
-  },
-  {
     name: "Github Team",
     owner:
       "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
