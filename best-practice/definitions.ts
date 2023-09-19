@@ -102,16 +102,28 @@ const galaxiesTeam: readonly IBestPractice[] = [
       "Teams should have their GitHub team names in their galaxies entry",
     howToCheck:
       "Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo",
-    howToExempt: "Non-development teams are exempt",
+    howToExempt: "Teams that don't use GitHub are exempt",
   },
   {
     name: "Team Emails",
     owner:
       "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
-    description: "Team emails in Galaxies should be up to date",
+    description: "A team on Galaxies should have an email address entry",
     howToCheck:
       "Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo",
     howToExempt: "N/A",
+  },
+  {
+    name: "Team Channels",
+    owner:
+      "[DevX Operations](https://github.com/orgs/guardian/teams/devx-operations)",
+    description:
+      "A team on Galaxies should have a public chat channel key listed",
+    howToCheck:
+      "Check in [this file](https://github.com/guardian/galaxies/blob/main/shared/data/teams.ts) in the Galaxies repo",
+    //We rely on this information this for repocop alerts, so only teams that have repos are relevant at this stage
+    howToExempt:
+      "It's generally good practice to do this, but teams that don't use GitHub are exempt",
   },
 ] as const satisfies readonly IBestPractice[];
 
