@@ -6,7 +6,8 @@ const repository: readonly IBestPractice[] = [
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
     description:
       "The default branch name should be `main`.<br>See the [master-to-main tool](https://github.com/guardian/master-to-main/blob/main/migrating.md).",
-    howToCheck: "Manual. View the repository on https://github.com",
+    howToCheck:
+      "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt: "Archived repositories are exempt.",
   },
   {
@@ -15,7 +16,7 @@ const repository: readonly IBestPractice[] = [
     description:
       "Enable branch protection for the default branch, ensuring changes are reviewed before being deployed.",
     howToCheck:
-      "Manual. View the repository on https://github.com. Repos with _no_ protected branches [are on Grafana](https://metrics.gutools.co.uk/d/aqd0U_rVk/branch-protections?orgId=1). Nb. this dashboard does not tell you whether protections follow best practices on repos which _are_ already protected.",
+      "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt: "Archived repositories are exempt.",
   },
   {
@@ -31,7 +32,8 @@ const repository: readonly IBestPractice[] = [
     owner: "[@guardian](https://github.com/orgs/guardian/teams/all)",
     description:
       "Grant at least one GitHub team Admin access - typically, the dev team that own the project.",
-    howToCheck: "Manual. View the repository on https://github.com",
+    howToCheck:
+      "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt:
       "Repositories *without* the one of following topics are exempt: production, testing, documentation. Archived repositories are exempt.",
   },
@@ -49,7 +51,8 @@ const repository: readonly IBestPractice[] = [
       "[DevX Security](https://github.com/orgs/guardian/teams/devx-security)",
     description:
       "Repositories should have a topic, to help understand what is in production.",
-    howToCheck: "Manual. View the repository on https://github.com",
+    howToCheck:
+      "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt:
       "Repositories owned *only* by non-P&E teams are exempt. Archived repositories are exempt.",
   },
