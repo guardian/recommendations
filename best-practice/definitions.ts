@@ -25,7 +25,8 @@ const repository: readonly IBestPractice[] = [
     description:
       "Grant access on a team basis, rather than directly to individuals.",
     howToCheck: "Manual. View the repository on https://github.com",
-    howToExempt: "N/A",
+    howToExempt:
+      "Repositories with one of following topics are exempt: `hackday`, `learning`, `prototype`.",
   },
   {
     name: "Admin Access",
@@ -35,7 +36,7 @@ const repository: readonly IBestPractice[] = [
     howToCheck:
       "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt:
-      "Repositories *without* the one of following topics are exempt: production, testing, documentation. Archived repositories are exempt.",
+      "Repositories with one of following topics are exempt: `hackday`, `learning`, `prototype`. Archived repositories are exempt.",
   },
   {
     name: "Archiving",
@@ -50,7 +51,7 @@ const repository: readonly IBestPractice[] = [
     owner:
       "[DevX Security](https://github.com/orgs/guardian/teams/devx-security)",
     description:
-      "Repositories should have a topic, to help understand what is in production.",
+      "Repositories should have one of the following topics, to help understand what is in production. `production`, `testing`, `documentation`, `hackday`, `prototype`, `learning`",
     howToCheck:
       "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt:
