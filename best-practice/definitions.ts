@@ -55,7 +55,7 @@ const repository: readonly IBestPractice[] = [
     howToCheck:
       "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
     howToExempt:
-      "Repositories owned *only* by non-P&E teams are exempt. Archived repositories are exempt.",
+      "Archived repositories are exempt.",
   },
   {
     name: "Contents",
