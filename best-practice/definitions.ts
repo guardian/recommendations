@@ -54,8 +54,7 @@ const repository: readonly IBestPractice[] = [
       "Repositories should have one of the following topics, to help understand what is in production. `production`, `testing`, `documentation`, `hackday`, `prototype`, `learning`, `interactive`",
     howToCheck:
       "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
-    howToExempt:
-      "Archived repositories are exempt.",
+    howToExempt: "Archived repositories are exempt.",
   },
   {
     name: "Contents",
