@@ -51,11 +51,10 @@ const repository: readonly IBestPractice[] = [
     owner:
       "[DevX Security](https://github.com/orgs/guardian/teams/devx-security)",
     description:
-      "Repositories should have one of the following topics, to help understand what is in production. `production`, `testing`, `documentation`, `hackday`, `prototype`, `learning`",
+      "Repositories should have one of the following topics, to help understand what is in production. `production`, `testing`, `documentation`, `hackday`, `prototype`, `learning`, `interactive`",
     howToCheck:
       "[Grafana](https://metrics.gutools.co.uk/d/2uaV8PiIz/repocop?orgId=1)",
-    howToExempt:
-      "Repositories owned *only* by non-P&E teams are exempt. Archived repositories are exempt.",
+    howToExempt: "Archived repositories are exempt.",
   },
   {
     name: "Contents",
