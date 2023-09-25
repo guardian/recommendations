@@ -19,7 +19,7 @@ provides simpler scalability and greater robustness
 
 **Services with published interfaces** applications owned by a team should form a coherent service with explicit, documented interfaces for use by other services
 
-**Scaling state is complex** avoid state where possible and where it is unavoidable, have a clear plan for how it can scale including CAP considerations, or why scaling is unnecessary
+**Scaling state is complex** avoid state where possible and where it is unavoidable, have a clear plan for how it can scale including consistency, availability and partition tolerance (CAP) considerations, or why scaling is unnecessary
 
 **Prefer communication via idempotent events** idempotent events allow us to replay in the event of failure and use at-least-once semantics
 
