@@ -326,13 +326,7 @@ Although `@guardian/libs` is at v6.5.2 in the repo and would work fine, we still
 
 Prefer continuous delivery from GitHub using [Changesets](https://github.com/changesets/changesets).
 
-Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account. NPM tokens are provided by the DevX team on a repo by repo basis.
-
-> This account is managed under npm@theguardian.com by the devex stream.
-
-#### Spontaneous publishing
-
-If you do not use Changesets, publish manually from the command line using [np](https://www.npmjs.com/package/np).
+Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account (managed by CSTI). The `NPM_TOKEN` secret is provided on a repo by repo basis via https://github.com/guardian/github-secret-access.
 
 ## Using `@guardian` NPM packages
 
