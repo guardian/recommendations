@@ -328,7 +328,7 @@ Prefer continuous delivery from GitHub using [Changesets](https://github.com/cha
 
 Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account (managed by CSTI). The `NPM_TOKEN` secret is provided on a repo by repo basis via https://github.com/guardian/github-secret-access.
 
-An example of adding Changesets to an existing CD workflow is [here]([url](https://github.com/guardian/cdk/pull/2071))
+An example of adding Changesets to an existing CD workflow is [here](https://github.com/guardian/cdk/pull/2071).
 
 ## Using `@guardian` NPM packages
 
