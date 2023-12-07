@@ -6,7 +6,7 @@ NS1 is our preferred supplier for DNS hosting. We pay for their dedicated DNS se
 
 ### Avoid Route53
 
-In the past teams have delegated subdomains to Route53, but this approach is no longer recommended. It is now easy to manage DNS records in NS1 so the main benefit of Route53 is eroded. Delegating to Route53 introduces an additional point of failure, since NS1 is authoritative for all of our key domain names. It also makes it harder for engineers and future tooling to reason about a domain.
+In the past teams have delegated subdomains to Route53, but this approach is no longer recommended. It is now easy to manage DNS records in NS1 as infrastructure-in-code, so the main benefit of Route53 is eroded. Delegating to Route53 introduces an additional point of failure, since NS1 is authoritative for all of our key domain names. It also makes it harder for engineers and future tooling to reason about a domain.
 
 ### Exceptions where Route53 might be a good answer
 
