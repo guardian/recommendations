@@ -2,7 +2,7 @@
 
 ## Which DNS provider should I use?
 
-NS1 is our preferred supplier for DNS hosting. We pay for their dedicated DNS service, which is independent from their shared platform.  This means that even if their shared platform experiences a DDOS attack, our DNS will still be available. It is easy to cloudform DNS records in NS1 using the GuCNAME custom resource.
+NS1 is our preferred supplier for DNS hosting. We pay for their dedicated DNS service, which is independent from their shared platform.  This means that even if their shared platform experiences a DDOS attack, our DNS will still be available. It is easy to cloudform DNS records in NS1 using the Guardian::DNS::RecordSet custom resource ([CDK](https://guardian.github.io/cdk/classes/constructs_dns.GuCname.html) / [Cloudformation](https://github.com/guardian/cfn-private-resource-types/tree/main/dns/guardian-dns-record-set-type/docs) docs)
 
 ### Avoid Route53
 
