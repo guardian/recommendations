@@ -26,3 +26,14 @@ If you have a TLD that isn’t shared (e.g. ophan.co.uk), there is no particular
 **gutools.co.uk** should only be used for internal facing tooling. But this is not limited to editorial tools, and can include marketing, engineering or any other tool with an internal audience.
 
 **guim.co.uk** should only be used for public static assets primarily required by our public facing website and apps.
+
+## Non-production stages
+
+For stages other than PROD we use different domains. This ensures that PROD is completely isolated (e.g. cookies will be separate).
+
+| Production domain | Pre-production structure     | Code domain                |
+|-------------------|------------------------------|----------------------------|
+| theguardian.com   | [stage].dev-theguardian.com  | code.dev-theguardian.com   |
+| guardianapis.com  | [stage].dev-guardianapis.com | code.dev-guardianapis.ccom |
+| gutools.co.uk     | [stage].dev-gutools.co.uk    | code.dev-gutools.co.uk     |
+| guim.co.uk        | Does not follow rule         | guimcode.co.uk             |
