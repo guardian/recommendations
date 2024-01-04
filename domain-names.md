@@ -23,6 +23,6 @@ If you have a TLD that isn’t shared (e.g. ophan.co.uk), there is no particular
 
 **guardianapis.com** should be used for any system whose users are primarily machines rather than people. It will typically serve JSON or binary protocol rather than HTML. It should never appear in an internal or external user’s address bar. It should not use or set cookies.
 
-**gutools.com** should only be used for internal facing tooling. But this is not limited to editorial tools, and can include marketing, engineering or any other tool with an internal audience.
+**gutools.co.uk** should only be used for internal facing tooling. But this is not limited to editorial tools, and can include marketing, engineering or any other tool with an internal audience.
 
 **guim.co.uk** should only be used for public static assets primarily required by our public facing website and apps.
