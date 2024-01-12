@@ -13,34 +13,34 @@ Please do submit any edits you feel necessary, and these will be reviewed and me
 
 ## Some examples
 
-#### From [Twitter Engineering on 2 July](https://twitter.com/TwitterEng/status/1278733305190342656)
+### From [Twitter Engineering in 2020](https://twitter.com/TwitterEng/status/1278733305190342656)
 
-| **Non-inclusive** | **Alternatives** |
-|---|---|
-| Whitelist | Allowlist |
-| Blacklist | Denylist |
-| Master/slave | Leader/follower, primary/replica, primary/standby |
-| Grandfathered | Legacy status |
-| Gendered pronouns (e.g. guys) | Folks, people, you all, y'all |
-| Gendered pronouns (e.g. he/him/his) | They, them, their |
-| Man hours | Person hours, engineering hours |
-| Sanity check | Quick check, confidence check, coherence check |
-| Dummy value | Placeholder value, sample value |
+| **Non-inclusive**                   | **Alternatives**                                  |
+|-------------------------------------|---------------------------------------------------|
+| Whitelist                           | Allowlist                                         |
+| Blacklist                           | Denylist                                          |
+| Master/slave                        | Leader/follower, primary/replica, primary/standby |
+| Grandfathered                       | Legacy status                                     |
+| Gendered pronouns (e.g. guys)       | Folks, people, you all, y'all                     |
+| Gendered pronouns (e.g. he/him/his) | They, them, their                                 |
+| Man hours                           | Person hours, engineering hours                   |
+| Sanity check                        | Quick check, confidence check, coherence check    |
+| Dummy value                         | Placeholder value, sample value                   |
 
-#### From P&E - Engineering
+### From P&E - Engineering
 
-|  **Non-inclusive**   | **Alternatives** |
-| -------------------- | ---------------- |
-| Blackbox             | Closed / Opaque box |
-| Whitebox             | Open / Clear box |
+| **Non-inclusive**    | **Alternatives**                   |
+|----------------------|------------------------------------|
+| Blackbox             | Closed / Opaque box                |
+| Whitebox             | Open / Clear box                   |
 | God mode             | Staff mode / CSR mode / Admin mode |
-| Back of a fag packet | Back of an envelope/napkin |
-| Straw man            | Straw person/head |
-| mental               | unbelievable/horrible |
+| Back of a fag packet | Back of an envelope/napkin         |
+| Straw man            | Straw person/head                  |
+| mental               | unbelievable/horrible              |
 
-#### Longer list from DialPad
+### Longer list from DialPad
+
 https://github.com/dialpad/inclusive-language
-  
 
 ## Accountability
 
@@ -53,4 +53,5 @@ If you would like to cement the improvements in both your own and your team’s 
 GNM takes deliberate or repeated use of non-inclusive language very seriously, so if you are aware of this happening, please report it to a manager or HR as normal. GNM’s Dignity at Work policy can be found in the [GNM Employee Handbook](https://drive.google.com/file/d/1bCE8b68Or6E7xnS7kqwSk1cL0h7byC56/).
 
 ## Associated resources
+
 *   The [GNM Employee Handbook](https://drive.google.com/file/d/1bCE8b68Or6E7xnS7kqwSk1cL0h7byC56/) has a section on WorkingTogether which covers GNM’s Equality and diversity, Trans equality and Dignity at Work policies.
