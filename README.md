@@ -81,6 +81,7 @@ This repository document [principles](#principles), standards and [guidelines](#
 -   [Content Delivery Network (CDN)](cdn.md)
 -   [Continuous Deployment](continuous-deployment.md)
 -   [Continuous Integration](continuous-integration.md)
+-   [Domain Names](domain-names.md)
 -   [Elasticsearch](elasticsearch.md)
 -   [Emotion](emotion.md)
 -   [GitHub](github.md)
