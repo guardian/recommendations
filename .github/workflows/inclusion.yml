@@ -26,4 +26,4 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Run inclusion
-        run: npx alex -q *.md || echo "Catch warnings and exit 0" # Once all warnings have been resolved, remove the second statement
+        run: npx alex -q *.md
