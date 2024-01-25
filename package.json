@@ -1,0 +1,13 @@
+{
+  "name": "recommendations",
+  "version": "1.0.0",
+  "description": "This repository document [principles](#principles), standards and [guidelines](#guidelines).",
+  "scripts": {
+    "inclusion-lint": "find . -name '*.md' | grep -v node_modules |  xargs alex -q"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "alex": "^11.0.1"
+  }
+}
