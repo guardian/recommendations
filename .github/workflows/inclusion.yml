@@ -1,0 +1,32 @@
+# Find full documentation here https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+name: CI
+
+on:
+  pull_request:
+  
+  # Manual invocation.
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  CI:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    # See https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Run script/ci
+        run: npm ci && npm run inclusion-lint
