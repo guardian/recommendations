@@ -1,5 +1,5 @@
 # Find full documentation here https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
-name: CI
+name: Inclusive Language
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ on:
       - main
 
 jobs:
-  CI:
+  inclusion-lint:
     timeout-minutes: 15
     runs-on: ubuntu-latest
 
@@ -28,5 +28,5 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
 
-      - name: Run script/ci
+      - name: Run inclusion linter
         run: npm ci && npm run inclusion-lint || echo "Catch warnings and exit 0"
