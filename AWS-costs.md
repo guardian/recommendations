@@ -20,7 +20,7 @@ Unused AMIs cost money. You can clean them up using the [AMI cleanup tool](https
 Unattached Elastic IP addresses costs money. You can find them using the trust advisor, or looking at your bills as they are free if they are attached (so in use).
 
 ### DynamoDB
-It’s very easy to overcommit the reserved capacity on this service. You should frequently review the reserved capacity of all your dynamodb tables. 
+You should frequently review the reserved capacity of all your dynamodb tables to make sure it's not over-committed.
 The easiest way to do this is to select the Metric tab and check the Provisioned vs. Consumed write and read capacity graphs and use the Capacity tab to adjust the Provisioned capacity accordingly. 
 Make sure the table capacity can handle traffic spikes. Use the time range on the graphs to see the past weeks usage.
 
@@ -81,7 +81,7 @@ You can see savings of over `50%` on reserved instances vs. on-demand instances.
 [More info on reserving instances](https://aws.amazon.com/ec2/purchasing-options/reserved-instances/getting-started/).
 
 Reservations are set to a particular AWS region and to a particular instances type.
-Therefore after making a reservation you are committing to run that particular region/instances combination until the reservation period finishes or you will swipe off all the financial benefits.
+Therefore, after making a reservation you are committing to run that particular region/instances combination until the reservation period finishes, or you will swipe off all the financial benefits.
 
 ### Spot Instances
 

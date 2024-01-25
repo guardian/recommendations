@@ -288,7 +288,7 @@ Although, for us, `@guardian/slideshow` is using `@guardian/libs` directly and n
 
 The new version means we will also need to update the `peerDependencies` range for `@guardian/slideshow`, to ensure consumers are using a compatible version of `@guardian/libs`.
 
-But because changes to `peerDependencies` are breaking (see above), we will also then need a new _major_ version of `@guardian/slideshow` (even if the original change to `@guardian/libs` was just a patch).
+But because changes to `peerDependencies` are breaking (see above), we will also then need a new _major_ version of `@guardian/slideshow` (even if the original change to `@guardian/libs` was only a patch).
 
 This is not great for consumers of `@guardian/slideshow`!
 

@@ -11,7 +11,7 @@ Metrics for Lambdas
 * To use AWS Embedded metrics, logs must be in JSON format.
 * A metric is embedded in a JSON logging request by adding a root node named “_aws” to the start of the log request.
 * The metric details are defined within this "_aws" node.
-* The following code snippet shows a simple logging request updating a single metric:  
+* The following code snippet shows a logging request updating a single metric:
  
 ```json 
   {"_aws": {  

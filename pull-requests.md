@@ -63,6 +63,7 @@ Good PR reviews are extremely valuable. They help share understanding of both th
 The following are generally applicable to PR reviews, but are not hard rules.
 
 ## A reviewer isn't responsible
+<!--alex ignore obvious-->
 The primary aim of a review is to confirm the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
 
 "Reasonable" covers various aspects. For example: long-term maintainability by the team, monetary cost, security, etc.
@@ -91,7 +92,7 @@ The following are some things to consider when examining the code:
 - Does the code take the most out of frameworks and language? Is there any custom implementation of native or already-existing functions?
 - Is documentation on functions, methods, classes, contexts, and behaviors adequate?
 - Are the critical spots adequately logged?
-- Does the code consider failures? Is it just considering the happy path?
+- Does the code consider failures? Is it only considering the happy path?
 - How maintainable is the code in the long term by the wider team?
     - Are there simpler solutions?
     - Is the code as modular as possible?
