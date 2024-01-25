@@ -24,9 +24,6 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          cache: "npm"
 
-      - name: Run inclusion linter
-        run: npm ci && npm run inclusion-lint || echo "Catch warnings and exit 0"
+      - name: Run inclusion
+        run: npx alex -q *.md || echo "Catch warnings and exit 0" # Once all warnings have been resolved, remove the second statement
