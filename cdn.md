@@ -25,7 +25,7 @@ Fastly is highly programmable through its VCL configuration language, but VCL ca
 
 A lot can be achieved with minimal Fastly configuration, and careful use of cache-control, surrogate-control and surrogate-key headers served by your application. This has the advantage that most of the caching logic is co-located with the rest of your application.
 
-If this is insufficient, the next step is making use of [VCL Snippets](https://docs.fastly.com/en/guides/using-regular-vcl-snippets), which can be easily edited in the Fastly console and provide a useful way of providing a little extra functionality. You can try-out snippets of Fastly VCL functionality with https://fiddle.fastly.dev/ .
+If this is insufficient, the next step is making use of [VCL Snippets](https://docs.fastly.com/en/guides/using-regular-vcl-snippets), which can be edited in the Fastly console and provide a useful way of providing a little extra functionality. You can try-out snippets of Fastly VCL functionality with https://fiddle.fastly.dev/ .
 
 If you find that your VCL snippets are becoming large, you should consider switching to [custom VCL](https://docs.fastly.com/en/guides/uploading-custom-vcl), which should be versioned in Github, tested in CI and deployed using riff-raff, as in
 https://github.com/guardian/fastly-edge-cache.

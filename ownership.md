@@ -47,7 +47,7 @@ The broad expectations of ongoing maintenance of a production application are:
 ### Orphaned Projects
 In the vast majority of cases we address these by assigning [ownership](./github.md#collaborators-and-codeowners) of source code to an official engineering team. Official engineering teams have useful properties for this task, like resourcing oversight and planning ceremonies.
 
-However there are some repositories (containing production software) we have created that have no obvious official engineering team owner. Instead we expect a small group of volunteers to be responsible for the above maintenance tasks. We expect these volunteers to:
+There are some repositories (containing production software) we have created that have no clear official engineering team owner. In this case we expect a small group of volunteers to be responsible for the above maintenance tasks. We expect these volunteers to:
 - Create a GitHub team and add volunteers as team members. Notify the Developer Experience team of this (the team should be admins of all relevant GitHub repos)
 - Create a Google group / email address
 - Find replacements for any leavers (can be delegated to their line manager if needed)

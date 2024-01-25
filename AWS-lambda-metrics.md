@@ -3,7 +3,7 @@ Metrics for Lambdas
 * AWS Embedded Metrics are an ideal solution for generating metrics for Lambda functions that will track historical data.
 * They are a method for capturing Cloudwatch metrics as part of a logging request. 
 * This is good because it avoids the financial and performance cost of making a putMetricData() request.
-* It also makes it easy to find the point at which the metric is updated in both the logs and in the code itself.
+* It also makes it easier to find the point at which the metric is updated in both the logs and in the code itself.
 * This does not work at all for our EC2 apps as their logs do not pass through Cloudwatch.
 * [This pull request](https://github.com/guardian/mobile-n10n/pull/696) gives a working example of how to embed metrics in your logging request
 * [This document](https://docs.google.com/document/d/1cL_t5NhO8J9Bwiu4rghoGh8i_um_sXDyKuq4COhdLEc/edit?usp=sharing) gives a good summary of why AWS embedded metrics are so useful

@@ -41,7 +41,7 @@ VPC
 
 * To follow best practice for VPCs, ensure you have a single CDK-generated VPC in your account that is used to house your applications. You can find the docs for it [here](https://github.com/guardian/cdk/blob/main/src/constructs/vpc/vpc.ts#L32-L59). 
 * While generally discouraged, in some exceptional cases, such as security-sensitive services, you may want to use the construct to generate further VPCs in order to isolate specific applications. It is worth discussing with DevX Security and InfoSec if you think you have a service that requires this.
-* Avoid using the default VPC - The default VPC is designed to make it easy to get up and running but with many negative tradeoffs:
+* Avoid using the default VPC - The default VPC is designed to get you up and running quickly, but with many negative tradeoffs:
   - It lacks the proper security and auditing controls. 
   - Network Access Control Lists (NACLs) are unrestricted.
   - The default VPC does not enable flow logs. Flow logs allow users to track network flows in the VPC for auditing and troubleshooting purposes
@@ -116,7 +116,7 @@ and the the function does one or more of the following:
 
 This started happening after a change in how the event loop works between NodeJS 8 and 10. The method AWS uses to freeze the lambda runtime after it has not been invoked for a while may not work correctly in the cases above.
 
-The workaround is simple (if a little silly). Wrap your root handler in a setTimeout:
+The workaround is to wrap your root handler in a setTimeout:
 
 ```javascript
 exports.handler = function (event, context, callback) {

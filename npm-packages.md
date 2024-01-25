@@ -290,7 +290,7 @@ The new version means we will also need to update the `peerDependencies` range f
 
 But because changes to `peerDependencies` are breaking (see above), we will also then need a new _major_ version of `@guardian/slideshow` (even if the original change to `@guardian/libs` was just a patch).
 
-This is obviously not great for consumers of `@guardian/slideshow`!
+This is not great for consumers of `@guardian/slideshow`!
 
 Therefore it is a bad idea for published packages to consume the local version of any deps that live alongside them in a repo.
 

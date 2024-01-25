@@ -8,7 +8,7 @@ Code review is an essential part of the continuous deployment pipeline. It enabl
 
 This last aspect is especially important in mono-repos as:
 - Multiple teams might be submitting changes to the repository
-- Some code changes may have non-obvious impact. For example, whether a code change directly or indirectly impacts data security. Understanding the impact of a change can be hard without the insight and input of a subject matter expert.
+- Some code changes may have hidden consequences. For example, whether a code change directly or indirectly impacts data security. Understanding the impact of a change can be hard without the insight and input of a subject matter expert.
 
 Code review also allows for knowledge sharing in both directions between code authors and reviewers at all levels of experience. Reviewing PRs is a great way to understand a new codebase, and to stay in touch with what's happening in your team. And although a review might not be the best place for long discussions, reviews can help to surface new patterns and techniques for both code authors and reviewers.
 
@@ -24,7 +24,7 @@ Read over your code before opening the PR for review. The main point of code rev
 Tip: Github allows you to open a PR in `draft` state, which can often be helpful if you want to review your own code, or have remote CI checks run, before others review it. (Remember to [change the status of your PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#marking-a-pull-request-as-ready-for-review) to `ready for review` later on though!)
 
 ## Small
-A PR should be easy to understand, and address a single concern.
+A PR should be clear, and address a single concern.
 
 There should be a manageable number of changes in a PR. Try to make your PR as small as possible while still advancing the functionality of the product.
 
@@ -157,7 +157,7 @@ A good way to get into the habit of doing post-merge checks is to write one fina
 A good post-merge comment on a PR can provide evidence that the PR works, or showcase the benefits of doing the PR in the first place. It can answer questions future developers may have, like "Did this stuff _ever_ work?" or "Did this help? Should I make a similar change in my repo?".
 
 Here are some examples of what you could put in a post-merge comment - if your PR was adding:
-* **Metrics or Logging** : Include a sample or screenshot of the newly gathered data, with a link to the ELK or dashboard to make it easy to get to that data in the future ([example](https://github.com/guardian/ophan/pull/4065#issuecomment-802200900))
+* **Metrics or Logging** : Include a sample or screenshot of the newly gathered data, with a link to the ELK or dashboard to make it easier to get to that data in the future ([example](https://github.com/guardian/ophan/pull/4065#issuecomment-802200900))
 * **A new UI feature** : A screenshot or even video of the feature in action in PROD. This doesn't need to be too extensive, because you should already have screenshots/video in the main PR description! If the new feature is being A/B tested, you may want to link to the results. ([example](https://github.com/guardian/ophan/pull/3406#issuecomment-522595859))
 * **Performance improvements** : A graph showing how performance has improved post-deployment! ([example](https://github.com/guardian/ophan/pull/4435#issuecomment-1056778719))
 * **A security/bug fix** : any evidence that the bug is no longer there, eg a screenshot, video, or log-search. ([example](https://github.com/guardian/ophan/pull/2896#issuecomment-415489771))
