@@ -8,7 +8,7 @@ Code review is an essential part of the continuous deployment pipeline. It enabl
 
 This last aspect is especially important in mono-repos as:
 - Multiple teams might be submitting changes to the repository
-- Some code changes may have hidden consequences. For example, whether a code change directly or indirectly impacts data security. Understanding the impact of a change can be hard without the insight and input of a subject matter expert.
+- Some code changes may have unintended consequences. For example, whether a code change directly or indirectly impacts data security. Understanding the impact of a change can be hard without the insight and input of a subject matter expert.
 
 Code review also allows for knowledge sharing in both directions between code authors and reviewers at all levels of experience. Reviewing PRs is a great way to understand a new codebase, and to stay in touch with what's happening in your team. And although a review might not be the best place for long discussions, reviews can help to surface new patterns and techniques for both code authors and reviewers.
 
