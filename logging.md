@@ -27,7 +27,7 @@ logs
 
 * Using the central ELK stack standardises the approach to logging across teams, which makes it easier to triage issues,
 rotate between teams, etc.
-* It allows us to easily search and correlate logs across different AWS resources and accounts within a single UI
+* It allows us to search and correlate logs across different AWS resources and accounts within a single UI
 * DevX maintain the central ELK stack (and some supporting tooling), which reduces maintenance overhead for individual
 teams
 

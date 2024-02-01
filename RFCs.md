@@ -16,7 +16,7 @@ When you are ready, provide a clear description of:
 2. Why the status quo does not address the problem
 3. A proposed solution
 
-This will help readers to more easily understand your rationale.
+This will help readers to better understand your rationale.
 
 Comments on Google docs or GitHub discussions are good ways of collecting people's thoughts alongside your original proposal.
 

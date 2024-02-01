@@ -1,6 +1,6 @@
 # Guidelines for inclusive communication
 
-The purpose of these guidelines are to provide some best practices and examples of inclusive communication. Just like many other best practices, you may be referred to these guidelines by your colleagues as part of code reviews, feedback sessions, document comments, and retrospectives, etc, so please do take time to digest them effectively. They are relevant to all forms of communication including verbal, written, drawing and code.
+The purpose of these guidelines are to provide some best practices and examples of inclusive communication. Like many other best practices, you may be referred to these guidelines by your colleagues as part of code reviews, feedback sessions, document comments, and retrospectives, etc, so please do take time to digest them effectively. They are relevant to all forms of communication including verbal, written, drawing and code.
 
 Please do submit any edits you feel necessary, and these will be reviewed and merged by a member of the EM team.
 

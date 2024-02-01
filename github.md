@@ -21,7 +21,7 @@ Bear in mind:
 * The best visibility for most repositories is `Public`, rather than `Internal` or `Private`.
   [Developing in the Open](https://www.theguardian.com/info/developer-blog/2014/nov/28/developing-in-the-open) makes better software!
 * Make sure you grant an appropriate focussed [GitHub team](https://github.com/orgs/guardian/teams) full
-  [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the just the dev team that will be owning this project, it shouldn't be a huge team with hundreds of members!
+  [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the dev team that will be owning this project, not a huge team with hundreds of members!
 
 We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
 way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring

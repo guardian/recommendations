@@ -84,8 +84,7 @@ This feature is documented [here](https://github.com/scala-steward-org/scala-ste
 
 * You'll still need to monitor your dependencies to see if any have been abandoned or are no
   longer in use by the codebase.
-* The effect of an updated dependency on transitive dependencies can often be surprisingly extensive, occasionally even
-  with just a patch update.
+* The effect of an updated dependency on transitive dependencies can often be surprisingly extensive, occasionally even if it's only a patch update.
 * As well as a set of tests that give you confidence at compile time, you'll also need to inspect the effect of the
   update on runtime behaviour, either by automated or manual smoke tests.  You'll save yourself a lot of pain if you can
   do this in an automated way.

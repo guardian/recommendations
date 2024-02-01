@@ -22,7 +22,8 @@ This repository document [principles](#principles), standards and [guidelines](#
 
 - Publish services **availability SLA** to **communicate expectations** to users or dependent systems and identify area of improvements.
 
-- Design for **simplicity** and **single responsibility**. Great designs model complex problems as simple discrete components. monitoring, self-healing and graceful degradation are simpler when responsibilities are not conflated.
+<!-- alex ignore simple -->
+- Design for **simplicity** and **single responsibility**. Great designs model complex problems as simple discrete components. Monitoring, self-healing and graceful degradation are simpler when responsibilities are not conflated.
 
 - **Design for failures**. All things break, so the behaviour of a system when any of its components, collaborators or hosting infrastructure fail or respond slowly must be a key part of its design.
 
