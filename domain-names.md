@@ -2,7 +2,9 @@
 
 ## Which DNS provider should I use?
 
-NS1 is our preferred supplier for DNS hosting. We pay for their dedicated DNS service, which is independent from their shared platform.  This means that even if their shared platform experiences a DDOS attack, our DNS will still be available. You can cloudform DNS records in NS1 using the Guardian::DNS::RecordSet custom resource ([CDK](https://guardian.github.io/cdk/classes/constructs_dns.GuCname.html) / [Cloudformation](https://github.com/guardian/cfn-private-resource-types/tree/main/dns/guardian-dns-record-set-type/docs) docs)
+NS1 is our preferred supplier for DNS hosting. We pay for their dedicated DNS service, which is independent from their shared platform.  This means that even if their shared platform experiences a DDOS attack, our DNS will still be available.
+
+You can cloudform DNS records in NS1 using the Guardian::DNS::RecordSet custom resource ([CDK](https://guardian.github.io/cdk/classes/constructs_dns.GuCname.html) / [Cloudformation](https://github.com/guardian/cfn-private-resource-types/tree/main/dns/guardian-dns-record-set-type/docs) docs). If you have an existing domain that's administered in NS1 and want to migrate it to CDK, see [the EC2 migration docs](https://github.com/guardian/cdk/blob/main/docs/migration-guide-ec2.md#stage-2-switch-dns).
 
 ### Avoid Route53
 
