@@ -95,3 +95,4 @@ This repository document [principles](#principles), standards and [guidelines](#
 -   [Security](security.md)
 -   [Services](services.md)
 -   [Thrift](thrift.md)
+-   [Containers](containers.md)
