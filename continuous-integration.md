@@ -1,5 +1,6 @@
 [Scripts To Rule Them All pattern]: https://github.com/github/scripts-to-rule-them-all
 [GitHub Actions]: https://docs.github.com/en/actions
+[Github Actions recommendations]: github-actions.md
 [RiffRaff]: https://github.com/guardian/riff-raff
 [`actions-riff-raff`]:https://github.com/guardian/actions-riff-raff/
 [`aws-actions/configure-aws-credentials`]: https://github.com/aws-actions/configure-aws-credentials
@@ -31,7 +32,7 @@ Every minute you reduce your building time is a minute saved when you will need 
 
 ## Platforms
 
-* Use GitHub Actions (with [`aws-actions/configure-aws-credentials`]) to run continuous integration tasks
+* Use GitHub Actions (with [`aws-actions/configure-aws-credentials`]) to run continuous integration tasks. See also [Github Actions recommendations].
 * Where possible, have CI execute a single, centralised script in the repository named `script/ci` 
     - This adheres to GitHub's [Scripts To Rule Them All pattern]
 
