@@ -15,7 +15,7 @@ A security issue arises when using tags to specify versions: code executed by th
 
 Since commit SHAs are immutable, the code of the underlying workflow cannot be changed for any given commit. This mitigates a security issue that arises from using tags (assuming you’re comfortable with the code present for the given SHA).
 
-It’s important to also audit the action itself for the given commit, so you’re reasonably satisfied the action is behaving as expected.
+It’s important to check the source code of the action for the given commit, so you’re reasonably satisfied the action is behaving as expected (and not exfiltrating secrets, for example).
 
 As well as specifying the commit, it’s worth combining this with a comment specifying a more readable semver version. Dependabot also knows how to handle updates for workflows versioned with SHAs, with a comment that is kept updated with the version tag that the commit points to: see [nodejs/node/pull/51334](https://github.com/nodejs/node/pull/51334) for an example.
 
