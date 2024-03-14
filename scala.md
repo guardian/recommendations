@@ -6,7 +6,7 @@
  * Prefer the latest version of Scala. At the time of writing `3.1.2` is the latest version, so `2.13.8` may be acceptable. if you are still using `2.12.x` you should plan to migrate.
  * If some dependencies are unavailable for the latest version, it is acceptable to use the latest patch version of the previous minor version but try to avoid it. If you have a dependency that isn't available for one of these versions, it's effectively dead and you should plan how to move away from it.
  * If you come to a codebase using an older version of Scala, it should be upgraded before any new features are added.
- * Run on a Corretto LTS version of Java, no lower than Java 11. At the time of writing this means Corretto 11 or 17. For tips on upgrading from Java 8, see [here](https://docs.google.com/document/d/1ZR-YnaXCT5_gLVmTCeGs0mWd3KPaAozPjQK8uUzHZ9w/edit?usp=sharing).
+ * Run on a Corretto LTS version of Java, no lower than Java 21. For tips on upgrading from Java 8 or Java 11, see [here](https://docs.google.com/document/d/1ZR-YnaXCT5_gLVmTCeGs0mWd3KPaAozPjQK8uUzHZ9w/edit?usp=sharing).
  * Prefer [passing dependencies as function parameters](http://debasishg.blogspot.com/2011/03/pushing-envelope-on-oo-and-functional.html) over [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection)[^1]. This enable [referential transparency](https://en.wikipedia.org/wiki/Referential_transparency) of your programs.
    
 
