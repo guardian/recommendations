@@ -62,12 +62,12 @@ Good PR reviews are extremely valuable. They help share understanding of both th
 
 The following are generally applicable to PR reviews, but are not hard rules.
 
-## A reviewer isn't responsible
+## A reviewer isn't directly responsible
 The primary aim of a review is to confirm the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
 
 "Reasonable" covers various aspects. For example: long-term maintainability by the team, monetary cost, security, etc.
 
-The reviewer does not take responsibility for whether the code is correct, or will have unintended side-effects.
+The reviewer does not directly take responsibility for whether the code is correct, or will have unintended side-effects. However, all the code produced and released by a team is a shared responsibility. When reviewing code, be sure to consider the human context. If this is a new contributor or a less experienced engineer, the teams' shared responsibility might mean that an experienced team member should give the review more time and attention.
 
 ## DRY
 No-one loves someone who writes the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
