@@ -23,6 +23,12 @@ You can find the SHA for a particular release by navigating to the Releases page
 
 ![image](finding-gha-release-sha.png)
 
+Alternatively, they can be obtained via the command line. For example:
+
+```bash
+git ls-remote --tags https://github.com/actions/checkout | sort -Vr -k2
+```
+
 ## Keep actions up to date with Dependabot
 
 Use Dependabot to keep all actions up to date. See [Keeping your actions up to date with Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot).
