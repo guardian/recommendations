@@ -2,7 +2,7 @@
 
 Rulesets can be used to apply branch protection and CI status check rules to a repo, in the case where branch protection needs to be bypassed in certain cases. 
 
-An example of this is the [GHA Scala Library Release Workflow](https://github.com/guardian/gha-scala-library-release-workflow), which requires branch protection to be disabled in order for it to be able to run. 
+An example of this is the [GHA Scala Library Release Workflow](https://github.com/guardian/gha-scala-library-release-workflow), which requires branch protection to be turned off in order for it to be able to run. 
 
 To re-apply branch protection of the default branch via rulesets:
 
