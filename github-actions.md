@@ -17,6 +17,8 @@ It’s important to check the source code of the action for the given commit, so
 
 As well as specifying the commit, it’s worth combining this with a comment specifying a more readable semver version, in the format `# v0.0.1`. Dependabot also knows how to handle updates for workflows versioned with SHAs, with a comment that is kept updated with the version tag that the commit points to: see [nodejs/node/pull/51334](https://github.com/nodejs/node/pull/51334) for an example.
 
+Note that this differs from the [Github recommendations](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions), as we're applying the principle of zero trust to all Github Actions.
+
 ### Finding the SHA for a given release
 
 You can find the SHA for a particular release by navigating to the Releases page of a GitHub repository, and clicking the short SHA digest in the panel to the left of the release. The full SHA can then be copied out of the URL.
