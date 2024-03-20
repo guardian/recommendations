@@ -45,6 +45,8 @@ Particularly when [continuous delivery] is configured, branch protection reduces
 - Require branches to be up to date before merging
 - Include administrators
 
+If you need to disable branch protection, e.g. in order to use the [Scala release workflow](https://github.com/guardian/gha-scala-library-release-workflow), you should [re-enable protection via rulesets](github-rulesets.md), which allow for protection to be bypassed in certain specific cases.
+
 ### Access
 Access should be granted to [GitHub teams][gh-teams]. Avoid individual access.
 
