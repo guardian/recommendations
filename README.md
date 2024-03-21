@@ -86,6 +86,7 @@ This repository document [principles](#principles), standards and [guidelines](#
 -   [Elasticsearch](elasticsearch.md)
 -   [Emotion](emotion.md)
 -   [GitHub](github.md)
+-   [Github Actions](github-actions.md)
 -   [Logging](logging.md)
 -   [NPM packages](npm-packages.md)
 -   [Production Services, Ownership and Maintenance](ownership.md)

@@ -12,7 +12,7 @@ N.B. This guidance only intended as a minimum baseline; in practice the expectat
 - All source code should be version controlled using [GitHub](./github.md)
 - CI/CD should be employed
     - An appropriate testing strategy should be considered. We do not aim for a specific % of test coverage, but important business logic should be unit tested
-    - For CI, use GitHub Actions
+    - For CI, use [GitHub Actions](./github-actions.md)
     - For most (non-library) projects, deployment will be done via [Riff-Raff](https://riffraff.gutools.co.uk/)
 
 ### Security
