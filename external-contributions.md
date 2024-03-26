@@ -12,7 +12,7 @@ We appreciate your interest in contributing to our projects. The relevant team w
 
 While we value every contribution, there are instances where we may not be able to merge external changes. This decision is not a reflection of your effort or quality of work. Various factors, including project suitability and alignment with internal standards, influence these decisions.
 
-If you’d like more information about the prospects of a change, you may also like to contact us about an idea before you work on it.
+If you’d like more information about the prospects of a change, you may also like to [contact us](mailto:userhelp@theguardian.com) about an idea before you work on it.
 
 ## Guidance for Guardian Staff
 
