@@ -35,7 +35,7 @@ When upgrading dependencies, if not [automated](https://github.com/guardian/reco
 
 You are more likely to encounter incompatibilities or issues otherwise. 
 
-In general you don't need to make your PR as small as possible, and favour pace and frequency of delivery over atomicity of changes. Contrary to commits which can be [bisected to find root cause of an issue](https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination), every deployment will integrate  additional changes in the system to the ones in the PR (for example baked AMI may be a new one, EC2 bootstrap script may install a newer version of system library, etc.) so you will more likely identify reason of an issue through tests and monitoring than size of of the PR.
+In general you don't need to make your PR as small as possible, and favour pace and frequency of delivery over atomicity of changes. Contrary to commits which can be [bisected to find root cause of an issue](https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination), every deployment will integrate  additional changes in the system to the ones in the PR (for example baked AMI may be a new one, EC2 bootstrap script may install a newer version of system library, etc.) so you will be more likely to identify the reason for an issue through tests and monitoring than size of the PR.
 
 ## Releasable
 A PR should be releasable once its review is complete.
