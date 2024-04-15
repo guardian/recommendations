@@ -33,7 +33,7 @@ When upgrading dependencies, if not [automated](https://github.com/guardian/reco
  - For Scala, upgrade `scala` runtime, `sbt`, `sbt-plugins` and optionally `play-framework` all in one PR.
  - For Node, upgrade `typescript` runtime, package manager, code formatter, linter, bundler, all in one PR.    
 
-You are more likely to encounters incompatibilities or issues otherwise. 
+You are more likely to encounter incompatibilities or issues otherwise. 
 
 In general you don't need to make your PR as small as possible, and favour pace and frequency of delivery over atomicity of changes. Contrary to commits which can be [bisected to find root cause of an issue](https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination), every deployment will integrate  additional changes in the system to the ones in the PR (for example baked AMI may be a new one, EC2 bootstrap script may install a newer version of system library, etc.) so you will more likely identify reason of an issue through tests and monitoring than size of of the PR.
 
