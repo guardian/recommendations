@@ -68,6 +68,7 @@ Good PR reviews are extremely valuable. They help share understanding of both th
 The following are generally applicable to PR reviews, but are not hard rules.
 
 ## A reviewer isn't directly responsible
+<!--alex ignore obvious-->
 The primary aim of a review is to confirm the PR addresses its stated problem in a reasonable way, and the solution has no obvious problems.
 
 "Reasonable" covers various aspects. For example: long-term maintainability by the team, monetary cost, security, etc.
