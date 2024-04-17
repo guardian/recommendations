@@ -12,6 +12,7 @@ Regular snapshots of your cluster can provide restore points if data is lost.  S
 
 If you have the [AWS Plugin](https://github.com/elastic/elasticsearch-cloud-aws) installed you can perform snapshots to S3.
 
+<!-- alex ignore master -->
 Some examples of scripts used to setup and run S3 snapshots: https://github.com/guardian/grid/tree/master/elasticsearch/scripts
 
 You can watch snapshots in progress: `curl $ES_URL:9200/_snapshot/_status`

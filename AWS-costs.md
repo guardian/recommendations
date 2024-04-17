@@ -3,7 +3,7 @@ AWS Costs
 
 ### Trusted Advisor
 
-Use the [Trusted Advisor](https://console.aws.amazon.com/trustedadvisor/home?#/dashboard) to identify instances that you can potentially downgrade to a smaller instance size or terminate. Trusted Advisor is a native AWS resource available to you when your account has Enterprise support. It gives recommendations for cost savings opportunities and also provides availability, security, and fault tolerance recommendations. Even simple tunings in CPU usage and provisioned IOPS can add up to significant savings.
+Use the [Trusted Advisor](https://console.aws.amazon.com/trustedadvisor/home?#/dashboard) to identify instances that you can potentially downgrade to a smaller instance size or terminate. Trusted Advisor is a native AWS resource available to you when your account has Enterprise support. It gives recommendations for cost savings opportunities and also provides availability, security, and fault tolerance recommendations. Even the simplest tunings, such as to CPU usage and provisioned IOPS can add up to significant savings.
 
 On the TA dashboard, click on **Low Utilization Amazon EC2 Instances** and sort the low utilisation instances table by the highest **Estimated Monthly Savings**. 
 
@@ -11,16 +11,16 @@ On the TA dashboard, click on **Low Utilization Amazon EC2 Instances** and sort 
 You can use the [Bills](https://console.aws.amazon.com/billing/home?region=eu-west-1#/bill) and [Cost explorer](https://console.aws.amazon.com/billing/home?region=eu-west-1#/bill) to understand the breakdown of your AWS usage and possible identify services you didn’t know you were using it.
 
 ### Unattached Volumes
-Volumes available but not in used costs the same price. You can easily find them in the [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Volumes:state=available;sort=size) under Volumes section by filtering by state (available).
+Volumes available but not in used costs the same price. You can find them in the [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Volumes:state=available;sort=size) under Volumes section by filtering by state (available).
 
 ### Unused AMIs
-Unused AMIs cost money.  You can easily clean them up using the [AMI cleanup tool](https://github.com/guardian/deploy-tools-platform/tree/master/cleanup)
+Unused AMIs cost money. You can clean them up using the [AMI cleanup tool](https://github.com/guardian/deploy-tools-platform/tree/master/cleanup)
 
 ### Unattached EIPs
-Unattached Elastic IP addresses costs money. You can easily find them using the trust advisor, or looking at your bills as they are free if they are attached (so in use).
+Unattached Elastic IP addresses costs money. You can find them using the trust advisor, or looking at your bills as they are free if they are attached (so in use).
 
 ### DynamoDB
-It’s very easy to overcommit the reserved capacity on this service. You should frequently review the reserved capacity of all your dynamodb tables. 
+You should frequently review the reserved capacity of all your dynamodb tables to make sure it's not over-committed.
 The easiest way to do this is to select the Metric tab and check the Provisioned vs. Consumed write and read capacity graphs and use the Capacity tab to adjust the Provisioned capacity accordingly. 
 Make sure the table capacity can handle traffic spikes. Use the time range on the graphs to see the past weeks usage.
 
@@ -38,7 +38,7 @@ Lower storage price, higher access price. Interesting for backups for instance.
 
 * [Reduce Redundancy Storage](https://aws.amazon.com/s3/reduced-redundancy/)
 
-Lower storage price, reduced redundancy. Interesting for easy reproducible data or non critical data such as logs for instance.  
+Lower storage price, reduced redundancy. Interesting for reproducible data or non-critical data such as logs.  
 
 * Glacier
 
@@ -51,9 +51,9 @@ Another useful feature to manage your buckets is the possibility to set [lifecyc
  S3’s multipart upload feature accelerates the uploading of large objects by allowing you to split them up into logical parts that can be uploaded in parallel. However if you initiate a multipart upload but never finish it, the in-progress upload occupies some storage space and will incur storage charges.
 And the thing is these uploads are not visible when you list the contents of a bucket through the console or the standard api (you have to use a special command)
 
-There is 2 easy ways to solve this now and prevent it to happen in the future:
+There are two ways to solve this now and prevent it from happening in the future:
 
-* a [simple script](https://gist.github.com/mchv/9dccbd9245287b26e34ab78bad43ea6c) that can list them with size and potentially delete existing (based on [AWS API](http://docs.aws.amazon.com/cli/latest/reference/s3api/list-parts.html?highlight=list%20parts))
+* a [script](https://gist.github.com/mchv/9dccbd9245287b26e34ab78bad43ea6c) that can list them with size and potentially delete existing (based on [AWS API](http://docs.aws.amazon.com/cli/latest/reference/s3api/list-parts.html?highlight=list%20parts))
 * [Add a lifecycle rule](https://aws.amazon.com/blogs/aws/s3-lifecycle-management-update-support-for-multipart-uploads-and-delete-markers/) to each bucket to delete automatically incomplete multipart uploads after a few days  ([official AWS doc](http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)) 
 
 An example of how to cloud-form the lifecycle rule:
@@ -81,7 +81,7 @@ You can see savings of over `50%` on reserved instances vs. on-demand instances.
 [More info on reserving instances](https://aws.amazon.com/ec2/purchasing-options/reserved-instances/getting-started/).
 
 Reservations are set to a particular AWS region and to a particular instances type.
-Therefore after making a reservation you are committing to run that particular region/instances combination until the reservation period finishes or you will swipe off all the financial benefits.
+Therefore, after making a reservation you are committing to run that particular region/instances combination until the reservation period finishes, or you will swipe off all the financial benefits.
 
 ### Spot Instances
 

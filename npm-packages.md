@@ -288,9 +288,9 @@ Although, for us, `@guardian/slideshow` is using `@guardian/libs` directly and n
 
 The new version means we will also need to update the `peerDependencies` range for `@guardian/slideshow`, to ensure consumers are using a compatible version of `@guardian/libs`.
 
-But because changes to `peerDependencies` are breaking (see above), we will also then need a new _major_ version of `@guardian/slideshow` (even if the original change to `@guardian/libs` was just a patch).
+But because changes to `peerDependencies` are breaking (see above), we will also then need a new _major_ version of `@guardian/slideshow` (even if the original change to `@guardian/libs` was only a patch).
 
-This is obviously not great for consumers of `@guardian/slideshow`!
+This is not great for consumers of `@guardian/slideshow`!
 
 Therefore it is a bad idea for published packages to consume the local version of any deps that live alongside them in a repo.
 
@@ -326,13 +326,9 @@ Although `@guardian/libs` is at v6.5.2 in the repo and would work fine, we still
 
 Prefer continuous delivery from GitHub using [Changesets](https://github.com/changesets/changesets).
 
-Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account. NPM tokens are provided by the DevX team on a repo by repo basis.
+Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account (managed by CSTI). The `NPM_TOKEN` secret is provided on a repo by repo basis via https://github.com/guardian/github-secret-access.
 
-> This account is managed under npm@theguardian.com by the devex stream.
-
-#### Spontaneous publishing
-
-If you do not use Changesets, publish manually from the command line using [np](https://www.npmjs.com/package/np).
+An example of adding Changesets to an existing CD workflow is [here](https://github.com/guardian/cdk/pull/2071).
 
 ## Using `@guardian` NPM packages
 

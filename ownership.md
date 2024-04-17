@@ -12,7 +12,7 @@ N.B. This guidance only intended as a minimum baseline; in practice the expectat
 - All source code should be version controlled using [GitHub](./github.md)
 - CI/CD should be employed
     - An appropriate testing strategy should be considered. We do not aim for a specific % of test coverage, but important business logic should be unit tested
-    - For CI, use GitHub Actions
+    - For CI, use [GitHub Actions](./github-actions.md)
     - For most (non-library) projects, deployment will be done via [Riff-Raff](https://riffraff.gutools.co.uk/)
 
 ### Security
@@ -47,7 +47,7 @@ The broad expectations of ongoing maintenance of a production application are:
 ### Orphaned Projects
 In the vast majority of cases we address these by assigning [ownership](./github.md#collaborators-and-codeowners) of source code to an official engineering team. Official engineering teams have useful properties for this task, like resourcing oversight and planning ceremonies.
 
-However there are some repositories (containing production software) we have created that have no obvious official engineering team owner. Instead we expect a small group of volunteers to be responsible for the above maintenance tasks. We expect these volunteers to:
+There are some repositories (containing production software) we have created that have no clear official engineering team owner. In this case we expect a small group of volunteers to be responsible for the above maintenance tasks. We expect these volunteers to:
 - Create a GitHub team and add volunteers as team members. Notify the Developer Experience team of this (the team should be admins of all relevant GitHub repos)
 - Create a Google group / email address
 - Find replacements for any leavers (can be delegated to their line manager if needed)

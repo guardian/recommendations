@@ -21,7 +21,8 @@ Bear in mind:
 * The best visibility for most repositories is `Public`, rather than `Internal` or `Private`.
   [Developing in the Open](https://www.theguardian.com/info/developer-blog/2014/nov/28/developing-in-the-open) makes better software!
 * Make sure you grant an appropriate focussed [GitHub team](https://github.com/orgs/guardian/teams) full
-  [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the just the dev team that will be owning this project, it shouldn't be a huge team with hundreds of members!
+  [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the dev team that will be owning this project, not a huge team with hundreds of members!
+* For public repositories, we recommend using the Apache v2 license.
 
 We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
 way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring
@@ -43,6 +44,8 @@ Particularly when [continuous delivery] is configured, branch protection reduces
 - Require status checks to pass before merging
 - Require branches to be up to date before merging
 - Include administrators
+
+If you need to disable branch protection, e.g. in order to use the [Scala release workflow](https://github.com/guardian/gha-scala-library-release-workflow), you should [re-enable protection via rulesets](github-rulesets.md), which allow for protection to be bypassed in certain specific cases.
 
 ### Access
 Access should be granted to [GitHub teams][gh-teams]. Avoid individual access.

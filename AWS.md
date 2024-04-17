@@ -41,14 +41,14 @@ VPC
 
 * To follow best practice for VPCs, ensure you have a single CDK-generated VPC in your account that is used to house your applications. You can find the docs for it [here](https://github.com/guardian/cdk/blob/main/src/constructs/vpc/vpc.ts#L32-L59). 
 * While generally discouraged, in some exceptional cases, such as security-sensitive services, you may want to use the construct to generate further VPCs in order to isolate specific applications. It is worth discussing with DevX Security and InfoSec if you think you have a service that requires this.
-* Avoid using the default VPC - The default VPC is designed to make it easy to get up and running but with many negative tradeoffs:
+* Avoid using the default VPC - The default VPC is designed to get you up and running quickly, but with many negative tradeoffs:
   - It lacks the proper security and auditing controls. 
   - Network Access Control Lists (NACLs) are unrestricted.
   - The default VPC does not enable flow logs. Flow logs allow users to track network flows in the VPC for auditing and troubleshooting purposes
   - No tagging
   - The default VPC enables the assignment of public addresses in public subnets by default. This is a security issue as a small mistake in setup could 
     then allow the instance to be reachable by the Internet. 
-* The account should be allocated a block of our IP address space to support peering. Often you may not know you need peering up front, so better to plan for it just in case. See [here](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html) for more info on AWS peering rules.
+* The account should be allocated a block of our IP address space to support peering. Often you may not know you need peering up front, so better to plan for it regardless. See [here](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html) for more info on AWS peering rules.
 * If it is likely that AWS resources will need to communicate with our on-prem infrastructure, then contact the networking team to request a CIDR allocation for the VPC.
 * Ensure you have added the correct [Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html) for the AWS services being accessed from your private subnets to avoid incurring unnecessary networking costs. 
 * Security of the VPC and security groups must be considered. See [here](https://github.com/guardian/security-recommendations/blob/main/recommendations/aws.md#vpc--security-groups) for details.
@@ -116,7 +116,7 @@ and the the function does one or more of the following:
 
 This started happening after a change in how the event loop works between NodeJS 8 and 10. The method AWS uses to freeze the lambda runtime after it has not been invoked for a while may not work correctly in the cases above.
 
-The workaround is simple (if a little silly). Wrap your root handler in a setTimeout:
+The workaround is to wrap your root handler in a setTimeout:
 
 ```javascript
 exports.handler = function (event, context, callback) {
@@ -145,7 +145,7 @@ Your lambda will get triggered multiple times you trigger it synchronously using
 #### Details
 [`--cli-read-timeout`](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html#:~:text=cli%2Dread%2Dtimeout) is a general CLI param that applies to all subcommands and determines how long it will wait for data to be read from a socket. It seems to default to 60 seconds.
 
-In the case of a synchronously executed long-running lambda, this timeout can be exceeded. The first lambda invocation "fails" (though not in a way that is visible in any lambda metrics or logs), and the CLI will abort the request and retry. The first lambda invocation hasn't really failed though - it will continue to run, possibly successfully - it's just that the CLI client that initiated it has stopped waiting for a response.
+In the case of a synchronously executed long-running lambda, this timeout can be exceeded. The first lambda invocation "fails" (though not in a way that is visible in any lambda metrics or logs), and the CLI will abort the request and retry. The first lambda invocation hasn't really failed though - it will continue to run, possibly successfully - but the CLI client that initiated it has stopped waiting for a response.
 
 Setting `--cli-read-timeout` to `0` removes the timeout and make the socket read wait indefinitely, meaning the CLI command will block until the lambda completes or times out.
 

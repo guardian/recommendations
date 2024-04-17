@@ -14,7 +14,7 @@ See the separate [npm-packages.md](./npm-packages.md).
 -   Gzip all textual assets served, using GZip level 6 where possible
 -   Optimise images for size (e.g. jpegtran, pngquant, giflossy, svgo,
     etc.)
--   Favour SVGs where possible. What happens if images are disabled or
+-   Favour SVGs where possible. What happens if images aren't enabled or
     unsupported?
 -   Avoid inlining encoded assets in CSS.
 
@@ -81,7 +81,7 @@ various areas below.
 
 -   Define what browsers and versions you support. What happens if using an unsupported browser?
 -   Define what viewports do you support. What happens if using an unsupported viewport?
--   What happens if JS/CSS is disabled or overridden in the client?
+-   What happens if JS/CSS is switched off or overridden in the client?
 
 ### Reporting
 
