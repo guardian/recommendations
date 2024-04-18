@@ -6,7 +6,9 @@ An example of this is the [GHA Scala Library Release Workflow](https://github.co
 
 To re-apply branch protection of the default branch via rulesets:
 
-* Edit the Custom Property `production_status` on your repo to select `production`. This will enable an organisation-level ruleset on your repo which applies branch protection to the default branch. (N.B. This ruleset is configured to allow the 'Gu Scala Library Release' app to bypass the branch protection.)
+* Edit the Custom Property `production_status` on your repo to select `production` (note, this step requires
+  [GitHub-org-owner privileges](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization#setting-values-for-repositories-in-your-organization)).
+  This will enable an organisation-level ruleset on your repo which applies branch protection to the default branch. (N.B. This ruleset is configured to allow the 'Gu Scala Library Release' app to bypass the branch protection.)
 
 To require CI checks to pass before merge:
 * Create a second ruleset in your repo with the 'Branch protection' property 'Require status checks to pass' -> 'Require branches to be up to date before merging'.
