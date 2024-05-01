@@ -18,7 +18,7 @@ N.B. This guidance only intended as a minimum baseline; in practice the expectat
 ### Security
 - A basic [security](./security.md) assessment should be performed to understand the risks and available controls. E.g. 
 authentication, network security, encryption, secret management. Expert guidance from outside the team should sought for high risk applications (e.g. processing user data)
-- Any dependency manifest files should be scanned using [Snyk Open Source](https://security-hq.gutools.co.uk/documentation/snyk)
+- Any dependency manifest files should be scanned using [Snyk Open Source](./snyk.md)
 - Internal tools should be behind Google Authentication 
     - A helper exists for [Scala](https://github.com/guardian/play-googleauth) and authentication can be added to an [ALB directly](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-authenticate-users.html)
     - Network-layer restrictions may also be recommended based on the context
