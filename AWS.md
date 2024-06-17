@@ -11,6 +11,7 @@ General
      * `CODE` for pre-production
      * `INFRA` for infrastructure or singleton resources e.g. [elasticsearch-node-rotation](https://github.com/guardian/elasticsearch-node-rotation)
    * `App` - the individual service e.g. `image-loader`
+   * `gu:repo` - the GitHub repository where the resource's definition can be found
  * If a resource needs to be shared across multiple environments, prefer to define it in it's own CFN template as the same resource cannot be defined in multiple templates
  * Prefer continuous delivery of infrastructure via Riff-Raff over manual deployment
    * This provides a better audit trail
