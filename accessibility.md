@@ -2,22 +2,19 @@
 
 ## Compliance
 
-We use a subset of the WCAG 2.1 AA standards as our benchmark for accessible products.
+We use compliance with WCAG 2.1 AA standards as our benchmark for accessible products.
 
-Aim to build user interfaces that:
+As a starting point, we aim to build user interfaces that:
 
 - Provide [text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives)
 - Are [adaptable](https://www.w3.org/TR/WCAG21/#adaptable)
 - Are [distinguishable](https://www.w3.org/TR/WCAG21/#distinguishable)
-- Give [enough time][] to read and use
+- Give [enough time](https://www.w3.org/TR/WCAG21/#enough-time) to read and use
 - Do not [trigger seizures or physical reactions](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
 - Are [navigable](https://www.w3.org/TR/WCAG21/#navigable)
 - Are [predictable](https://www.w3.org/TR/WCAG21/#predictable)
 - Help users [avoid or correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance)
-- Are [compatible][] with existing or future users agents and assistive technologies
-
-[enough time]: https://www.w3.org/TR/WCAG21/#enough-time
-[compatible]: https://www.w3.org/TR/WCAG21/#compatible
+- Are [compatible](https://www.w3.org/TR/WCAG21/#compatible) with existing or future users agents and assistive technologies
 
 For web-based products, ensure your interfaces:
 
