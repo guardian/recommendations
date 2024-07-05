@@ -1,5 +1,4 @@
-General
--------
+# General
 
  * Provision and manage all AWS resources using infrastructure as code
    * Prefer to use [CDK](https://github.com/guardian/cdk) to generate CloudFormation. You might find that older projects still use CloudFormation directly; these should be migrated to CDK where possible.
@@ -18,15 +17,13 @@ General
    * This decreases risk as, by default, Riff-Raff will protect stateful resources from being accidentally deleted 
  * Do not have private or secret information in a CFN template. Prefer to use Parameters or [private-infrastructure-config](https://github.com/guardian/private-infrastructure-config)
 
-Permissions
------------
+## Permissions
 
  * Applications should use IAM instance profiles to gain access to other AWS resources. 
  * Such profiles should be associated with roles that provide the minimum necessary rights.
  * Non-AWS credentials should be stored in Parameter Store, DynamoDB or S3, so that they can be retrieved via an IAM role.
 
-EC2
----
+## EC2
 
  * An application hosted on an EC2 machine should be fully functioning following boot, or restart without human intervention.
  * Always create EC2 machines in autoscaling groups, even if that group has a minimum and maximum size of 1.
@@ -37,8 +34,7 @@ EC2
  * Ensure that instances are kept up to date with new AMIs using Riff Raff scheduled deploys.
 
 
-VPC
----
+## VPC
 
 * To follow best practice for VPCs, ensure you have a single CDK-generated VPC in your account that is used to house your applications. You can find the docs for it [here](https://github.com/guardian/cdk/blob/main/src/constructs/vpc/vpc.ts#L32-L59). 
 * While generally discouraged, in some exceptional cases, such as security-sensitive services, you may want to use the construct to generate further VPCs in order to isolate specific applications. It is worth discussing with DevX Security and InfoSec if you think you have a service that requires this.
@@ -55,28 +51,25 @@ VPC
 * Security of the VPC and security groups must be considered. See [here](https://github.com/guardian/security-recommendations/blob/main/recommendations/aws.md#vpc--security-groups) for details.
 
 
-ELB
----
+## ELB
 
  * Load balancers should be cross-zone and have a connection draining policy.
 
-SQS
----
+## SQS
 
  * Use SQS's long polling support to minimise message processing latency.
 
-SES
----
+## SES
 
 * Internal tools should send emails via SES from a `gutools.co.uk` domain.
 * Services sending emails should send them from a domain per-environment, e.g.`mailer@my-service.gutools.co.uk` & `mailer@my-service.code.dev-gutools.co.uk`, for `PROD` and `CODE` environments respectively.
 
-Using a `guardian.co.uk` or `theguardian.com` domain for internal tools is not recommended to reduce the risk of identity spoofing. Similarly having differing domains per environment reduces the risk of confusion e.g. a `CODE` environment sending emails that are confused for real `PROD` emails by users.
+Using a `guardian.co.uk` or `theguardian.com` domain for internal tools is not recommended to reduce the risk of identity spoofing. 
+Similarly having differing domains per environment reduces the risk of confusion e.g. a `CODE` environment sending emails that are confused for real `PROD` emails by users.
 
 See [usage of SES to send emails in our projects](https://github.com/search?q=org%3Aguardian+EmailIdentity+language%3ATypeScript&type=code&l=TypeScript).
 
-S3
---
+## S3
 
  * Create buckets with CloudFormation, one per stage
  * Block public access
@@ -86,8 +79,7 @@ S3
    * This may pose a security risk if we inadvertently still use or reference the bucket
    * Instead remove everything from within the bucket and make it private if it is not already
 
-Lambda
-------
+## Lambda
 
 ### Unexpected socket errors in Node v10 and 12 lambdas
 You may occasionally see unexpected socket errors in NodeJS lambdas:
@@ -154,8 +146,8 @@ There is a StackOverflow thread about this issue here:
 https://stackoverflow.com/questions/53898894/aws-lambda-timeout-when-another-long-lambda-is-invoked
 
 
-Alarming on 5XX Errors (CloudWatch Metrics)
----
+## Alarming on 5XX Errors (CloudWatch Metrics)
+
 When using EC2 and ELB/ALB there are two different counts for 5XX
 - `HTTPCode_Backend_5XX` (ELB) / `HTTPCode_Target_5XX_Count` (ALB) produced by your application server
 - `HTTPCode_ELB_5XX` (ELB) / `HTTPCode_ELB_5XX_Count` (ALB) produced by the load balancer
