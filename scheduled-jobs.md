@@ -35,6 +35,7 @@ no need to write business logic or maintain a Lambda with the dependencies requi
 #### Cons
 * EventBridge requests to an API destination endpoint have a maximum timeout of 5 seconds. So if your task takes more than 5 seconds, and you need the
 caller to be aware of its outcome (e.g. to enable retries on failure) this approach won't be suitable.
+* nb. More generally, make sure to check the default timeout and retry settings to avoid swamping your service.
 * The AWS constructs require a fair amount of boilerplate CDK code, but there are examples in the Guardian estate that could be used as a basis, e.g. [in the crosswords status checker](https://github.com/guardian/crosswordv2/blob/126acf8c6cf88dcc2edc0e851df5b2d0bbe8685b/cdk/lib/scheduled-status-check.ts).
 
 
