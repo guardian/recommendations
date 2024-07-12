@@ -21,7 +21,7 @@ See also https://opensource.com/article/20/7/systemd-timers.
 
 ### Multi-instance apps (e.g. EC2 in an auto-scaling group)
 
-`crontab` and similar solutions won't always be suitable for multi-instance apps. For example, if you have more than one instance but only need to run the scheduled task once (common if the task has side effects, like sending email).
+`crontab` and similar solutions won't always be suitable for multi-instance apps. For example, if you have more than one instance but only need to run the scheduled task once (common if the task has side effects, like sending email).[^1]
 
 In this case, if the task can be triggered via a request to a HTTPS endpoint then the app's load balancer can ensure that at most one instance of the app receives the request and runs the task.
 
@@ -42,3 +42,6 @@ caller to be aware of its outcome (e.g. to enable retries on failure) this appro
 ### AWS Lambda
 
 An [`AWS::Events::Rule`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html) can invoke an AWS Lambda at regular intervals.
+
+
+[^1]: There are a number of examples of this pattern being used in the crosswordv2 repo, e.g. for the [status checker](https://github.com/guardian/crosswordv2/blob/126acf8c6cf88dcc2edc0e851df5b2d0bbe8685b/docs/status-checker.md?plain=1#L13-L14) and [helpline service](https://github.com/guardian/crosswordv2/blob/126acf8c6cf88dcc2edc0e851df5b2d0bbe8685b/docs/ats-helpline.md?plain=1#L8-L10).
