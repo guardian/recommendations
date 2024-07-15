@@ -38,7 +38,7 @@ authentication, network security, encryption, secret management. Expert guidance
 
 The broad expectations of ongoing maintenance of a production application are:
 1. Security vulnerabilities are [addressed](/security.md#vulnerability-management) *as a priority*
-1. Dependencies are [kept up to date](https://github.com/guardian/security-hq/blob/73d5174a49efcfda009c804305d748edced6a8af/hq/markdown/vulnerability-management.md#vulnerabilities-via-3rd-party-libraries), so that security patching requirements can be met efficiently
+1. Dependencies are [kept up to date](https://github.com/guardian/security-recommendations/blob/main/recommendations/vulnerability-management.md#vulnerabilities-via-3rd-party-libraries), so that security patching requirements can be met efficiently
 1. Unused functionality is removed
 1. Impaired functionality is addressed, with priority determined by its importance
 1. Costs are monitored. [Baseline monitoring](https://github.com/guardian/aws-cost-management) is added globally

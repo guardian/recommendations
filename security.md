@@ -9,15 +9,14 @@ This document contains general public security recommendations, for further inte
 
 ## Vulnerability management
 You should 
-[perform due diligence](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md) 
+[perform due diligence](https://github.com/guardian/security-recommendations/blob/main/recommendations/vulnerability-management.md) 
 on your platforms to minimise common vulnerabilities in infrastructure 
 and applications. Some of these vulnerabilities are not possible to fix 
 automatically, so your team should plan to spend time on addressing them 
 on a regular basis. 
 
 More detailed guidance is provided in 
-[Security HQ's documentation](https://github.com/guardian/security-hq/blob/main/hq/markdown/vulnerability-management.md) 
-(our central tool for security information.)
+[Security Recommendations](https://github.com/guardian/security-recommendations).
 
 ## Sensitive data
 
