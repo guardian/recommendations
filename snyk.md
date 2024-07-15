@@ -1,4 +1,7 @@
-# Snyk
+# Snyk (DEPRECATED)
+
+> [!IMPORTANT]
+> We recommend using [Github Dependency Graph](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph) and [Dependabot Alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts) to analyse dependencies for vulnerabilities.
 
 ## Introduction
 

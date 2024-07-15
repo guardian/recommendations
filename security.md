@@ -1,7 +1,7 @@
 # Security
 
 As an organisation we have a low information-security risk appetite. We strive
-for excellence when protecting the privacy of our reader's data and the 
+for excellence when protecting the privacy of our readers' data and the 
 integrity of our systems. **The security of our applications, 
 infrastructure and data is the highest priority.**
 
