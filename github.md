@@ -30,6 +30,15 @@ service which will ensure many more aspects of Guardian repos are checked and ad
 
 
 ## Repository Configuration
+### Visibility
+The default should be `Public`.
+
+In some cases it may be necessary to have a more restrictive visibility. Think carefully about the justification for making a repository non-public and make sure this justification is clear to the whole team.
+
+If you need a non-public repository, the best visibility to choose is [`Internal`](https://docs.github.com/en/enterprise-cloud@latest/repositories/creating-and-managing-repositories/about-repositories#about-internal-repositories). This makes the repository readable (but not writable) by all Guardian GitHub organisation members. (Typically you should also grant write access via the [`@guardian/guardian-developers-write`][gh-write] team: see [Access](#access) below.)
+
+You can make a repository `Private` if you do not want it to be visible to the entire organisation. This should only be done in exceptional circumstances and your team should be clear about the justification.
+
 ### Default branch name
 Use `main`.
 
@@ -53,9 +62,9 @@ Access should be granted to [GitHub teams][gh-teams]. Avoid individual access.
 Should an individual leave the GitHub organisation, they'll automatically lose access to all repositories when access is granted via teams.
 When individual access is granted, they'll retain access to a repository until manually removed.
 
-Generally, repositories should be open to the department via these teams:
-- [`@guardian/guardian-developers-read`][gh-read] should have read access
-- [`@guardian/guardian-developers-write`][gh-write] should have write access
+Generally, new repositories should be open to the department via `Internal` visibility (for read access) and by granting write access to the [`@guardian/guardian-developers-write`][gh-write] team.
+
+(Existing `Private` repositories may achieve the same effect by additionally granting read access to [`@guardian/guardian-developers-read`][gh-read]. This approach is not recommended since GitHub's introduction of `Internal` visibility.)
 
 ### Collaborators and CODEOWNERS
 Include at least one GitHub team as a collaborator with admin access. *At an organisational level, this identifies owners for every repository, so that we can better ensure security and maintenance work is under the remit of a team for all our (production) code.*
