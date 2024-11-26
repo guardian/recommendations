@@ -88,7 +88,9 @@ This repository document [principles](#principles), standards and [guidelines](#
 -   [GitHub](github.md)
 -   [Github Actions](github-actions.md)
 -   [Logging](logging.md)
--   [NPM packages](npm-packages.md)
+- Publishing software libraries
+  - [NPM packages](npm-packages.md)
+  - [Maven Central for Scala, Kotlin & other JVM-based languages](publishing-libraries-to-maven-central.md)
 -   [Production Services, Ownership and Maintenance](ownership.md)
 -   [Pull requests](pull-requests.md)
 -   [Resiliency and Robustness](resiliency.md)
