@@ -13,8 +13,6 @@ Please do submit any edits you feel necessary, and these will be reviewed and me
 
 ## Some examples
 
-### From [Twitter Engineering in 2020](https://twitter.com/TwitterEng/status/1278733305190342656)
-
 | **Non-inclusive**                   | **Alternatives**                                  |
 |-------------------------------------|---------------------------------------------------|
 | Whitelist                           | Allowlist                                         |
