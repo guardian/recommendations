@@ -1,9 +1,7 @@
 # Scala
 
- * Always specify an explicit sbt.version
- * Ensure you run in production with GC logging enabled
  * Prefer immutability
- * Prefer the latest version of Scala. At the time of writing `3.1.2` is the latest version, so `2.13.8` may be acceptable. if you are still using `2.12.x` you should plan to migrate.
+ * Prefer the latest version of Scala.  Follow the official recommendations [here](https://www.scala-lang.org/development/) i.e. use the LTS version for libraries and latest for production code.  You should move off Scala 2.12 if you are still using it.
  * If some dependencies are unavailable for the latest version, it is acceptable to use the latest patch version of the previous minor version but try to avoid it. If you have a dependency that isn't available for one of these versions, it's effectively dead and you should plan how to move away from it.
  * If you come to a codebase using an older version of Scala, it should be upgraded before any new features are added.
  * Run on a Corretto LTS version of Java, no lower than Java 21. For tips on upgrading from Java 8 or Java 11, see [here](https://docs.google.com/document/d/1ZR-YnaXCT5_gLVmTCeGs0mWd3KPaAozPjQK8uUzHZ9w/edit?usp=sharing).
