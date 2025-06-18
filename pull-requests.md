@@ -50,6 +50,8 @@ If these things are not true then you should address the blockers before raising
 ## Descriptive
 A PR's description should include sufficient information on what the change is and why it is necessary.
 
+You should self-review your PR and leave comments to pre-empt any questions that are likely to come up at the right moment, or draw attention to areas that need more attention.
+
 This is an investment in your own future peace of mind. Once a PR is merged it will effectively be documentation of how the code has changed. There should be enough information on the reasoning behind the change to enable it to be understood by someone reading it for the first time.
 
 Where necessary, it should also describe how to test, what success looks like, and what a rollback would involve.
