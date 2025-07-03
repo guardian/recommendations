@@ -78,7 +78,7 @@ The primary aim of a review is to confirm the PR addresses its stated problem in
 The reviewer does not directly take responsibility for whether the code is correct, or will have unintended side-effects. However, all the code produced and released by a team is a shared responsibility. When reviewing code, be sure to consider the human context. If this is a new contributor or a less experienced engineer, the teams' shared responsibility might mean that an experienced team member should give the review more time and attention.
 
 ## DRY
-No-one loves someone who writes the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
+Don't write the same comment fifteen times on a PR. If there is a recurring issue like naming, code formatting or code structure in a PR then point one example out, and make a general comment explaining there are multiple occurrences.
 
 ## Talk is better
 Don't try and hold a conversation in a PR. If you have more than three comments or three paragraphs in a PR then consider talking through the issues with the person who raised the PR.
@@ -89,6 +89,9 @@ Record the outcome and actions of the conversation on the PR so everyone else ca
 While looking at the PR you should remember to focus on the changes in the PR.
 
 It is tempting, if there are general problems with the code being examined, to start requesting changes to improve the pre-existing code. Small improvements are sometimes fine, however large amounts of refactoring pre-existing code should not be done via comments in a PR. If such work is needed it should have its own pull request (and potentially go into team planning as a discrete piece of work).
+
+## Make actionable comments
+Keep in mind the person who raised the PR - especially if they are newer to the codebase or company you may need to be clear what action they should take and how important it is.  e.g. "optional: consider renaming to cancellationDate" or other prefixes such as nitpick/blocker/question/future/note.
 
 ## Code changes
 The following are some things to consider when examining the code:
