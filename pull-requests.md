@@ -91,7 +91,7 @@ While looking at the PR you should remember to focus on the changes in the PR.
 It is tempting, if there are general problems with the code being examined, to start requesting changes to improve the pre-existing code. Small improvements are sometimes fine, however large amounts of refactoring pre-existing code should not be done via comments in a PR. If such work is needed it should have its own pull request (and potentially go into team planning as a discrete piece of work).
 
 ## Make actionable comments
-Keep in mind the person who raised the PR - especially if they are newer to the codebase or company you may need to be clear what action they should take and how important it is.  e.g. "optional: consider renaming to cancellationDate" or other prefixes such as nitpick/blocker/question/future/note.
+Keep in mind the person who raised the PR - especially if they are newer to the codebase or company you may need to be clear what action they should take and how important it is.  e.g. "optional: consider renaming to cancellationDate" or other prefixes such as nitpick/required/question/future/note.
 
 ## Code changes
 The following are some things to consider when examining the code:
