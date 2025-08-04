@@ -330,6 +330,8 @@ Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package 
 
 An example of adding Changesets to an existing CD workflow is [here](https://github.com/guardian/cdk/pull/2071).
 
+Note that by default this will cause the Changesets PRs to be created by the [github-actions](https://github.com/apps/github-actions) app user, which will prevent any workflows (ie. CI checks) from running. If your branch protection rules require the PRs to pass CI before merging (which they should!) you will need to have the PRs created by another user. Several repos use the [gu-changesets-release-pr](https://github.com/apps/gu-changesets-release-pr) app to perform this; you can too by adding the `GU_CHANGESETS_APP_ID` and `GU_CHANGESETS_PRIVATE_KEY` secrets in the [github-secret-access](https://github.com/guardian/github-secret-access) repo, then adding [lines like these](https://github.com/guardian/pan-domain-authentication/commit/8a897ca669fea860d088a6f36b254ddc9720bfe8) to your workflow, which will configure the correct git user before the changesets action runs.
+
 ## Using `@guardian` NPM packages
 
 To ensure the Guardian's application bundles are as efficient as possible, packages should assume nothing about the environment in which their code will run (e.g. which browsers, versions of browsers etc).
