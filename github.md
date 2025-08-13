@@ -95,6 +95,7 @@ For example, when configuring [auto-publishing for an npm library][npm-publishin
 | testing       | Repositories that are used for test purposes                       |
 | documentation | Repositories that contain only documentation and no source code    |
 | production    | Repositories that are deployed to production                       |
+| interactive   | Repositories that are owned by the interactives/visuals teams      |
 
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use. 
 
