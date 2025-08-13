@@ -24,9 +24,7 @@ Bear in mind:
   [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the dev team that will be owning this project, not a huge team with hundreds of members!
 * For public repositories, we recommend using the Apache v2 license.
 
-We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
-way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring
-service which will ensure many more aspects of Guardian repos are checked and adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
+Guardian repos should adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
 
 
 ## Repository Configuration
