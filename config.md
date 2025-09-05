@@ -30,7 +30,7 @@ Lambdas may also use Parameter Store. It is possible to have config passed in as
 1. changes to the parameter might not be picked up by Cloudformation, and
 2. environment variables might be exposed in other contexts outside of the Lambda runtime, which makes them unsuitable for storing sensitive information.
 
-Examples: fetching [from Parameter Store](https://github.com/guardian/lurch/blob/380a3f0ca667fceae50e6b5203058a6c0e781aab/packages/services/src/Config.ts#L178-L191) and [from Secrets Manager](https://github.com/guardian/newswires/blob/5532d266d21c821bcb0cc556723c45069277904f/poller-lambdas/src/index.ts#L35-L41) at runtime using the TypeScript sdk
+Examples: fetching [from Parameter Store](https://github.com/guardian/transcription-service/blob/20eec93bbd688e7fd2436ec5e9ebebfcb15cd5e4/packages/backend-common/src/configHelpers.ts#L19-L24) and [from Secrets Manager](https://github.com/guardian/newswires/blob/5532d266d21c821bcb0cc556723c45069277904f/poller-lambdas/src/index.ts#L35-L41) at runtime using the TypeScript sdk
 
 ## Secret rotation
 [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) can perform secret rotation automatically for some AWS services.
