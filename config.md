@@ -25,7 +25,7 @@ It is possible to use config files as a way of documenting all config items, wit
 
 
 ## Lambdas
-Lambdas may also use Parameter Store. It is possible to have config passed in as environment variables directly from Parameter Store, but generally we recommend fetching from the Parameter Store at runtime, especially for sensitive values. This is because ecause 
+Lambdas may also use Parameter Store. It is possible to have config passed in as environment variables directly from Parameter Store, but we recommend fetching from the Parameter Store at runtime, especially for sensitive values. This is because: 
 
 1. changes to the parameter might not be picked up by Cloudformation, and
 2. environment variables might be exposed in other contexts outside of the Lambda runtime, which makes them unsuitable for storing sensitive information.
