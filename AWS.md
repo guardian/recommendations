@@ -15,7 +15,7 @@
  * Prefer continuous delivery of infrastructure via Riff-Raff over manual deployment
    * This provides a better audit trail
    * This decreases risk as, by default, Riff-Raff will protect stateful resources from being accidentally deleted 
- * Do not have private or secret information in a CFN template. Prefer to use Parameters or [private-infrastructure-config](https://github.com/guardian/private-infrastructure-config)
+ * Do not have private or secret information in a CFN template. Prefer to use Parameters or [@guardian/aws-account-setup](https://github.com/guardian/aws-account-setup/blob/main/packages/shared/README.md)
 
 ## Permissions
 
