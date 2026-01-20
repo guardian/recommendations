@@ -52,7 +52,7 @@ readers be expected to already know and what does the documentation aim to teach
 ### Including hyperlinks
 
 Hyperlinks to other projects, documentation, or samples of key code snippets, reduce repetition and provide users with
-access to relevant resource. Linking allows the author to make assumptions about the readers knowledge by specifying
+access to relevant resources. Linking allows the author to make assumptions about the reader's/readers' knowledge by specifying
 prerequisites for the content. For example:
 
 > The [AWS Cloud Development Kit](https://github.com/aws/aws-cdk) (AWS CDK) is an open-source software
