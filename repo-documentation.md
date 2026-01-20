@@ -80,7 +80,7 @@ these terms can provide significant clarity for experts and novices alike.
 
 – [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words?_gl=1*4d3vld*_up*MQ..*_ga*NTc1NTM3MzgwLjE3Njg4MjM5MjA.*_ga_SM8HXJ53K2*czE3Njg4MjM5MjAkbzEkZzAkdDE3Njg4MjQxMzkkajYwJGwwJGgw#define_new_or_unfamiliar_terms)
 
-Acronyms can abbreviate and simplify documentation, but it can also create barriers to entry for an unfamiliar
+Acronyms can abbreviate and simplify documentation, but they can also create barriers to entry for an unfamiliar
 audience.
 
 <!--alex ignore just-->
