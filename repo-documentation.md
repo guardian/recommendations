@@ -45,7 +45,7 @@ readers be expected to already know and what does the documentation aim to teach
 > - Who is your target audience?
 > - What is your target audience's goal? Why are they reading this document?
 > - What do your readers already know before they read your document?
-> - What should your readers know or be able to do after they read your document
+> - What should your readers know or be able to do after they read your document?
 
 – [Technical Writing One / Documents](https://developers.google.com/tech-writing/one/documents?_gl=1*1euylx7*_up*MQ..*_ga*NTc1NTM3MzgwLjE3Njg4MjM5MjA.*_ga_SM8HXJ53K2*czE3Njg4MzE3MTQkbzIkZzAkdDE3Njg4MzM0ODMkajYwJGwwJGgw#write_for_your_audience)
 
