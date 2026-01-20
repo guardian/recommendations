@@ -97,7 +97,7 @@ audience.
 
 <!--alex ignore clearly-->
 Complex information can often be better understood when presented in a structured format rather than in large blocks of
-text Illustrations, diagrams and tables break up the text and allows readers to identify the most relevant information.
+text. Illustrations, diagrams and tables break up the text and allow readers to identify the most relevant information.
 When writing documentation, consider how a diagram can clearly explain intricate UI, concepts, or relationships.
 
 > [!TIP]
