@@ -37,7 +37,10 @@ important questions in a concise way.
 – [Technical Writing One / Audience](https://developers.google.com/tech-writing/one/audience#curse_of_knowledge)
 
 Consider how and why someone is reading the documentation. What questions and objectives may they have? What might
-readers be expected to already know and what does the documentation aim to teach them?
+readers be expected to already know and what does the documentation aim to teach them? The definition of your audience
+and intent of the documentation can be included in your introduction which will also make it clear to readers. If they
+are in the wrong place, a [helpful hyperlink](#including-hyperlinks) may be able to help them on their way to more
+relevant information.
 
 > [!TIP]
 > Answering the following questions helps you determine what your document should contain:
@@ -52,8 +55,8 @@ readers be expected to already know and what does the documentation aim to teach
 ### Including hyperlinks
 
 Hyperlinks to other projects, documentation, or samples of key code snippets, reduce repetition and provide users with
-access to relevant resources. Linking allows the author to make assumptions about the reader's/readers' knowledge by specifying
-prerequisites for the content. For example:
+access to relevant resources. Linking allows the author to make assumptions about the reader's/readers' knowledge by
+specifying prerequisites for the content. For example:
 
 > The [AWS Cloud Development Kit](https://github.com/aws/aws-cdk) (AWS CDK) is an open-source software
 > development framework to define cloud infrastructure in code and provision it
@@ -137,6 +140,7 @@ The section should provide a clear explanation for why the project exists and wh
 
 Areas to include:
  - Who is the intended audience for the project?
+ - Who should read this documentation (users, engineers, managers)?
  - What core features does the project provide?
  - Why was the project made?
  - Which other services does it integrate with (provide links)?
