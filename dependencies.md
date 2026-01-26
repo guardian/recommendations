@@ -15,8 +15,7 @@ deploys. Most languages have package manager which aim to solve this issue.
 >
 > Additional labels for pre-release and build metadata are available as extensions to the `major`.`minor`.`patch` format.
 
-Several tools, such as [Dependabot][] or Snyk, can automatically and regularly
-scan the dependencies of your projects and suggest upgrades.
+[Dependabot][] automatically scans the dependencies of your projects and suggest upgrades.
 
 [Semantic Versioning]: https://semver.org/
 [Dependabot]: https://github.com/guardian/configs/blob/main/.github/dependabot.yml
