@@ -34,7 +34,7 @@ important questions in a concise way.
 > explanations that make passing reference to subtle interactions and deep systems that the expert doesn’t stop to
 > explain.
 
-– [Technical Writing One / Audience](https://developers.google.com/tech-writing/one/audience?_gl=1*1nxkafc*_up*MQ..*_ga*NTc1NTM3MzgwLjE3Njg4MjM5MjA.*_ga_SM8HXJ53K2*czE3Njg4MzE3MTQkbzIkZzAkdDE3Njg4MzM0ODMkajYwJGwwJGgw#curse_of_knowledge)
+– [Technical Writing One / Audience](https://developers.google.com/tech-writing/one/audience#curse_of_knowledge)
 
 Consider how and why someone is reading the documentation. What questions and objectives may they have? What might
 readers be expected to already know and what does the documentation aim to teach them?
@@ -47,7 +47,7 @@ readers be expected to already know and what does the documentation aim to teach
 > - What do your readers already know before they read your document?
 > - What should your readers know or be able to do after they read your document?
 
-– [Technical Writing One / Documents](https://developers.google.com/tech-writing/one/documents?_gl=1*1euylx7*_up*MQ..*_ga*NTc1NTM3MzgwLjE3Njg4MjM5MjA.*_ga_SM8HXJ53K2*czE3Njg4MzE3MTQkbzIkZzAkdDE3Njg4MzM0ODMkajYwJGwwJGgw#write_for_your_audience)
+– [Technical Writing One / Documents](https://developers.google.com/tech-writing/one/documents#write_for_your_audience)
 
 ### Including hyperlinks
 
@@ -78,7 +78,7 @@ these terms can provide significant clarity for experts and novices alike.
 > - If your document is introducing the term, define the term. If your document is introducing many terms, collect the
     > definitions into a glossary.
 
-– [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words?_gl=1*4d3vld*_up*MQ..*_ga*NTc1NTM3MzgwLjE3Njg4MjM5MjA.*_ga_SM8HXJ53K2*czE3Njg4MjM5MjAkbzEkZzAkdDE3Njg4MjQxMzkkajYwJGwwJGgw#define_new_or_unfamiliar_terms)
+– [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words#define_new_or_unfamiliar_terms)
 
 Acronyms can abbreviate and simplify documentation, but they can also create barriers to entry for an unfamiliar
 audience.
@@ -91,7 +91,7 @@ audience.
 > convert TTN to Telekinetic Tactile Network in their heads, so the "shorter" acronym actually takes a little longer to
 > process than the full term.
 
-– [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words?_gl=1*154isid*_up*MQ..*_ga*Mzg0NzExNTA2LjE3Njg4NDIzMTA.*_ga_SM8HXJ53K2*czE3Njg4NDIzMTAkbzEkZzAkdDE3Njg4NDIzMTAkajYwJGwwJGgw#use_acronyms_properly)
+– [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words#use_acronyms_properly)
 
 ### Illustrations, lists and tables
 
@@ -104,7 +104,7 @@ When writing documentation, consider how a diagram can clearly explain intricate
 > Analytic minds tend to love tables. Given a page containing multiple paragraphs and a single table, engineers' eyes
 > zoom towards the table.
 
-– [Technical Writing One / Tables](https://developers.google.com/tech-writing/one/lists-and-tables?_gl=1*11yvapt*_up*MQ..*_ga*NTc1NTM3MzgwLjE3Njg4MjM5MjA.*_ga_SM8HXJ53K2*czE3Njg4MzE3MTQkbzIkZzAkdDE3Njg4MzM0ODMkajYwJGwwJGgw#create_useful_tables)
+– [Technical Writing One / Tables](https://developers.google.com/tech-writing/one/lists-and-tables#create_useful_tables)
 
 ## README Template
 
