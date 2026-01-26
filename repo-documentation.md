@@ -17,7 +17,7 @@ structure for the base README file of a repo.
 
 Writing effective documentation is challenging and requires time and investment. It is a skill which requires practice
 and effort to improve on. Google offers helpful resources that provide advice for writing quality documentation. See
-the [Technical Writing One](https://developers.google.com/tech-writing/one?_gl=1*k0cdlv*_up*MQ..*_ga*NDcwODc0MjQ4LjE3Njg4NDAxNjc.*_ga_SM8HXJ53K2*czE3Njg4NDAxNjckbzEkZzAkdDE3Njg4NDAxNjckajYwJGwwJGgw)
+the [Technical Writing One](https://developers.google.com/tech-writing/one)
 materials for improving your technical writing skills.
 
 ### Write for an audience
