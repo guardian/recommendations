@@ -103,6 +103,12 @@ Complex information can often be better understood when presented in a structure
 text. Illustrations, diagrams and tables break up the text and allow readers to identify the most relevant information.
 When writing documentation, consider how a diagram can clearly explain intricate UI, concepts, or relationships.
 
+Markdown provides a variety of features to format your documentation with GitHub offering
+their [own set of additional features](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+These features can be used to strucutre, emphasize, and
+even [collapse](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
+information.
+
 > [!TIP]
 > Analytic minds tend to love tables. Given a page containing multiple paragraphs and a single table, engineers' eyes
 > zoom towards the table.
