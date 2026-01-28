@@ -22,11 +22,21 @@ materials for improving your technical writing skills.
 
 ### Write for an audience
 
-<!--alex ignore clearly-->
-Repo documentation is primarily useful for engineers. However, authors should also consider the value it provides to
-product and engineering managers. When documentation is written clearly, it provides a useful resource for a multitude
-of readers with varying levels of technical skill and domain knowledge. It can save time by answering the most
-important questions in a concise way.
+Before authors can provide practical information to readers, they need to consider:
+
+ - Who is their target audience?
+ - What is their target audience's goal? Why are they reading this document?
+ - What do readers already know before they read your document?
+ - What should readers know or be able to do after they read your document?
+
+Answering these questions allows an author to know what is relevant and reasonable to assume about readers. This helps
+to keep documentation concise and focused. Assuming too much will make the documentation difficult to engage with,
+whereas too little will make it overly verbose.
+
+The assumptions made about reader should be tested through a review process. Reviewers should be transparent about areas
+they found confusing or irrelevant. Identifying these areas in the documentation is the most helpful feedback an author
+can receive. It allows an author to consider their real audience and work with them to provide the right level of
+detail.
 
 <!--alex ignore easy-->
 > [!WARNING]
@@ -36,21 +46,16 @@ important questions in a concise way.
 
 – [Technical Writing One / Audience](https://developers.google.com/tech-writing/one/audience#curse_of_knowledge)
 
-Consider how and why someone is reading the documentation. What questions and objectives may they have? What might
-readers be expected to already know and what does the documentation aim to teach them? The definition of your audience
-and intent of the documentation can be included in your introduction which will also make it clear to readers. If they
-are in the wrong place, a [helpful hyperlink](#including-hyperlinks) may be able to help them on their way to more
-relevant information.
 
-> [!TIP]
-> Answering the following questions helps you determine what your document should contain:
->
-> - Who is your target audience?
-> - What is your target audience's goal? Why are they reading this document?
-> - What do your readers already know before they read your document?
-> - What should your readers know or be able to do after they read your document?
+<!--alex ignore clearly-->
+Repo documentation is primarily useful for engineers. However, authors should consider the value it provides to product
+and engineering managers. When documentation is written clearly, it provides a useful resource for a multitude of
+readers with varying levels of technical skill and domain knowledge. It can save time by answering the most important
+questions in a concise way.
 
-– [Technical Writing One / Documents](https://developers.google.com/tech-writing/one/documents#write_for_your_audience)
+The definition of your audience and intent of the documentation can be included in your introduction which will also
+make it clear to readers. If they are in the wrong place, a [helpful hyperlink](#including-hyperlinks) may be able to
+help them on their way to more relevant information.
 
 ### Including hyperlinks
 
