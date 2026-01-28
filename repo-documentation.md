@@ -110,7 +110,7 @@ When writing documentation, consider how a diagram can clearly explain intricate
 
 Markdown provides a variety of features to format your documentation with GitHub offering
 their [own set of additional features](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-These features can be used to strucutre, emphasize, and
+These features can be used to structure, emphasize, and
 even [collapse](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
 information.
 
