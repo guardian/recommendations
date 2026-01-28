@@ -79,7 +79,7 @@ these terms can provide significant clarity for experts and novices alike.
 >
 > - If the term already exists, link to a good existing explanation. (Don't reinvent the wheel.)
 > - If your document is introducing the term, define the term. If your document is introducing many terms, collect the
-    > definitions into a glossary.
+    definitions into a glossary.
 
 – [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words#define_new_or_unfamiliar_terms)
 
