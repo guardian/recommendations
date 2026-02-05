@@ -24,10 +24,10 @@ materials for improving your technical writing skills.
 
 Before authors can provide practical information to readers, they need to consider:
 
- - Who is their target audience?
- - What is their target audience's goal? Why are they reading this document?
- - What do readers already know before they read your document?
- - What should readers know or be able to do after they read your document?
+- Who is their target audience?
+- What is their target audience's goal? Why are they reading this document?
+- What do readers already know before they read your document?
+- What should readers know or be able to do after they read your document?
 
 Answering these questions allows an author to know what is relevant and reasonable to assume about readers. This helps
 to keep documentation concise and focused. Assuming too much will make the documentation difficult to engage with,
@@ -95,7 +95,7 @@ audience.
 > [!TIP]
 > Sure, you can introduce and use acronyms properly, but should you use acronyms? Well, acronyms do reduce sentence
 > size. For example, TTN is two words shorter than Telekinetic Tactile Network. However, acronyms are really just a
-> layer of abstraction; readers must mentally expand recently learned acronyms to the full term. For example, readers
+> layer of abstraction; readers must mentally expand recently learned [unfamiliar] acronyms to the full term. For example, readers
 > convert TTN to Telekinetic Tactile Network in their heads, so the "shorter" acronym actually takes a little longer to
 > process than the full term.
 
@@ -112,13 +112,9 @@ Markdown provides a variety of features to format your documentation with GitHub
 their [own set of additional features](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 These features can be used to structure, emphasize, and
 even [collapse](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
-information.
-
-> [!TIP]
-> Analytic minds tend to love tables. Given a page containing multiple paragraphs and a single table, engineers' eyes
-> zoom towards the table.
-
-– [Technical Writing One / Tables](https://developers.google.com/tech-writing/one/lists-and-tables#create_useful_tables)
+information. [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/)
+allows diagrams to be represented in Markdown and provides support for a variety of common diagram formats such as flow
+charts and UML.
 
 ## README Template
 
