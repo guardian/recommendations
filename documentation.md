@@ -1,7 +1,6 @@
-# Repo Documentation
+# Documentation
 
-Repositories are often the first place an engineer will look for documentation on a project. Effective technical
-documentation is a gift to your future self, and will save you and others time.
+Effective technical documentation is a gift to your future self, and will save you and others time.
 
 This document provides practical advice on writing high quality technical documentation with a recommended
 structure for the base README file of a repo.
