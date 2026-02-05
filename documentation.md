@@ -128,7 +128,9 @@ template is not intended to replace all other documentation but rather provide a
 
 <!--- 
 The top-level description should provide a short summary of the project, ensuring the reader is in the right place. 
-Keep this brief, as further detail will be provided in the subsequent sections.  
+Keep this brief and provide suitable onward links, as further detail will be provided in the subsequent sections. 
+This description should consider a wider audience as it is likely to be the first piece of documentation a person may 
+see. As such, this description should be carefully considered.
 -->
 
 ## Contents
