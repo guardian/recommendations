@@ -144,13 +144,14 @@ see. As such, this description should be carefully considered.
 ## 1. Introduction
 
 <!--- 
-The section should provide a clear explanation for why the project exists and what it does.
+The section should provide a clear explanation for why the project exists and what it does. Different types of readers
+should be considered, including users, engineers, and managers. More specific and technical detail should be provided 
+under "How it works".
 
 Areas to include:
- - Who is the intended audience for the project?
- - Who should read this documentation (users, engineers, managers)?
- - What core features does the project provide?
+ - Who are the users of this project?
  - Why was the project made?
+ - What core features does the project provide?
  - Which other services does it integrate with (provide links)?
  - [When applicable] What does the project look like (include images)?
 
