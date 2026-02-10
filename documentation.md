@@ -94,7 +94,8 @@ audience.
 > [!TIP]
 > Sure, you can introduce and use acronyms properly, but should you use acronyms? Well, acronyms do reduce sentence
 > size. For example, TTN is two words shorter than Telekinetic Tactile Network. However, acronyms are really just a
-> layer of abstraction; readers must mentally expand recently learned [unfamiliar] acronyms to the full term. For example, readers
+> layer of abstraction; readers must mentally expand recently learned [unfamiliar] acronyms to the full term. For
+> example, readers
 > convert TTN to Telekinetic Tactile Network in their heads, so the "shorter" acronym actually takes a little longer to
 > process than the full term.
 
@@ -114,6 +115,24 @@ even [collapse](https://docs.github.com/en/get-started/writing-on-github/working
 information. [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/)
 allows diagrams to be represented in Markdown and provides support for a variety of common diagram formats such as flow
 charts and UML.
+
+### Documentation for LLMs
+
+With LLMs now widely available, documentation is no longer exclusively consumed by humans. This has some implications
+for how we write documentation. As a general rule, content that is useful for humans is also useful for LLMs.
+Documentation can provide complementary information and context, especially in cases where it is unlikely to be
+inferable from the project itself. An example of this is the "why" behind project decisions, "why was the project
+made?", "why was a feature implemented in a certain way?".
+
+Tips on writing for an LLM:
+
+- Markdown is the bread-and-butter of LLMs because it is token-efficient, while allowing hierarchical structure.
+- Markdown files should be included in the project repo as opposed to a separate wiki.
+- Co-locate Markdown docs with relevant code, e.g. README.md files in the root of folders.
+- Provide a table of contents to help identify the high-level structure of the repo and all relevant docs.
+- Provide specific LLM instructions in
+  a [copilot-instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#creating-repository-wide-custom-instructions-1) (
+  or equivalent) file.
 
 ## README Template
 
