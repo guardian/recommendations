@@ -130,9 +130,12 @@ Tips on writing for an LLM:
 - Markdown files should be included in the project repo as opposed to a separate wiki.
 - Co-locate Markdown docs with relevant code, e.g. README.md files in the root of folders.
 - Provide a table of contents to help identify the high-level structure of the repo and all relevant docs.
-- Provide specific LLM instructions in
+- Provide repo-specific LLM instructions that apply to all agent sessions in
   a [copilot-instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#creating-repository-wide-custom-instructions-1) (
   or equivalent) file.
+- To help LLM agents avoid polluting their context window with unnecessary information for a particular task:
+  - Prefer smaller, well-scoped files, both for documentation and for code.
+  - Write [agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) for information that will help an agent work effectively on your repo, but do not necessarily apply to every task. Skills load [on-demand](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#:~:text=Skills%20load%20on%2Ddemand%20and%20eliminate%20the%20need%20to%20repeatedly%20provide%20the%20same%20guidance%20across%20multiple%20conversations.) rather than for every agent conversation
 
 ## README Template
 
