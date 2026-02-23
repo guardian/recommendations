@@ -118,24 +118,24 @@ charts and UML.
 
 ### Documentation for LLMs
 
-With LLMs now widely available, documentation is no longer exclusively consumed by humans. This has some implications
-for how we write documentation. As a general rule, content that is useful for humans is also useful for LLMs.
-Documentation can provide complementary information and context, especially in cases where it is unlikely to be
-inferable from the project itself. An example of this is the "why" behind project decisions, "why was the project
-made?", "why was a feature implemented in a certain way?".
+Documentation is no longer consumed exclusively by human engineers, but also by LLM agents performing tasks as directed by those engineers.
+As a general rule, documentation that is useful for humans is also useful for LLMs.
 
-Tips on writing for an LLM:
+<!--alex ignore easy-->
+A key principle for effective LLM use is to **avoid polluting the context window**. You want to make it as easy as possible for an LLM agent to find exactly the information it needs to complete a task, but not accidentally read in unnecessary information.
 
-- Markdown is the bread-and-butter of LLMs because it is token-efficient, while allowing hierarchical structure.
-- Markdown files should be included in the project repo as opposed to a separate wiki.
-- Co-locate Markdown docs with relevant code, e.g. README.md files in the root of folders.
-- Provide a table of contents to help identify the high-level structure of the repo and all relevant docs.
-- Provide repo-specific LLM instructions that apply to all agent sessions in
-  a [copilot-instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#creating-repository-wide-custom-instructions-1) (
-  or equivalent) file.
-- To help LLM agents avoid polluting their context window with unnecessary information for a particular task:
-  - Prefer smaller, well-scoped files, both for documentation and for code.
-  - Write [agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) for information that will help an agent work effectively on your repo, but do not necessarily apply to every task. Skills load [on-demand](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#:~:text=Skills%20load%20on%2Ddemand%20and%20eliminate%20the%20need%20to%20repeatedly%20provide%20the%20same%20guidance%20across%20multiple%20conversations.) rather than for every agent conversation
+This has several implications for documentation, most of which also benefit human contributors:
+- Provide a table of contents to help identify the high-level structure of the repo and all relevant docs
+- Prefer smaller, well-scoped documentation files
+- Always use markdown. Markdown is the bread-and-butter of LLMs because it is token-efficient, while allowing hierarchical structure.
+- Where possible, co-locate docs with relevant code, e.g. README.md files in the root of folders.
+- Put docs as markdown files in the repo itself, as opposed to a separate wiki
+- Use docs to provide complementary information that cannot be inferred from code, rather than redundant information. An example of this is the "why" behind project decisions, "why was the project made?", "why was a feature implemented in a certain way?", or information about how to run & test the project.
+
+There are also two types of LLM-specific documentation which you should include in your repo:
+- *[copilot-instructions.md](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#creating-repository-wide-custom-instructions-1)* for repo-specific LLM instructions that apply to *all* agent sessions. (This may soon be superseded by cross-platform [AGENTS.md](https://agents.md/) but for now prefer copilot-instructions as Copilot is the only approved AI coding tool for our organisation.)
+- *[agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)* for tasks that will help an agent work effectively on your repo, but do not necessarily apply to every agent session. Skills load [on-demand](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#:~:text=Skills%20load%20on%2Ddemand%20and%20eliminate%20the%20need%20to%20repeatedly%20provide%20the%20same%20guidance%20across%20multiple%20conversations.) when the agent decides they are relevant for the particular task at hand, thus avoiding context pollution
+
 
 ## README Template
 
