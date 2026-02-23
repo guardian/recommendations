@@ -119,7 +119,9 @@ charts and UML.
 ### Documentation for LLMs
 
 Documentation is no longer consumed exclusively by human engineers, but also by LLM agents performing tasks as directed by those engineers.
+As a general rule, documentation that is useful for humans is also useful for LLMs.
 
+<!--alex ignore easy-->
 A key principle for effective LLM use is to **avoid polluting the context window**. You want to make it as easy as possible for an LLM agent to find exactly the information it needs to complete a task, but not accidentally read in unnecessary information.
 
 This has several implications for documentation, most of which also benefit human contributors:
