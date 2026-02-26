@@ -116,6 +116,37 @@ information. [Mermaid](https://github.blog/developer-skills/github/include-diagr
 allows diagrams to be represented in Markdown and provides support for a variety of common diagram formats such as flow
 charts and UML.
 
+### Structure matters
+#### Headings
+Make proper use of headings to structure your writing. They help make your documentation easier to navigate, especially when someone is looking for information on a specific topic. This includes using h2 and h3 levels to add hierarchy to documentation when appropriate. The easier it is to find the information you need, the more useful your documentation becomes.
+
+#### Breaking up blocks of text
+You can use visual hints like Warnings and Tips to break up blocks of text. This makes your documentation less visually overwhelming, and can help emphasise key points to anyone skim reading.
+
+> [!WARNING]
+> Don’t use too many warnings or tips, otherwise they can add to visual overwhelm and noise on the page, instead of reducing it.
+
+Bullet points and numbered lists also work well for this. Use them! Most people find it easier to read a bullet point list instead of the same information presented in a paragraph.
+
+### Keep it simple
+Keep sentences short. Use ~~terminology with reduced complexity~~ simpler words when you can. Prioritise making your documentation clear and easy to read over impressing people with your wide ranging vocabulary. Your subject matter should be the most difficult thing about your writing - not the language.
+
+#### A note on adverbs
+Paying attention to your use of adverbs turns your writing from this:
+As a general rule, adverbs should <u>probably</u> be avoided in technical writing. They <u>often</u> add complexity and <u>significantly</u> increase word count, without <u>massively</u> changing the meaning of your sentence. This is not a blanket rule - sometimes they <u>really</u> are essential for accuracy.
+
+To this:
+As a general rule, adverbs should be avoided in technical writing. They add complexity and increase word count, without changing the meaning of your sentence. This is not a blanket rule - sometimes they are essential for accuracy.
+
+### Active vs passive voice
+This is a ‘nice to have’ instead of an essential part of technical writing, but it has a real impact on readability. The below examples illustrate this.
+
+#### Passive voice
+Documentation should be written in the active voice when possible. The number and length of the words used will be reduced, and readability will be improved.
+
+#### Active voice
+Write documentation in the active voice when possible. It reduces the number and length of the words you use, improving readability.
+
 ### Documentation for LLMs
 
 Documentation is no longer consumed exclusively by human engineers, but also by LLM agents performing tasks as directed by those engineers.
