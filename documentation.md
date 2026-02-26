@@ -138,7 +138,7 @@ Keep sentences short. Use ~~terminology with reduced complexity~~ simpler words 
 
 Paying attention to your use of adverbs turns your writing from this:
 <br>
-As a general rule, adverbs should <u>probably</u> be avoided in technical writing. They <u>often</u> add complexity and <u>significantly</u> increase word count, without <u>massively</u> changing the meaning of your sentence. This is not a blanket rule - sometimes they <u>really</u> are essential for accuracy.
+As a general rule, adverbs should _probably_ be avoided in technical writing. They _often_ add complexity and _significantly_ increase word count, without _massively_ changing the meaning of your sentence. This is not a blanket rule - sometimes they _really_ are essential for accuracy.
 
 To this:
 <br>
