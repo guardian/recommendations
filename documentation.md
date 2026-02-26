@@ -130,9 +130,13 @@ You can use visual hints like Warnings and Tips to break up blocks of text. This
 
 Bullet points and numbered lists also work well for this. Use them! Most people find it easier to read a bullet point list instead of the same information presented in a paragraph.
 
-### Keep it simple
+### Use fewer words
 
-Keep sentences short. Use ~~terminology with reduced complexity~~ simpler words when you can. Prioritise making your documentation clear and easy to read over impressing people with your wide ranging vocabulary. Your subject matter should be the most difficult thing about your writing - not the language.
+Keep sentences short. Consider splitting sentences in two if they contain multiple commas or a semicolon. Lots of punctuation is a sign your sentence is too long.
+
+### Use less complex language
+
+Use ~~terminology with reduced complexity~~ simpler words when you can. Prioritise making your documentation clear and readable over impressing people with your wide ranging vocabulary. Your subject matter should be the most difficult thing about your writing - not the language.
 
 #### A note on adverbs
 
