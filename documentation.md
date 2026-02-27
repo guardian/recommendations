@@ -130,15 +130,16 @@ You can use visual hints like Warnings and Tips to break up blocks of text. This
 
 Bullet points and numbered lists also work well for this. Use them! Most people find it easier to read a bullet point list instead of the same information presented in a paragraph.
 
-### Use fewer words
+### Write clearly
+#### Use fewer words
 
 Keep sentences short. Consider splitting sentences in two if they contain multiple commas or a semicolon. Lots of punctuation is a sign your sentence is too long.
 
-### Use less complex language
+#### Use less complex language
 
 Use ~~terminology with reduced complexity~~ simpler words when you can. Prioritise making your documentation clear and readable over impressing people with your wide ranging vocabulary. Your subject matter should be the most difficult thing about your writing - not the language.
 
-#### A note on adverbs
+##### A note on adverbs
 
 Paying attention to your use of adverbs turns your writing from this:
 <br>
@@ -148,17 +149,17 @@ To this:
 <br>
 As a general rule, adverbs should be avoided in technical writing. They add complexity and increase word count, without changing the meaning of your sentence. This is not a blanket rule - sometimes they are essential for accuracy.
 
-### Active vs passive voice
+#### Active vs passive voice
 
 This is a ‘nice to have’ instead of an essential part of technical writing, but it has a real impact on readability. The below examples illustrate this.
 
 – [Technical Writing One / Active voice](https://developers.google.com/tech-writing/one/active-voice)
 
-#### Passive voice
+##### Passive voice
 
 Documentation should be written in the active voice when possible. The number and length of the words used will be reduced, and readability will be improved.
 
-#### Active voice
+##### Active voice
 
 Write documentation in the active voice when possible. It reduces the number and length of the words you use, improving readability.
 
