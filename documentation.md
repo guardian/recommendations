@@ -152,6 +152,8 @@ As a general rule, adverbs should be avoided in technical writing. They add comp
 
 This is a ‘nice to have’ instead of an essential part of technical writing, but it has a real impact on readability. The below examples illustrate this.
 
+– [Technical Writing One / Active voice](https://developers.google.com/tech-writing/one/active-voice)
+
 #### Passive voice
 
 Documentation should be written in the active voice when possible. The number and length of the words used will be reduced, and readability will be improved.
