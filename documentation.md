@@ -130,6 +130,7 @@ You can use visual hints like Warnings and Tips to break up blocks of text. This
 
 Bullet points and numbered lists also work well for this. Use them! Most people find it easier to read a bullet point list instead of the same information presented in a paragraph.
 
+<!--alex ignore clearly-->
 ### Write clearly
 #### Use fewer words
 
