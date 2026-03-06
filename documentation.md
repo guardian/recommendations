@@ -101,7 +101,8 @@ audience.
 
 – [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words#use_acronyms_properly)
 
-### Illustrations, lists and tables
+### Structure your writing
+#### Illustrations, lists and tables
 
 <!--alex ignore clearly-->
 Complex information can often be better understood when presented in a structured format rather than in large blocks of
@@ -116,7 +117,6 @@ information. [Mermaid](https://github.blog/developer-skills/github/include-diagr
 allows diagrams to be represented in Markdown and provides support for a variety of common diagram formats such as flow
 charts and UML.
 
-### Structure your writing
 #### Headings
 
 Use headings to structure your writing. They make your documentation easier to navigate, especially when someone is looking for information on a specific topic. This includes using h2 and h3 levels to add hierarchy to documentation when appropriate. The easier it is to find the information you need, the more useful your documentation.
