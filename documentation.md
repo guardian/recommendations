@@ -101,7 +101,8 @@ audience.
 
 – [Technical Writing One / Words](https://developers.google.com/tech-writing/one/words#use_acronyms_properly)
 
-### Illustrations, lists and tables
+### Structure your writing
+#### Illustrations, lists and tables
 
 <!--alex ignore clearly-->
 Complex information can often be better understood when presented in a structured format rather than in large blocks of
@@ -115,6 +116,53 @@ even [collapse](https://docs.github.com/en/get-started/writing-on-github/working
 information. [Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/)
 allows diagrams to be represented in Markdown and provides support for a variety of common diagram formats such as flow
 charts and UML.
+
+#### Headings
+
+Use headings to structure your writing. They make your documentation easier to navigate, especially when someone is looking for information on a specific topic. This includes using h2 and h3 levels to add hierarchy to documentation when appropriate. The easier it is to find the information you need, the more useful your documentation.
+
+#### Breaking up blocks of text
+
+You can use visual hints like Warnings and Tips to break up blocks of text. This makes your documentation less visually overwhelming, and emphasises key points to anyone skim-reading.
+
+> [!WARNING]
+> Don’t use too many warnings or tips, otherwise they add to visual overwhelm and noise on the page, rather than reduce it.
+
+Bullet points and numbered lists also work well for this. Use them! Most people find it easier to read a bullet point list instead of the same information presented in a paragraph.
+
+<!--alex ignore clearly-->
+### Write clearly
+#### Use fewer words
+
+Keep sentences short. Consider splitting sentences in two if they contain multiple commas or a semicolon. Lots of punctuation is a sign your sentence is too long.
+
+#### Use less complex language
+
+Use ~~terminology with reduced complexity~~ simpler words when you can. Prioritise making your documentation clear and readable over impressing people with your wide ranging vocabulary. Your subject matter should be the most difficult thing about your writing - not the language.
+
+##### A note on adverbs
+
+Paying attention to your use of adverbs turns your writing from this:
+<br>
+As a general rule, adverbs should _probably_ be avoided in technical writing. They _often_ add complexity and _significantly_ increase word count, without _massively_ changing the meaning of your sentence. This is not a blanket rule - sometimes they _really_ are essential for accuracy.
+
+To this:
+<br>
+As a general rule, adverbs should be avoided in technical writing. They add complexity and increase word count, without changing the meaning of your sentence. This is not a blanket rule - sometimes they are essential for accuracy.
+
+#### Active vs passive voice
+
+This is a ‘nice to have’ instead of an essential part of technical writing, but it has a real impact on readability. The below examples illustrate this.
+
+– [Technical Writing One / Active voice](https://developers.google.com/tech-writing/one/active-voice)
+
+##### Passive voice
+
+Documentation should be written in the active voice when possible. The number and length of the words used will be reduced, and readability will be improved.
+
+##### Active voice
+
+Write documentation in the active voice when possible. It reduces the number and length of the words you use, improving readability.
 
 ### Documentation for LLMs
 
