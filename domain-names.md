@@ -16,7 +16,9 @@ If you have a TLD that isn’t shared (e.g. ophan.co.uk), there is no particular
 
 ## Which domain name should I use?
 
-**theguardian.com** should only be used for reader-facing services. TLS termination should be handled by [Fastly](cdn.md) even if your content is not cacheable. This provides many benefits:
+**theguardian.com** should only be used for reader-facing services - see [_avoiding subdomains under theguardian.com_](avoid-subdomains-under-theguardian.md) for more details.
+
+TLS termination should be handled by [Fastly](cdn.md) even if your content is not cacheable. This provides many benefits:
 * Early support for new protocols (e.g. QUIC)
 * Deprecation of old TLS versions
 * Prompt deprecation of insecure cipher suites
