@@ -70,6 +70,7 @@ analytics). In practice, [restrictions would seem to apply to the whole theguard
 > **Does ITP differentiate between my subdomains?**
 >
 > No. ITP captures statistics and applies its rules for the effective top-level domain plus one, or eTLD+1. An eTLD is
+<!--alex ignore just-->
 > `.com` or `.co.uk` so an example of an eTLD+1 would be `social.co.uk` but not `sub.social.co.uk` (eTLD+2) or just
 > `co.uk` (eTLD).
 
