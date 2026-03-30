@@ -200,6 +200,7 @@ Steps:
 2. Create a new `README.md` with the provided template below
 3. Prompt GitHub Copilot (or another organisation-approved LLM tool) to fill out the template
 4. Review the initial pass ensuring all documentation is accurate and succinct
+5. Delete `old-README.md`
 
 Example prompt:
 
