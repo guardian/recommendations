@@ -191,6 +191,24 @@ The following template provides a starting point for adding documentation to a n
 section an author should be confident that they have documented some of the most important aspects of a project. This
 template is not intended to replace all other documentation but rather provide a starting point for the opening README.
 
+### Recommended LLM steps
+
+LLMs can provide a useful initial pass over the documentation template
+
+Steps:
+1. Rename the existing Markdown document (if available) to `old-REAMDE.md`
+2. Create a new `README.md` with the provided template below
+3. Prompt Copilot or other LLM tools to fill out the template
+4. Review the initial pass ensuring all documentation is accurate and succinct
+
+Example prompt:
+
+```text
+Fill out the project README documentation template with all the necessary detail. Use the `old-README.md` file and anything else you can find in the project to add the relevant detail. 
+```
+
+### Template
+
 ```markdown
 # [Project Title]
 
@@ -254,14 +272,14 @@ Areas to include:
 <!---
 This section should provide helpful links to other useful resources. 
 
-These could be: 
+These could be:
  - Further detailed project documentation
         - ADRs       
         - Runbooks
         - Feature documentation
         - User training
+ - Related projects (including a brief description of the relationship)
  - Documentation of third-party libraries
- - Other related services
 -->
 
 ## 5. Terminology
