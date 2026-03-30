@@ -193,12 +193,12 @@ template is not intended to replace all other documentation but rather provide a
 
 ### Recommended LLM steps
 
-LLMs can provide a useful initial pass over the documentation template
+LLMs can provide a useful initial pass over the documentation template.
 
 Steps:
-1. Rename the existing Markdown document (if available) to `old-REAMDE.md`
+1. Rename the existing `README.md` file (if available) to `old-README.md`
 2. Create a new `README.md` with the provided template below
-3. Prompt Copilot or other LLM tools to fill out the template
+3. Prompt GitHub Copilot (or another organisation-approved LLM tool) to fill out the template
 4. Review the initial pass ensuring all documentation is accurate and succinct
 
 Example prompt:
