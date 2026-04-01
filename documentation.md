@@ -199,8 +199,13 @@ Steps:
 1. Rename the existing `README.md` file (if available) to `old-README.md`
 2. Create a new `README.md` with the provided template below
 3. Prompt GitHub Copilot (or another organisation-approved LLM tool) to fill out the template
-4. Review the initial pass ensuring all documentation is accurate and succinct
-5. Delete `old-README.md`
+4. Review the initial pass:
+   - LLM output is often overly verbose, trimming it down is key
+   - Ensure that the provided detail is accurate and correct
+   - Check all links are up-to-date and valid
+   - Make all formatting consistent
+   - See [overall guidance](#overall-guidance) for more advice
+7. Delete `old-README.md`
 
 Example prompt:
 
