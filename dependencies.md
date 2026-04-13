@@ -39,8 +39,8 @@ This provides more [consistency and safety between the `package.json` file and t
 
 Why not pinning dependencies is dangerous:
 - You are more vulnerable to supply chain attacks, as you are pulling in the
-latestversion of a dependency, which may have been compromised. Explicitly
-raising a PR (bonus points you do this using an automated system with a
+latest version of a dependency, which may have been compromised. Explicitly
+raising a PR (bonus points if you do this using an automated system with a
 [cooldown period](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-))
 often results in a delay of a few hours to several days, which is usually
 enough time for the maintainers, or package manager to detect security
