@@ -1,4 +1,4 @@
-# Dependencies
+# Application Dependencies
 
 The software we develop often depends on standalone packaged libraries.
 Managing these dependencies is crucial to delivery: we need processes that yield
@@ -33,9 +33,28 @@ or managed with Node and a build system based on `package.json` declaration.
 
 When using a package manager, use a lock file to prevent prevent mismatches in transitive
 dependencies between environments.
-
 Ensure that all dependencies in deployed applications are pinned to a `patch` version.
-This provides more [consistency and safety between the `package.json` file and the lock file](https://docs.renovatebot.com/dependency-pinning/#what-a-lock-file-doesnt-do-for-you).
+This provides more [consistency and safety between the `package.json` file and the lockfile](https://docs.renovatebot.com/dependency-pinning/#what-a-lock-file-doesnt-do-for-you). Always use
+`npm ci`/`yarn install --frozen-lockfile`/`pnpm install --frozen-lockfile` in CI to ensure
+that the lock file is respected.
+
+
+Why not pinning dependencies in applications is dangerous:
+- You are more vulnerable to supply chain attacks, as you are pulling in the
+latest version of a dependency, which may have been compromised. Explicitly
+raising a PR (bonus points if you do this using an automated system with a
+[cooldown period](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-))
+often results in a delay of a few hours to several days, which is usually
+enough time for the maintainers, or package manager to detect security
+issues. See the [Axios supply chain attack of, March 2026](https://snyk.io/blog/axios-npm-package-compromised-supply-chain-attack-delivers-cross-platform/)
+for an example of this.
+- Depending on your build and release process, you may get a different version
+of the dependency in production than you have in development, which can lead to
+unexpected bugs.
+- Not all packages follow SemVer, so you may get breaking changes in a minor or
+patch release.
+- If your lockfile is not in version control, it can be difficult to know which
+version of a dependency is running in production
 
 ```JSONC
 {
