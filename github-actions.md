@@ -45,7 +45,7 @@ By default, GitHub grants `GITHUB_TOKEN` either read-only or read-write permissi
 
 ### Why this matters
 
-A compromised or malicious action running within a job could abuse broad `GITHUB_TOKEN` permissions to, for example, push code, create releases, or read secrets. Scoping permissions tightly limits the blast radius of such an event.
+A compromised or malicious action running within a job could exploit broad `GITHUB_TOKEN` permissions to, for example, push code, create releases, or read secrets. Scoping permissions tightly limits the blast radius of such an event.
 
 ### Example
 
