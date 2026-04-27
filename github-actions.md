@@ -98,7 +98,7 @@ jobs:
       - uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
         id: app-token
         with:
-          app-id: ${{ vars.APP_ID }}
+          client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           # Restrict the installation token to only the permissions needed
           permission-contents: read
