@@ -57,8 +57,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Job-level override: this job needs no additional permissions
-    permissions: {}
+    # No job-level override: this job uses workflow-level permissions
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
