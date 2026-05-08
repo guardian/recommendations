@@ -27,9 +27,11 @@ TLS termination should be handled by [Fastly](cdn.md) even if your content is no
 
 **guardianapis.com** should be used for any system whose users are primarily machines rather than people. It will typically serve JSON or binary protocol rather than HTML. It should never appear in an internal or external user’s address bar. It should not use or set cookies.
 
-**gutools.co.uk** should only be used for internal facing tooling. But this is not limited to editorial tools, and can include marketing, engineering or any other tool with an internal audience.
+**gutools.co.uk** should only be used for internal facing tooling. But this is not limited to editorial tools, and can include marketing, engineering or any other tool with an internal audience that is maintained by a Guardian team. Tools should be added to the [tools index](https://tools.gutools.co.uk)
 
 **guim.co.uk** should only be used for public static assets primarily required by our public facing website and apps.
+
+**guexperiments.co.uk** should only be used for internal experiments. Experiments might be hack day or 10% time projects or really anything that isn't properly supported. If an experiment becomes a team-supported tool, it should be migrated to gutools.co.uk. If it becomes a reader-facing app, it should move to theguardian.com or guardianapis.com. Experiments should be added to the [experiments index](https://experiments.guexperiments.co.uk)
 
 ## Non-production stages
 
