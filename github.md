@@ -11,12 +11,6 @@ These requirements are intended to make it easier to manage user accounts and un
 
 ## Creating a new repository
 
-The recommended method for spawning a new repository is using https://repo.new/ (which redirects to https://github.com/new/).
-
-![image](https://github.com/guardian/recommendations/assets/52038/3acc15cf-0465-4133-9a18-0d4cb6eca754)
-
-Bear in mind:
-
 * The repository Owner should be `guardian`
 * The best visibility for most repositories is `Public`, rather than `Internal` or `Private`.
   [Developing in the Open](https://www.theguardian.com/info/developer-blog/2014/nov/28/developing-in-the-open) makes better software!
@@ -24,9 +18,7 @@ Bear in mind:
   [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the dev team that will be owning this project, not a huge team with hundreds of members!
 * For public repositories, we recommend using the Apache v2 license.
 
-We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
-way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring
-service which will ensure many more aspects of Guardian repos are checked and adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
+Guardian repos should adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
 
 
 ## Repository Configuration
@@ -62,9 +54,9 @@ Access should be granted to [GitHub teams][gh-teams]. Avoid individual access.
 Should an individual leave the GitHub organisation, they'll automatically lose access to all repositories when access is granted via teams.
 When individual access is granted, they'll retain access to a repository until manually removed.
 
-Generally, new repositories should be open to the department via `Internal` visibility (for read access) and by granting write access to the [`@guardian/guardian-developers-write`][gh-write] team.
+By default, new repositories are open to the department via `Internal` visibility (for read access).
 
-(Existing `Private` repositories may achieve the same effect by additionally granting read access to [`@guardian/guardian-developers-read`][gh-read]. This approach is not recommended since GitHub's introduction of `Internal` visibility.)
+(Existing `Private` repositories may be converted to `Internal` if their contents is not particularly sensitive)
 
 ### Collaborators and CODEOWNERS
 Include at least one GitHub team as a collaborator with admin access. *At an organisational level, this identifies owners for every repository, so that we can better ensure security and maintenance work is under the remit of a team for all our (production) code.*
@@ -95,6 +87,7 @@ For example, when configuring [auto-publishing for an npm library][npm-publishin
 | testing       | Repositories that are used for test purposes                       |
 | documentation | Repositories that contain only documentation and no source code    |
 | production    | Repositories that are deployed to production                       |
+| interactive   | Repositories that are owned by the interactives/visuals teams      |
 
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use. 
 
