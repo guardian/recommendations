@@ -28,6 +28,8 @@ See the [Scala-specific recommendations](./scala.md)
 
 ## JavaScript
 
+### Specifying dependencies
+
 Dependencies in JavaScript can be either imported directly from a URL,
 or managed with Node and a build system based on `package.json` declaration.
 
@@ -40,7 +42,7 @@ that the lock file is respected.
 
 
 Why not pinning dependencies in applications is dangerous:
-- You are more vulnerable to supply chain attacks, as you are pulling in the
+- You are more vulnerable to supply chain attacks, as you are probably pulling in the
 latest version of a dependency, which may have been compromised. Explicitly
 raising a PR (bonus points if you do this using an automated system with a
 [cooldown period](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-))
@@ -71,3 +73,25 @@ version of a dependency is running in production
 
 When developing libraries to be published as NPM packages,
 [use ranges for peer dependencies](./npm-packages.md#peerDependencies).
+
+### Package managers
+
+The JavaScript/TypeScript ecosystem is an extremely popular way to distribute
+malware, due to its historically lax approach to security. Some practices to
+mitigate this risk include:
+
+- Utilise minimumReleaseAge or equivalent configurations, so that new versions
+of dependencies have a chance to be vetted. We recommend 48 hours. These are
+available in npm, pnpm, and bun.
+- Configure [cooldowns](https://github.blog/changelog/2025-07-01-dependabot-supports-configuration-of-a-minimum-package-age/#whats-new)
+in Dependabot. This works similarly to minimumReleaseAge above.
+- Avoid installing dependencies on the fly, for example by using npx. Its
+default behaviour is to install the most recent version, which may be malicious.
+- Exercise caution when choosing less popular libraries, malicious releases may
+take longer to be noticed.
+- Less practical, but worth considering: Disable
+[lifecycle scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts#examples)
+(i.e preinstall/postinstall) in your projects. They are extremely useful for
+developers, but equally useful to hackers. This might break things. This can be
+tricky in npm projects, as it’s an all or nothing switch. pnpm’s support for
+this is much better, as it’s enabled by default and has granular controls.
