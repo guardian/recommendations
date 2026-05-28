@@ -26,11 +26,6 @@ If you need a non-public repository, the best visibility to choose is [`Internal
 
 You can make a repository `Private` if you do not want it to be visible to the entire organisation. This should only be done in exceptional circumstances and your team should be clear about the justification.
 
-### Default branch name
-Use `main`.
-
-Words matter. See docs from the [`master-to-main` tool][master-to-main] for more information. This tool can also be used to rename the default branch.
-
 ### Branch Protection
 Enable branch protection for the default branch.
 
