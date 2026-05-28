@@ -76,6 +76,7 @@ This repository document [principles](#principles), standards and [guidelines](#
 -   [Application Dependencies](application-dependencies.md)
 -   [Applications](applications.md)
 - [AWS](AWS.md)
+-   [Best Practices](https://github.com/guardian/service-catalogue/blob/main/packages/best-practices/best-practices.md).
 -   [Costs](AWS-costs.md)
 -   [Lambda Metrics](AWS-lambda-metrics.md)
 -   [Client Side](client-side.md)
@@ -84,6 +85,7 @@ This repository document [principles](#principles), standards and [guidelines](#
 -   [Consent and Data Privacy](consent-and-data-privacy.md)
 -   [Content Delivery Network (CDN)](cdn.md)
 -   [Continuous Deployment](continuous-deployment.md)
+-   [Continuous Deployment of Cloudformation](continuous-deployment-of-cloudformation.md)
 -   [Continuous Integration](continuous-integration.md)
 - [Documentation](documentation.md)
   - [Architecture Decision Records](architecture-decision-records.md)  
