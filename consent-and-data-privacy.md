@@ -1,4 +1,4 @@
-# Content and Data Privacy
+# Consent and Data Privacy
 
 A quick reminder about our obligations relating to consent and data privacy, and a pointer to where you can find out more. If you have any questions, the [Transparency & Consent](mailto:Transparency.and.consent@guardian.co.uk) (staffed by talented P\&E colleagues) and [Data Privacy Team](mailto:data.protection@guardian.co.uk) (staffed by actual lawyers) are available to assist.
 
