@@ -29,7 +29,7 @@ You can make a repository `Private` if you do not want it to be visible to the e
 ### Branch Protection
 Enable branch protection for the default branch.
 
-Particularly when [continuous delivery] is configured, branch protection reduces risk as it means changes get reviewed before being deployed.  The following settings are recommended:
+Particularly when [continuous deployment] is configured, branch protection reduces risk as it means changes get reviewed before being deployed.  The following settings are recommended:
 - Require pull request reviews before merging
 - Require review from Code Owners (see [Codeowners](#codeowners))
 - Require status checks to pass before merging
@@ -128,5 +128,5 @@ Examples:
 [gh-teams]: https://github.com/orgs/guardian/teams
 [gh-read]: https://github.com/orgs/guardian/teams/guardian-developers-read
 [gh-write]: https://github.com/orgs/guardian/teams/guardian-developers-write
-[continuous delivery]: ./continuous-deployment.md
+[continuous deployment]: ./continuous-deployment.md
 [security recommendations]: ./security.md
