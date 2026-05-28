@@ -24,3 +24,7 @@ Comments on Google docs or GitHub discussions are good ways of collecting people
 An RFC is a request for help – someone is asking for your insight and the benefit of your experience. Be candid but be kind. Ultimately, the aim is to collaborate until collectively, we arrive at the best possible version of the idea.
 
 At the same time, remember you are being asked for help. No one is trying to embarrass you! It’s a test of ideas, not the people who have them. There are no wrong comments – the more contributors to an RFC, the more effective they are.
+
+## Next steps
+Once the RFC has been commented on and a decision has come out of it, you might then need to write an [Architecture Decision Record](architecture-decision-records.md)
+

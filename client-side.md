@@ -32,7 +32,7 @@ See the separate [npm-packages.md](./npm-packages.md).
 
 ## Dependencies
 
-See the separate [dependencies.md](./dependencies.md#javascript).
+See the separate [application-dependencies.md](./application-dependencies.md#javascript).
 
 ## Node.js
 

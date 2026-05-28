@@ -1,7 +1,7 @@
 # Continuous Deployment of CloudFormation
 
 ## Background
-### What is Continuous Delivery?
+### What is Continuous Deployment?
 [Continuous Deployment](./continuous-deployment.md) (CD) is a software release process where verified changes to a codebase are deployed immediately,
 and autonomously to a production environment. 
 The main benefit of CD is the removal of human error, as the platform will perform the same steps over and over.

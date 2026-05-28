@@ -27,15 +27,17 @@ Tip: Github allows you to open a PR in `draft` state, which can often be helpful
 
 A PR should be clear, address a single concern, and composed of a manageable number of changes.
 
-If a PR is too complex, it is much easier for issues to be missed. In addition if trying to understand an aspect of the code change in the future, it becomes harder to understand if buried in a very large and complex PR.
-     
+If a PR is too complex, it is harder to review, and much easier for issues to be missed.
+
+But you do not need to make your PR as small as possible, and should favour pace and frequency of delivery over atomicity of changes.
+
+## Dependency updates
+
 When upgrading dependencies, if not [automated](https://github.com/guardian/recommendations/blob/main/scala.md#continuous-dependency-management), try to update several of them at the same time:
  - For Scala, upgrade `scala` runtime, `sbt`, `sbt-plugins` and optionally `play-framework` all in one PR.
  - For Node, upgrade `typescript` runtime, package manager, code formatter, linter, bundler, all in one PR.    
 
 You are more likely to encounter incompatibilities or issues otherwise. 
-
-In general you don't need to make your PR as small as possible, and favour pace and frequency of delivery over atomicity of changes. Contrary to commits which can be [bisected to find root cause of an issue](https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination), every deployment will integrate  additional changes in the system to the ones in the PR (for example baked AMI may be a new one, EC2 bootstrap script may install a newer version of system library, etc.) so you will be more likely to identify the reason for an issue through tests and monitoring than size of the PR.
 
 ## Releasable
 A PR should be releasable once its review is complete.

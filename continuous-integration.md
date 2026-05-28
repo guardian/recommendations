@@ -21,7 +21,7 @@ You should have continuous integration set up in your repository running the fol
 
 ## Keeping the process fast
 
-The purpose of CI is to have rapid feedback and as such you should favour `speedness` over `correctness` and direct  `costs`.    
+The purpose of CI is to have rapid feedback and as such you should favour `speediness` over `correctness` and direct  `costs`.    
 Quoting `Martin Fowler`:  
 
 > For most projects, however, the XP guideline of a ten minute build is perfectly within reason. Most of our modern projects achieve this. It's worth putting in concentrated effort to make it happen, because every minute you reduce off the build time is a minute saved for each developer every time they commit. Since CI demands frequent commits, this adds up to a lot of time.
