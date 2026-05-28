@@ -26,22 +26,7 @@ Make sure the table capacity can handle traffic spikes. Use the time range on th
 Cloudwatch metrics can become really expensive without being used at all. Apart from your app metrics, you can configure some AWS SDK to send the metrics you are using, [for instance for kinesis](https://github.com/guardian/content-api/pull/1332/files#diff-60cf2d80ad25f26151966317093f6eb0R64). 
 
 ### S3
-S3 may looks cheap, but the management console does not help you to understand what is inside each bucket and the size of each own. You can follow the storage size of each of your buckets from a [cloudwatch metric](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#metrics:metricFilter=Pattern%253DAWS%252FS3) called `BucketSizeBytes`. It is good idea as well to have a look the different [storage classes](https://aws.amazon.com/s3/storage-classes/) available for your data:
-
-* Infrequent access
-
-Lower storage price, higher access price. Interesting for backups for instance.
-
-
-* [Reduce Redundancy Storage](https://aws.amazon.com/s3/reduced-redundancy/)
-
-Lower storage price, reduced redundancy. Interesting for reproducible data or non-critical data such as logs.  
-
-* Glacier
-
-Extremely low storage price, very high access price. Interesting for data to archive but almost never retrieved.
-
-Another useful feature to manage your buckets is the possibility to set [lifecycle policies](http://docs.aws.amazon.com/AmazonS3/latest/UG/lifecycle-configuration-bucket-no-versioning.html) to change the storage class or delete objects in the buckets or on a path of the bucket.
+S3 may looks cheap, but the management console does not help you to understand what is inside each bucket and the size of each own. You can follow the storage size of each of your buckets from a [cloudwatch metric](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#metrics:metricFilter=Pattern%253DAWS%252FS3) called `BucketSizeBytes`. It is good idea as well to have a look the different [storage classes](https://aws.amazon.com/s3/storage-classes/) available for your data.
 
 #### Getting rid of incomplete multipart upload
 
