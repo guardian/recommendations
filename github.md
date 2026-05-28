@@ -55,9 +55,6 @@ In general, avoid giving individual access to repositories and prefer teams.
 
 Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for different parts of the repository. *This allows the responsible team to receive notifications of contributions and review changes.*
 
-
-
-
 ### Archiving
 Repositories that are no longer used should be [archived][gh-archived].
 
@@ -81,40 +78,12 @@ For example, when configuring [auto-publishing for an npm library][npm-publishin
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use. 
 
 ## Repository contents
-- Never commit secret information. See also the [security recommendations].
-- Avoid private information in public repositories
 
-### Public information
-Things we could happily put on the front page of the Guardian.
+See also the [security recommendations] for definitions of public, private and secret information.
 
-Examples:
-  - source code
-  - diagrams
-  - [architecture decision records](architecture-decision-records.md)
-
-### Private information
-Things we do not want to be common knowledge, but knowing them does not directly compromise anything.
-
-Generally this means that knowing that detail would make an exploit (technical or people-wise) easier to achieve, especially when combining a few of them.
-
-Not for public repositories. Fine for private repositories.
-
-Examples:
-  - AWS account IDs
-  - S3 bucket names
-
-### Secret information
-Information that directly causes problems! These should be kept out of VCS completely.
-
-Secrets should be rotated regularly.
-
-If leaked, it is a security incident and the [incident doc] should be followed.
-
-Examples:
-  - API keys
-  - Passwords
-  - Authentication tokens
-
+- Never commit secret information. 
+- Avoid private information in public repositories.
+- Private information is fine in private repositories.
 
 <!-- only links below here -->
 

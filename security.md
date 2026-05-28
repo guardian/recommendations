@@ -52,7 +52,32 @@ and
 test data.** Representative test data is important, but not at the cost of 
 breaching GDPR or disregarding personal privacy preferences.
 
-## Secrets
+### Public information
+Things we could happily put on the front page of the Guardian.
+
+Examples:
+  - source code
+  - diagrams
+  - [architecture decision records](architecture-decision-records.md)
+
+### Private information
+
+Things we do not want to be common knowledge, but knowing them does not
+directly compromise anything.
+
+Generally this means that knowing that detail would make an exploit (technical
+or people-wise) easier to achieve, especially when combining a few of them.
+
+Not for public repositories. Fine for private repositories.
+
+Examples:
+  - AWS account IDs
+  - S3 bucket names
+
+### Secret information
+
+Information that directly causes problems! These should be kept out of VCS
+completely.
 
 **Keep secrets out of repositories.** Application secrets must not be
 stored in version control, even if the repo is "private". To prevent
@@ -65,6 +90,3 @@ possible.
 **Some non-secrets should still be kept out of the public domain.** 
 "Private" information that does not constitute a secret but may make
 an exploit easier to achieve should be kept in private repositories.
-
-Also see the guidance on 
-[github repository contents](https://github.com/guardian/recommendations/blob/main/github.md#repository-contents)
