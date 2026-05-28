@@ -20,7 +20,7 @@ Bear in mind:
 ### Visibility
 The default should be `Public`.
 
-In some cases it may be necessary to have a more restrictive visibility. Think carefully about the justification for making a repository non-public and make sure this justification is clear to the whole team.
+In some cases it may be necessary to have a more restrictive visibility. Think carefully about the justification for making a repository non-public and make sure this justification is clear to the whole team and included in the README to reduce the chance of someone making the repo public in the future because they were not aware of the rationale for the more restrictive visibility.
 
 If you need a non-public repository, the best visibility to choose is [`Internal`](https://docs.github.com/en/enterprise-cloud@latest/repositories/creating-and-managing-repositories/about-repositories#about-internal-repositories). This makes the repository readable (but not writable) by all Guardian GitHub organisation members. (Typically you should also grant write access via the [`@guardian/guardian-developers-write`][gh-write] team: see [Access](#access) below.)
 
