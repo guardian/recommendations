@@ -1,14 +1,5 @@
 # GitHub
 
-## User Configuration
-> **Note**
-> These are also checked by [gu-who](https://github.com/guardian/gu-who#enforced-requirements).
-
-- [MFA](https://help.github.com/articles/about-two-factor-authentication) must be enabled
-- A human name should be added to your account
-
-These requirements are intended to make it easier to manage user accounts and understand if they should be in the organisation or not.
-
 ## Creating a new repository
 
 The recommended method for spawning a new repository is using https://repo.new/ (which redirects to https://github.com/new/).
@@ -24,30 +15,21 @@ Bear in mind:
   [`Admin` access to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#filtering-the-list-of-teams-and-people) - this should be the dev team that will be owning this project, not a huge team with hundreds of members!
 * For public repositories, we recommend using the Apache v2 license.
 
-We're no longer using https://repo-genesis.herokuapp.com/, as there are many different aspects to setting a GitHub repo up in the best possible
-way, and repo-genesis only enforced a couple of them, and only at the point of creation. DevX have plans to enable a new repo-monitoring
-service which will ensure many more aspects of Guardian repos are checked and adhere to [best practices](https://github.com/guardian/recommendations/blob/main/best-practices.md#github).
-
 
 ## Repository Configuration
 ### Visibility
 The default should be `Public`.
 
-In some cases it may be necessary to have a more restrictive visibility. Think carefully about the justification for making a repository non-public and make sure this justification is clear to the whole team.
+In some cases it may be necessary to have a more restrictive visibility. Think carefully about the justification for making a repository non-public and make sure this justification is clear to the whole team and included in the README to reduce the chance of someone making the repo public in the future because they were not aware of the rationale for the more restrictive visibility.
 
 If you need a non-public repository, the best visibility to choose is [`Internal`](https://docs.github.com/en/enterprise-cloud@latest/repositories/creating-and-managing-repositories/about-repositories#about-internal-repositories). This makes the repository readable (but not writable) by all Guardian GitHub organisation members. (Typically you should also grant write access via the [`@guardian/guardian-developers-write`][gh-write] team: see [Access](#access) below.)
 
 You can make a repository `Private` if you do not want it to be visible to the entire organisation. This should only be done in exceptional circumstances and your team should be clear about the justification.
 
-### Default branch name
-Use `main`.
-
-Words matter. See docs from the [`master-to-main` tool][master-to-main] for more information. This tool can also be used to rename the default branch.
-
 ### Branch Protection
 Enable branch protection for the default branch.
 
-Particularly when [continuous delivery] is configured, branch protection reduces risk as it means changes get reviewed before being deployed.  The following settings are recommended:
+Particularly when [continuous deployment] is configured, branch protection reduces risk as it means changes get reviewed before being deployed.  The following settings are recommended:
 - Require pull request reviews before merging
 - Require review from Code Owners (see [Codeowners](#codeowners))
 - Require status checks to pass before merging
@@ -73,9 +55,6 @@ In general, avoid giving individual access to repositories and prefer teams.
 
 Include a [`CODEOWNERS`][gh-codeowners] file which references the [GitHub team(s)][gh-teams] responsible for different parts of the repository. *This allows the responsible team to receive notifications of contributions and review changes.*
 
-
-
-
 ### Archiving
 Repositories that are no longer used should be [archived][gh-archived].
 
@@ -99,40 +78,12 @@ For example, when configuring [auto-publishing for an npm library][npm-publishin
 If none of the above topics fit your need, a PR should be opened to add the new topic to this list before use. 
 
 ## Repository contents
-- Never commit secret information. See also the [security recommendations].
-- Avoid private information in public repositories
 
-### Public information
-Things we could happily put on the front page of the Guardian.
+See also the [security recommendations] for definitions of public, private and secret information.
 
-Examples:
-  - source code
-  - diagrams
-  - [architecture decision records](architecture-decision-records.md)
-
-### Private information
-Things we do not want to be common knowledge, but knowing them does not directly compromise anything.
-
-Generally this means that knowing that detail would make an exploit (technical or people-wise) easier to achieve, especially when combining a few of them.
-
-Not for public repositories. Fine for private repositories.
-
-Examples:
-  - AWS account IDs
-  - S3 bucket names
-
-### Secret information
-Information that directly causes problems! These should be kept out of VCS completely.
-
-Secrets should be rotated regularly.
-
-If leaked, it is a security incident and the [incident doc] should be followed.
-
-Examples:
-  - API keys
-  - Passwords
-  - Authentication tokens
-
+- Never commit secret information. 
+- Avoid private information in public repositories.
+- Private information is fine in private repositories.
 
 <!-- only links below here -->
 
@@ -146,5 +97,5 @@ Examples:
 [gh-teams]: https://github.com/orgs/guardian/teams
 [gh-read]: https://github.com/orgs/guardian/teams/guardian-developers-read
 [gh-write]: https://github.com/orgs/guardian/teams/guardian-developers-write
-[continuous delivery]: ./continuous-deployment.md
+[continuous deployment]: ./continuous-deployment.md
 [security recommendations]: ./security.md
