@@ -36,7 +36,14 @@ Particularly when [continuous deployment] is configured, branch protection reduc
 - Require branches to be up to date before merging
 - Include administrators
 
-If you need to disable branch protection, e.g. in order to use the [Scala release workflow](https://github.com/guardian/gha-scala-library-release-workflow), you should [re-enable protection via rulesets](github-rulesets.md), which allow for protection to be bypassed in certain specific cases.
+GitHub provides two ways to configure branch protection:
+
+* [Branch protection **rules**](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) **(Legacy)**
+* [Branch protection **rulesets**](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) **(Preferred)** - see our [GitHub Ruleset recommendations](github-rulesets.md). This is _essential_ for repos that need to allow GitHub apps to bypass restrictions, eg to use the [Scala release workflow](https://github.com/guardian/gha-scala-library-release-workflow)
+
+If switching a repo to Branch protection **rulesets**, ensure all Branch protection **rules**
+are removed, to avoid confusion and ensure the restriction-bypasses allowed by the Rulesets
+are successfully granted.
 
 ### Access
 Access should be granted to [GitHub teams][gh-teams]. Avoid individual access.
