@@ -4,7 +4,7 @@
 
 NS1 is our preferred supplier for DNS hosting. We pay for their dedicated DNS service, which is independent from their shared platform.  This means that even if their shared platform experiences a DDOS attack, our DNS will still be available.
 
-You can cloudform DNS records in NS1 using the Guardian::DNS::RecordSet custom resource ([CDK](https://guardian.github.io/cdk/classes/constructs_dns.GuCname.html) / [Cloudformation](https://github.com/guardian/cfn-private-resource-types/tree/main/dns/guardian-dns-record-set-type/docs) docs). If you have an existing domain that's administered in NS1 and want to migrate it to CDK, see [the EC2 migration docs](https://github.com/guardian/cdk/blob/main/docs/migration-guide-ec2.md#stage-2-switch-dns).
+For low-risk domains, you can cloudform DNS records in NS1 as per [Cloudforming domains](#cloudforming-domains) section below
 
 ### Avoid Route53
 
@@ -37,9 +37,20 @@ TLS termination should be handled by [Fastly](cdn.md) even if your content is no
 
 For stages other than PROD we use different domains. This ensures that PROD is completely isolated (e.g. cookies will be separate).
 
-| Production domain | Pre-production structure     | Code domain                |
-|-------------------|------------------------------|----------------------------|
-| theguardian.com   | [stage].dev-theguardian.com  | code.dev-theguardian.com   |
-| guardianapis.com  | [stage].dev-guardianapis.com | code.dev-guardianapis.ccom |
-| gutools.co.uk     | [stage].dev-gutools.co.uk    | code.dev-gutools.co.uk     |
-| guim.co.uk        | Does not follow rule         | guimcode.co.uk             |
+| Production domain | Pre-production structure     | Code domain                | Supported by Guardian::DNS::RecordSet |
+|-------------------|------------------------------|----------------------------|---------------------------------------|
+| theguardian.com   | [stage].dev-theguardian.com  | code.dev-theguardian.com   | N                                     |
+| guardianapis.com  | [stage].dev-guardianapis.com | code.dev-guardianapis.ccom | Y                                     |
+| gutools.co.uk     | [stage].dev-gutools.co.uk    | code.dev-gutools.co.uk     | Y                                     |
+| guim.co.uk        | Does not follow rule         | guimcode.co.uk             | Y                                     |
+
+## Cloudforming domains
+
+If you are using a supported domain (notably not theguardian.com), you can cloudform using the Guardian::DNS::RecordSet custom resource.
+
+Docs:
+- [CDK](https://guardian.github.io/cdk/classes/constructs_dns.GuCname.html)
+- [cloudformation](https://github.com/guardian/cfn-private-resource-types/tree/main/dns/guardian-dns-record-set-type/docs) docs.
+- [underlying lambda](https://github.com/guardian/cfn-private-resource-types/tree/36798a5048cbd702710bf5daac1f101d04d18bdd/packages/dns-change-executor)
+
+If you have an existing domain that's administered in NS1 and want to migrate it to CDK, see [the EC2 migration docs](https://github.com/guardian/cdk/blob/main/docs/migration-guide-ec2.md#stage-2-switch-dns).
