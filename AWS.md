@@ -10,7 +10,9 @@
      * `CODE` for pre-production
      * `INFRA` for infrastructure or singleton resources e.g. [elasticsearch-node-rotation](https://github.com/guardian/elasticsearch-node-rotation)
    * `App` - the individual service e.g. `image-loader`
+   * `gu:tool` - the tool which the resource belongs to, similar to stack but more specific e.g. Composer, Workflow, Grid 
    * `gu:repo` - the GitHub repository where the resource's definition can be found
+   * `gu:application-repo` - the GitHub repository where the application code can be found
  * If a resource needs to be shared across multiple environments, prefer to define it in it's own CFN template as the same resource cannot be defined in multiple templates
  * Prefer continuous delivery of infrastructure via Riff-Raff over manual deployment
    * This provides a better audit trail
