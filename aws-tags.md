@@ -1,5 +1,9 @@
 # AWS Tags
 
+> [!NOTE]
+> Resources provisioned using [GuCDK](https://github.com/guardian/cdk) automatically fulfil these requirements.
+> When using a YAML/JSON CloudFormation template, resources that are not explicitly tagged will inherit tags from the parent CloudFormation stack.  
+
 Most resources in AWS can be [tagged](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/what-are-tags.html).
 This document outlines tags used at the Guardian. In short, resources should have the following tags:
 - `App`
