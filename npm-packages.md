@@ -324,11 +324,16 @@ Although `@guardian/libs` is at v6.5.2 in the repo and would work fine, we still
 
 #### Continuous delivery
 
-Prefer continuous delivery from GitHub using [Changesets](https://github.com/changesets/changesets).
+Prefer continuous delivery from GitHub using [Changesets](https://github.com/changesets/changesets). An example of adding Changesets to an existing CD workflow is [here](https://github.com/guardian/cdk/pull/2071).
 
-Use the org secret `NPM_TOKEN` to publish to NPM. This will publish the package from our [`guardian-developers`](https://www.npmjs.com/~guardian-developers) NPM account (managed by CSTI). The `NPM_TOKEN` secret is provided on a repo by repo basis via https://github.com/guardian/github-secret-access.
+We use NPM's [trusted publishing]([url](https://docs.npmjs.com/trusted-publishers)) to publish libraries to the @guardian NPM organisation. Contact DevX to add your library to the list of libraries that support this process.
 
-An example of adding Changesets to an existing CD workflow is [here](https://github.com/guardian/cdk/pull/2071).
+Once that's done, there are a few prerequisites to using trusted publishing:
+- the `npm ` package manager must be >11.5.1
+- Ensure the repository.url property in your package.json matches the repository running the publish action
+- GitHub Actions must have the necessary permission to generate OIDC tokens (`id-token: write`) — see [the guidance on NPM](https://docs.npmjs.com/trusted-publishers#step-2-configure-your-cicd-workflow) for more information.
+
+Once that's done, the usual publish action, initiated by changesets, should work within the action. Here's an [example workflow file]([url](https://github.com/guardian/prosemirror-elements/blob/main/.github/workflows/build-and-release.yml)) for reference.
 
 ## Using `@guardian` NPM packages
 
