@@ -333,7 +333,7 @@ Once that's done, there are a few prerequisites to using trusted publishing:
 - Ensure the repository.url property in your package.json matches the repository running the publish action
 - GitHub Actions must have the necessary permission to generate OIDC tokens (`id-token: write`) — see [the guidance on NPM](https://docs.npmjs.com/trusted-publishers#step-2-configure-your-cicd-workflow) for more information.
 
-Once that's done, the usual publish action, initiated by changesets, should just work. Here's an [example workflow file]([url](https://github.com/guardian/prosemirror-elements/blob/main/.github/workflows/build-and-release.yml)) for reference.
+Once that's done, the usual publish action, initiated by changesets, should work within the action. Here's an [example workflow file]([url](https://github.com/guardian/prosemirror-elements/blob/main/.github/workflows/build-and-release.yml)) for reference.
 
 ## Using `@guardian` NPM packages
 
