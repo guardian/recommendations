@@ -36,3 +36,21 @@ the required tags/permissions which must be added via CloudFormation
 [^2]: These will be added automatically if you are using `GuCDK`
 [^3]: To confirm that this log forwarding has been configured for your account see
 [this configuration](https://github.com/guardian/cloudwatch-logs-management/blob/main/packages/cdk/bin/cdk.ts)
+
+
+## I've added new fields to my logs, why aren't they showing up in ELK?
+ 
+[GuCDK](https://github.com/guardian/cdk) constructs handle a lot of the legwork for getting logs from our services to logs.gutools.co.uk.
+However, sometimes logs may be dropped before they are added to ElasticSearch (the E in ELK).
+
+Logstash (the L in ELK) does the job of writing logs to the ElasticSearch logs cluster. A new index is created in that cluster each day, 
+and field mappings are dynamically generated when logstash successfully writes new log documents to the cluster.Documents might fail to 
+write for a couple of reasons:
+
+- A field on the logs is clashing with an existing mapping, for example a nested object is being written where ElasticSearch expects a string
+- New fields on the logs would take the number of fields in the log mappings over the maximum field limit (1000 by default)
+
+Luckily, logstash makes its own logs, and we can check them for any errors delivering logs. For example to check Ophan's logstash logs, we can visit:
+https://logs.gutools.co.uk/app/r/s/HYbfB
+
+These can help us understand the cause and helkp us resolve any issues with the logs.
